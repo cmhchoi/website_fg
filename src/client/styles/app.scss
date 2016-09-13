@@ -1,0 +1,38 @@
+.homeBtn {
+  float: left
+}
+
+.historyBtn {
+  float: right;
+}
+
+.navbar-brand {
+	color: #777;
+  padding: 0px;
+  float: left;
+  height: 50px;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.navbar-brand {
+	img {
+    padding: 7px 15px;
+    height: 100%;
+    width: auto;
+    display: block;
+	}
+}
+
+.navbar-default {
+	background-color: transparent;
+}
+
+.navbar {
+	border-bottom: 1px solid lightgrey;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-radius: 0;
+	margin: 0 20px;
+}
