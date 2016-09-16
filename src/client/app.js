@@ -8,6 +8,7 @@ import About from './components/about.jsx';
 // import Products from './components/products.jsx';
 
 require('./styles/app.scss');
+require('./styles/frame.scss');
 
 render(
   <Router history={browserHistory}>
