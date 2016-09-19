@@ -2,12 +2,12 @@ import React from 'react';
 import { Link } from 'react-router';
 import $ from "jquery";
 
-export default class About extends React.Component {
+export default class News extends React.Component {
   
   render() {
     return(
       <div>
-        WHO WE ARE
+        WHAT'S NEW
       </div>
     )
   }

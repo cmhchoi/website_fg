@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class Frame extends React.Component {
   constructor(props) {
@@ -7,20 +8,29 @@ export default class Frame extends React.Component {
     this.state = {
       pictures: [
         {
-          img: "http://healthyandstylish.com/wp-content/uploads/2016/07/simple-steps-on-how-to-dress-according-to-your-body-type.jpg",
-          des: "TEXT"
+          img: "http://www.firstglory.com/images/stories/whatwedo/daretodream01.jpg",
+          des: "WHO WE ARE",
+          link: '/who-we-are'
         },
         {
-          img: "http://healthyandstylish.com/wp-content/uploads/2016/07/simple-steps-on-how-to-dress-according-to-your-body-type.jpg",
-          des: "TEXT"
+          img: "http://www.firstglory.com/images/stories/whatwedo/daretodream02.jpg",
+          des: "PRODUCTS",
+          link: '/products'
         },
         {
-          img: "http://healthyandstylish.com/wp-content/uploads/2016/07/simple-steps-on-how-to-dress-according-to-your-body-type.jpg",
-          des: "TEXT"
+          img: "http://www.firstglory.com/images/stories/whatwedo/daretodream03.jpg",
+          des: "PEOPLE",
+          link: '/people'
         },
         {
-          img: "http://healthyandstylish.com/wp-content/uploads/2016/07/simple-steps-on-how-to-dress-according-to-your-body-type.jpg",
-          des: "TEXT"
+          img: "http://www.firstglory.com/images/stories/whatwedo/daretodream04.jpg",
+          des: "GLOBAL COMMUNITY INITIATIVE",
+          link: '/global-community-initiatives'
+        },
+        {
+          img: "http://www.firstglory.com/images/stories/whatwedo/daretodream05.jpg",
+          des: "WHAT'S NEW",
+          link: '/whats-new'
         },
       ],
     }
@@ -28,15 +38,22 @@ export default class Frame extends React.Component {
 
   render() {
     return(
-      <div className="frame col-xs-12">
-        {this.state.pictures.map(picture => {
-          return <div className="picture-container col-xs-12 col-md-5">
-            <img className="picture" src={picture.img}/>
-            <p className="picture-des">{picture.des}</p>
-          </div>
-        })}
+      <div className="frame row">
+        <ul>
+          {this.state.pictures.map(picture => {
+            return <li className="col-xs-12 col-md-6 col-lg-4 picture-link">
+              <Link to={{ pathname: picture.link }}>
+                <div className="text">
+                  <p className="picture-des">{picture.des}</p>
+                </div>
+                <div className="picture-container">
+                  <img className="picture" src={picture.img}/>
+                </div>
+              </Link>
+            </li>
+          })}
+        </ul>
       </div>
     )
   }
-
 }
