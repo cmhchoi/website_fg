@@ -37627,7 +37627,7 @@
 
 
 	// module
-	exports.push([module.id, ".picture-container {\n  height: 0;\n  overflow: hidden;\n  position: relative;\n  background-color: rgba(0, 0, 0, 0.025);\n  padding-bottom: 100%; }\n\n.picture {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  display: block; }\n\nul {\n  list-style: none;\n  padding-left: 20px; }\n  ul li.picture-link {\n    padding-bottom: 15px;\n    padding-right: 5px;\n    padding-left: 5px;\n    font-family: 'Permanent Marker', cursive;\n    font-family: 'Patrick Hand SC', cursive;\n    font-weight: bold; }\n    ul li.picture-link .rectangle {\n      padding-bottom: 49.193548387096776%;\n      margin-bottom: -1px; }\n\n@media (max-width: 1200px) {\n  .rectangle {\n    padding-bottom: 100% !important; }\n    .rectangle img.picture {\n      width: inherit;\n      left: -50%; } }\n\n@media (max-width: 767px) {\n  li.picture-link {\n    padding-right: 30px !important; } }\n\n.text {\n  z-index: 1;\n  width: 100%;\n  position: absolute;\n  color: white;\n  display: table; }\n\n@media (min-width: 1200px) {\n  .text {\n    height: 285.83px; } }\n\n@media (min-width: 992px) {\n  .text {\n    height: 307.5px; } }\n\n@media (min-width: 768px) {\n  .text {\n    height: 307.5px; } }\n\np.picture-des {\n  font-size: -webkit-xxx-large;\n  text-align: center;\n  vertical-align: middle;\n  display: table-cell;\n  margin: auto 0;\n  text-shadow: 0px 0px 1px #F8F8FF  , -1px -1px #F8F8FF , 1px 1px #F8F8FF; }\n\n.picture-link:hover .text {\n  color: darkred; }\n  .picture-link:hover .text p.picture-des {\n    text-shadow: 0px 0px 1px darkred  , -1px -1px darkred , 1px 1px darkred; }\n\n.picture-link:hover .picture {\n  opacity: 0.5; }\n", ""]);
+	exports.push([module.id, ".picture-container {\n  height: 0;\n  overflow: hidden;\n  position: relative;\n  background-color: rgba(0, 0, 0, 0.025);\n  padding-bottom: 100%; }\n\n.picture {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  display: block; }\n\nul {\n  list-style: none;\n  padding-left: 20px; }\n  ul li.picture-link {\n    padding-bottom: 15px;\n    padding-right: 5px;\n    padding-left: 5px;\n    font-family: 'Permanent Marker', cursive;\n    font-family: 'Patrick Hand SC', cursive;\n    font-weight: bold; }\n    ul li.picture-link .rectangle {\n      padding-bottom: 49.193548387096776%;\n      margin-bottom: -1px; }\n\n@media (max-width: 767px) {\n  li.picture-link {\n    padding-right: 30px !important; }\n  ul li.picture-link div.rectangle {\n    padding-bottom: 100%; }\n    ul li.picture-link div.rectangle img.picture {\n      width: inherit;\n      left: -50%; } }\n\n@media (min-width: 767px) and (max-width: 1200px) {\n  ul li.picture-link div.rectangle.mid-no-rectangle {\n    padding-bottom: 100%; }\n    ul li.picture-link div.rectangle.mid-no-rectangle img.picture {\n      width: inherit;\n      left: -50%; } }\n\n@media (min-width: 1200px) {\n  ul li.picture-link div.rectangle.large-no-rectangle {\n    padding-bottom: 100%; }\n    ul li.picture-link div.rectangle.large-no-rectangle img.picture {\n      width: inherit;\n      left: -50%; } }\n\n.text {\n  z-index: 1;\n  width: 100%;\n  position: absolute;\n  color: white;\n  display: table; }\n\n@media (min-width: 1200px) {\n  .text {\n    height: 285.83px; } }\n\n@media (min-width: 992px) {\n  .text {\n    height: 307.5px; } }\n\n@media (min-width: 768px) {\n  .text {\n    height: 307.5px; } }\n\np.picture-des {\n  font-size: -webkit-xxx-large;\n  text-align: center;\n  vertical-align: middle;\n  display: table-cell;\n  margin: auto 0;\n  text-shadow: 0px 0px 1px #F8F8FF  , -1px -1px #F8F8FF , 1px 1px #F8F8FF; }\n\n.picture-link:hover .text {\n  color: darkred; }\n  .picture-link:hover .text p.picture-des {\n    text-shadow: 0px 0px 1px darkred  , -1px -1px darkred , 1px 1px darkred; }\n\n.picture-link:hover .picture {\n  opacity: 0.5; }\n", ""]);
 
 	// exports
 
@@ -37647,6 +37647,8 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -37674,130 +37676,507 @@
 	  }
 
 	  _createClass(Frame, [{
-	    key: 'render',
-	    value: function render() {
-	      var pictures = this.props.pictures;
-	      // let largeLogic = "col-xs-12 col-sm-6 col-lg-4 picture-link";
-	      // if(pictures.length === 4) {
-	      //   largeLogic = "col-xs-12 col-sm-6 col-lg-6 picture-link";
-	      // }
-
-
-	      // if(pictures.length % 3 === 1 || pictures.length % 3 === 2 || 
-	      //   pictures.length % 2 === 1 )
-
-
-	      //if length > 3
-
-	      //return first type
-	      // if length % 3 === 0, all lines large = 4 column
-	      // if length % 3 === 1, first line large = 8 col + 4 col, second line 4 col + 8 col
-	      // if length % 3 === 2, first line large = 8 col + 4 col, second line all large
-	      // if length % 2 === 0, all lines medium = 6 col
-	      // if length % 2 === 1, first line medium = 12 col, second line 6 col
-
-	      //if length === 3 
-
-	      //return large 1 line, medium 2 lines
-	      //large = 4 column
-	      //medium = first line medium = 12 col, second line 6 col
-
-	      //if length === 2
-
-	      // return 1 line
-	      // large = 6 col
-	      // medium = 6 col
-
-	      //if length === 1
-
-	      // return 1 line all 12 column
-	      // large = 12 col
-	      // medium = 12 col
-
-
-	      //<li className="picture-link col-lg-8">
-	      //  <Link to={{ pathname: '/who-we-are' }}>
-	      //  <div className="text">
-	      //  <p className="picture-des">WHO WE ARE</p>
-	      //</div>
-	      //<div className="picture-container">
-	      //<img className="picture" src="http://www.coupofy.com/m/Store/content/Skt79E_5.jpg"/>
-	      //</div>
-	      //</Link>
-	      //</li>
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'frame row' },
-	        _react2.default.createElement(
-	          'ul',
+	    key: 'normalFrame',
+	    value: function normalFrame(pictures, special) {
+	      var listClass = "col-xs-12 col-sm-6 picture-link";
+	      special === "special" ? listClass += " col-lg-6" : listClass += " col-lg-4";
+	      return pictures.map(function (picture) {
+	        return _react2.default.createElement(
+	          'div',
 	          null,
 	          _react2.default.createElement(
 	            'li',
-	            { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
+	            { className: listClass },
+	            _react2.default.createElement(
+	              _reactRouter.Link,
+	              { to: { pathname: picture.link } },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'text' },
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'picture-des' },
+	                  picture.des
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'picture-container' },
+	                _react2.default.createElement('img', { className: 'picture', src: picture.img })
+	              )
+	            )
+	          )
+	        );
+	      });
+	    }
+	  }, {
+	    key: 'medOneRow',
+	    value: function medOneRow(rectangles) {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-12 col-lg-4 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: rectangles[0].link } },
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'text' },
 	              _react2.default.createElement(
 	                'p',
 	                { className: 'picture-des' },
-	                'WHO WE ARE'
+	                rectangles[0].des
 	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'picture-container rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: 'http://www.coupofy.com/m/Store/content/Skt79E_5.jpg' })
+	              { className: 'picture-container rectangle large-no-rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
 	            )
-	          ),
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'largeOneRow',
+	    value: function largeOneRow(rectangles, squares) {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
 	          _react2.default.createElement(
-	            'li',
-	            { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	            _reactRouter.Link,
+	            { to: { pathname: rectangles[0].link } },
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'text' },
 	              _react2.default.createElement(
 	                'p',
 	                { className: 'picture-des' },
-	                'PRODUCTS'
+	                rectangles[0].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container rectangle mid-no-rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: squares[0].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                squares[0].des
 	              )
 	            ),
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'picture-container' },
-	              _react2.default.createElement('img', { className: 'picture', src: 'http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg' })
+	              _react2.default.createElement('img', { className: 'picture', src: squares[0].img })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'largeTwoRows',
+	    value: function largeTwoRows(rectangles, squares) {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: rectangles[0].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                rectangles[0].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container rectangle mid-no-rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
 	            )
 	          )
 	        ),
 	        _react2.default.createElement(
-	          'ul',
-	          null,
-	          pictures.map(function (picture) {
-	            return _react2.default.createElement(
-	              'li',
-	              { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: squares[0].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
 	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: { pathname: picture.link } },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'text' },
-	                  _react2.default.createElement(
-	                    'p',
-	                    { className: 'picture-des' },
-	                    picture.des
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'picture-container' },
-	                  _react2.default.createElement('img', { className: 'picture', src: picture.img })
-	                )
+	                'p',
+	                { className: 'picture-des' },
+	                squares[0].des
 	              )
-	            );
-	          })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container' },
+	              _react2.default.createElement('img', { className: 'picture', src: squares[0].img })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: squares[1].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                squares[1].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container' },
+	              _react2.default.createElement('img', { className: 'picture', src: squares[1].img })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: rectangles[1].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                rectangles[1].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container rectangle mid-no-rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: rectangles[1].img })
+	            )
+	          )
 	        )
 	      );
+	    }
+	  }, {
+	    key: 'largeTwoRowsMedOneRow',
+	    value: function largeTwoRowsMedOneRow(rectangles, squares) {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-12 col-lg-8 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: rectangles[0].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                rectangles[0].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: squares[0].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                squares[0].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container' },
+	              _react2.default.createElement('img', { className: 'picture', src: squares[0].img })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: squares[1].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                squares[1].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: squares[1].img })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: rectangles[1].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                rectangles[1].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: rectangles[1].img })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'largeOneRowMedOneRow',
+	    value: function largeOneRowMedOneRow(rectangles, squares) {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-12 col-lg-8 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: rectangles[0].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                rectangles[0].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'li',
+	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	          _react2.default.createElement(
+	            _reactRouter.Link,
+	            { to: { pathname: squares[0].link } },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                squares[0].des
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container' },
+	              _react2.default.createElement('img', { className: 'picture', src: squares[0].img })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var pictures = this.props.pictures;
+
+	      if (pictures.length % 3 === 1 && pictures.length !== 1) {
+	        var _ret = function () {
+
+	          var topRects = [];
+	          var topSquares = [];
+	          var normals = [];
+
+	          pictures.forEach(function (picture) {
+	            if (picture.size === 'rectangle' && topRects.length < 2) {
+	              topRects.push(picture);
+	            } else if (picture.size === 'square' && topSquares.length < 2) {
+	              topSquares.push(picture);
+	            } else {
+	              normals.push(picture);
+	            }
+	          });
+
+	          if (pictures.length % 2 === 1) {
+	            return {
+	              v: _react2.default.createElement(
+	                'div',
+	                { className: 'frame row' },
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _this2.largeTwoRowsMedOneRow(topRects, topSquares),
+	                  _this2.normalFrame(normals)
+	                )
+	              )
+	            };
+	          } else {
+	            return {
+	              v: _react2.default.createElement(
+	                'div',
+	                { className: 'frame row' },
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _this2.largeTwoRows(topRects, topSquares),
+	                  _this2.normalFrame(normals)
+	                )
+	              )
+	            };
+	          }
+	        }();
+
+	        if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
+	      } else if (pictures.length % 3 === 2 && pictures.length !== 2) {
+	        var _ret2 = function () {
+
+	          var topRects = [];
+	          var topSquares = [];
+	          var normals = [];
+
+	          pictures.forEach(function (picture) {
+	            if (picture.size === 'rectangle' && topRects.length < 1) {
+	              topRects.push(picture);
+	            } else if (picture.size === 'square' && topSquares.length < 1) {
+	              topSquares.push(picture);
+	            } else {
+	              normals.push(picture);
+	            }
+	          });
+
+	          if (pictures.length % 2 === 1) {
+	            return {
+	              v: _react2.default.createElement(
+	                'div',
+	                { className: 'frame row' },
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _this2.largeOneRowMedOneRow(topRects, topSquares),
+	                  _this2.normalFrame(normals)
+	                )
+	              )
+	            };
+	          } else {
+	            return {
+	              v: _react2.default.createElement(
+	                'div',
+	                { className: 'frame row' },
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _this2.largeOneRow(topRects, topSquares),
+	                  _this2.normalFrame(normals)
+	                )
+	              )
+	            };
+	          }
+	        }();
+
+	        if ((typeof _ret2 === 'undefined' ? 'undefined' : _typeof(_ret2)) === "object") return _ret2.v;
+	      } else if (pictures.length % 2 === 1) {
+	        var _ret3 = function () {
+
+	          var topRects = [];
+	          var normals = [];
+
+	          pictures.forEach(function (picture) {
+	            if (picture.size === 'rectangle' && topRects.length < 2) {
+	              topRects.push(picture);
+	            } else {
+	              normals.push(picture);
+	            }
+	          });
+
+	          return {
+	            v: _react2.default.createElement(
+	              'div',
+	              { className: 'frame row' },
+	              _react2.default.createElement(
+	                'ul',
+	                null,
+	                _this2.medOneRow(topRects),
+	                _this2.normalFrame(normals)
+	              )
+	            )
+	          };
+	        }();
+
+	        if ((typeof _ret3 === 'undefined' ? 'undefined' : _typeof(_ret3)) === "object") return _ret3.v;
+	      } else {
+
+	        return _react2.default.createElement(
+	          'div',
+	          { className: 'frame row' },
+	          _react2.default.createElement(
+	            'ul',
+	            null,
+	            this.normalFrame(pictures, "special")
+	          )
+	        );
+	      }
 	    }
 	  }]);
 
@@ -38087,20 +38466,17 @@
 	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
 
 	    _this.state = {
-	      pictures: [
-	      // {
-	      //   img: "http://wollywonka.be/wp-content/uploads/2016/09/DSC_0557_slider_klein.jpg",
-	      //   des: "WHO WE ARE",
-	      //   link: '/who-we-are',
-	      //   size: 'rectangle'
-	      // },
-	      // {
-	      //   img: "http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg",
-	      //   des: "PRODUCTS",
-	      //   link: '/products',
-	      //   size: 'square'
-	      // },
-	      {
+	      pictures: [{
+	        img: "http://wollywonka.be/wp-content/uploads/2016/09/DSC_0557_slider_klein.jpg",
+	        des: "WHO WE ARE",
+	        link: '/who-we-are',
+	        size: 'rectangle'
+	      }, {
+	        img: "http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg",
+	        des: "PRODUCTS",
+	        link: '/products',
+	        size: 'square'
+	      }, {
 	        img: "http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg",
 	        des: "PEOPLE",
 	        link: '/people',
@@ -38182,19 +38558,23 @@
 	      pictures: [{
 	        img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
 	        des: "HISTORY",
-	        link: '/who-we-are/history'
+	        link: '/who-we-are/history',
+	        size: 'rectangle'
 	      }, {
 	        img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
 	        des: "CULTURE & CORE VALUES",
-	        link: '/who-we-are/culture-core-values'
+	        link: '/who-we-are/culture-core-values',
+	        size: 'rectangle'
 	      }, {
-	        img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
+	        img: "http://www.kbslp.com/images/kbs_image_feed_image5.jpg",
 	        des: "EXECUTIVE OFFICERS",
-	        link: '/who-we-are/executive-officers'
+	        link: '/who-we-are/executive-officers',
+	        size: 'square'
 	      }, {
-	        img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
+	        img: "http://www.kbslp.com/images/kbs_image_feed_image5.jpg",
 	        des: "OUR PARTNERS",
-	        link: '/who-we-are/our-partners'
+	        link: '/who-we-are/our-partners',
+	        size: 'square'
 	      }]
 	    };
 	    return _this;
@@ -38270,17 +38650,20 @@
 
 	    _this.state = {
 	      pictures: [{
-	        img: "http://iris.backcountry.com/image/view/c311028/900/900",
+	        img: "http://images.contentful.com/x3a5wchdg6mu/17oZuNZe9MWeKeww02CGGy/74d0f98d64a52b6737c888e13f2c6c25/GANT_Recreation_Nature_5_greybg_16x9.jpg?q=75&fl=progressive&w=1536&h=768&fit=thumb&f=left",
 	        des: "MEN",
-	        link: '/products/men'
+	        link: '/products/men',
+	        size: 'rectangle'
 	      }, {
 	        img: "http://www.toadandco.com/images/product/610/T1241603-669-16.jpg",
 	        des: "WOMEN",
-	        link: '/products/women'
+	        link: '/products/women',
+	        size: 'square'
 	      }, {
 	        img: "https://s-media-cache-ak0.pinimg.com/736x/62/ec/92/62ec926e8a63ae7a60a68a97d70540a0.jpg",
 	        des: "CHILDREN",
-	        link: '/products/children'
+	        link: '/products/children',
+	        size: 'square'
 	      }]
 	    };
 	    return _this;
