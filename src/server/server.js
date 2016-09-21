@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 // const router = require('./routes');
+const staticRoutes = require('./routes/static');
+require("node-jsx").install();
 
 const app = express();
 
@@ -20,16 +22,11 @@ app
   }))
   .use(bodyParser.urlencoded({ extended: true }))
   .use(bodyParser.json())
-  .use(express.static(`${__dirname}/../client/`))
-  .use(cookieParser())
-  .use(session({
-    secret: 'shhhh',
-    resave: true,
-    saveUninitialized: true,
-    cookie: { maxAge: 60000 },
-  }))
-  // .use('/', router);
+  .use(express.static(`${__dirname}/../client`))
+  .use('/', staticRoutes)
+  .engine('html', require('ejs').renderFile)
+  .set('views', `${__dirname}/../client`);
   
 app.listen(port, () => {
-  console.log(`Connected to ${host}:${port}`);
+  console.log(`Connected to ${host}:${port}`, staticRoutes);
 });

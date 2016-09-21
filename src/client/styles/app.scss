@@ -1,11 +1,3 @@
-.homeBtn {
-  float: left
-}
-
-.historyBtn {
-  float: right;
-}
-
 .container {
   padding: 0 0;
 }
@@ -17,9 +9,6 @@
   height: 50px;
   font-size: 18px;
   line-height: 20px;
-}
-
-.navbar-brand {
 	img {
     padding: 7px 15px;
     height: 100%;
@@ -53,18 +42,58 @@
     padding-right: 0;
     padding-left: 0;
   }
-}
-
-.container {
   .content {
     padding-right: 0;
     padding-left: 0;
+    .content {
+      min-height: 78vh;
+    }
+  }
+}
+
+footer {
+  font-size: small;
+  nav {
+    margin-bottom: 0 !important;
+    div {
+      ul {
+        padding: 0 0;
+        float: right;
+        .foot-list {
+          float: left;
+          a {
+            padding-top: 29px;
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  p {
+    float: right;
+    margin-right: -10px;
   }
 }
 
 @media (max-width: 767px) {
   .navbar {
     margin-right: 15px;
+  }
+  footer {
+    p {
+      margin-right: 15px;
+    }
+  }
+  .content {
+    .content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  #footer-body {
+    ul {
+      padding: 0 20px;
+    }
   }
 }
 

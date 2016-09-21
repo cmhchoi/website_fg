@@ -54,51 +54,82 @@
 
 	var _reactRouter = __webpack_require__(172);
 
-	var _app = __webpack_require__(235);
+	var _App = __webpack_require__(253);
 
-	var _app2 = _interopRequireDefault(_app);
+	var _App2 = _interopRequireDefault(_App);
 
-	var _home = __webpack_require__(237);
+	var _Home = __webpack_require__(254);
 
-	var _home2 = _interopRequireDefault(_home);
+	var _Home2 = _interopRequireDefault(_Home);
 
-	var _about = __webpack_require__(239);
+	var _About = __webpack_require__(255);
 
-	var _about2 = _interopRequireDefault(_about);
+	var _About2 = _interopRequireDefault(_About);
 
-	var _products = __webpack_require__(248);
+	var _Products = __webpack_require__(256);
 
-	var _products2 = _interopRequireDefault(_products);
+	var _Products2 = _interopRequireDefault(_Products);
 
-	var _people = __webpack_require__(247);
+	var _People = __webpack_require__(257);
 
-	var _people2 = _interopRequireDefault(_people);
+	var _People2 = _interopRequireDefault(_People);
 
-	var _community = __webpack_require__(249);
+	var _Community = __webpack_require__(258);
 
-	var _community2 = _interopRequireDefault(_community);
+	var _Community2 = _interopRequireDefault(_Community);
 
-	var _news = __webpack_require__(246);
+	var _News = __webpack_require__(259);
 
-	var _news2 = _interopRequireDefault(_news);
+	var _News2 = _interopRequireDefault(_News);
+
+	var _History = __webpack_require__(260);
+
+	var _History2 = _interopRequireDefault(_History);
+
+	var _Culture = __webpack_require__(264);
+
+	var _Culture2 = _interopRequireDefault(_Culture);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	//import Men from './containers/Men.jsx';
+
 	__webpack_require__(240);
 	__webpack_require__(244);
+	__webpack_require__(262);
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
 	  { history: _reactRouter.browserHistory },
 	  _react2.default.createElement(
 	    _reactRouter.Route,
-	    { path: '/', component: _app2.default },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are', component: _about2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _products2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people', component: _people2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives', component: _community2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'whats-new', component: _news2.default })
+	    { path: '/', component: _App2.default },
+	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are', component: _About2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/history', component: _History2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/culture-core-values', component: _Culture2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/executive-officers', component: _History2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/our-partners', component: _History2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _Products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category', component: _Products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/men', component: _Products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/women', component: _Products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/children', component: _Products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/materials', component: _Products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/techniques', component: _Products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work/offices', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work/factories', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/story', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/jobs', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives', component: _Community2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/sustainability', component: _Community2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/charitable-programmes', component: _Community2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/practices', component: _Community2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/responsibility', component: _Community2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/collaboration', component: _Community2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'whats-new', component: _News2.default })
 	  )
 	), document.getElementById('app'));
 
@@ -27130,184 +27161,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 235 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var App = function (_React$Component) {
-	  _inherits(App, _React$Component);
-
-	  function App(props) {
-	    _classCallCheck(this, App);
-
-	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-	    _this.state = {
-	      // gallery
-	      // portfolio
-	      // factories
-	      // directors
-	      // news
-	    };
-	    return _this;
-	  }
-
-	  _createClass(App, [{
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {}
-	    //API call for data
-	    // this.serverRequest = $.get("https://demo2697834.mockable.io/movies", data => {
-	    //   this.setState({
-	    //     videos: data.entries,
-	    //   });
-	    // });
-
-
-	    // <IndexLink className="navbar-brand" to={{ pathname: '/' }}>
-	    //   <img src="assets/images/logo.png" alt="Dispute Bills" />
-	    // </IndexLink>
-
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'container' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'logo col-lg-1 col-sm-2 hidden-xs' },
-	            _react2.default.createElement(
-	              _reactRouter.IndexLink,
-	              { to: { pathname: '/' } },
-	              _react2.default.createElement('img', { className: 'logo-img', src: 'assets/images/logo1.png', alt: 'Dispute Bills' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'content col-lg-11 col-xs-12 col-sm-10' },
-	            _react2.default.createElement(
-	              'nav',
-	              { className: 'navbar navbar-default' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'navbar-header' },
-	                _react2.default.createElement(
-	                  'button',
-	                  { type: 'button', className: 'navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#navbar2' },
-	                  _react2.default.createElement(
-	                    'span',
-	                    { className: 'sr-only' },
-	                    'Toggle navigation'
-	                  ),
-	                  _react2.default.createElement('span', { className: 'icon-bar' }),
-	                  _react2.default.createElement('span', { className: 'icon-bar' }),
-	                  _react2.default.createElement('span', { className: 'icon-bar' })
-	                ),
-	                _react2.default.createElement(
-	                  _reactRouter.IndexLink,
-	                  { className: 'navbar-brand collapsed', to: { pathname: '/' } },
-	                  _react2.default.createElement('img', { className: 'nav-logo-img visible-xs', src: 'assets/images/logo.png', alt: 'First Glory' })
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { id: 'navbar2', className: 'navbar-collapse collapse' },
-	                _react2.default.createElement(
-	                  'ul',
-	                  { className: 'nav navbar-nav navbar-right' },
-	                  _react2.default.createElement(
-	                    'li',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: { pathname: '/who-we-are' } },
-	                      'Who We Are'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'li',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: { pathname: '/products' } },
-	                      'Products'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'li',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: { pathname: '/people' } },
-	                      'People'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'li',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: { pathname: '/global-community-initiatives' } },
-	                      'Global Community Initiative'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'li',
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactRouter.Link,
-	                      { to: { pathname: '/whats-new' } },
-	                      'What\'s New'
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'content' },
-	              this.props.children
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return App;
-	}(_react2.default.Component);
-
-	exports.default = App;
-
-/***/ },
+/* 235 */,
 /* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -37388,223 +37242,9 @@
 
 
 /***/ },
-/* 237 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	var _frame = __webpack_require__(238);
-
-	var _frame2 = _interopRequireDefault(_frame);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Home = function (_React$Component) {
-	  _inherits(Home, _React$Component);
-
-	  function Home() {
-	    _classCallCheck(this, Home);
-
-	    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
-	  }
-
-	  _createClass(Home, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_frame2.default, null)
-	      );
-	    }
-	  }]);
-
-	  return Home;
-	}(_react2.default.Component);
-
-	exports.default = Home;
-
-/***/ },
-/* 238 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Frame = function (_React$Component) {
-	  _inherits(Frame, _React$Component);
-
-	  function Frame(props) {
-	    _classCallCheck(this, Frame);
-
-	    var _this = _possibleConstructorReturn(this, (Frame.__proto__ || Object.getPrototypeOf(Frame)).call(this, props));
-
-	    _this.state = {
-	      pictures: [{
-	        img: "http://www.firstglory.com/images/stories/whatwedo/daretodream01.jpg",
-	        des: "WHO WE ARE",
-	        link: '/who-we-are'
-	      }, {
-	        img: "http://www.firstglory.com/images/stories/whatwedo/daretodream02.jpg",
-	        des: "PRODUCTS",
-	        link: '/products'
-	      }, {
-	        img: "http://www.firstglory.com/images/stories/whatwedo/daretodream03.jpg",
-	        des: "PEOPLE",
-	        link: '/people'
-	      }, {
-	        img: "http://www.firstglory.com/images/stories/whatwedo/daretodream04.jpg",
-	        des: "GLOBAL COMMUNITY INITIATIVE",
-	        link: '/global-community-initiatives'
-	      }, {
-	        img: "http://www.firstglory.com/images/stories/whatwedo/daretodream05.jpg",
-	        des: "WHAT'S NEW",
-	        link: '/whats-new'
-	      }]
-	    };
-	    return _this;
-	  }
-
-	  _createClass(Frame, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'frame row' },
-	        _react2.default.createElement(
-	          'ul',
-	          null,
-	          this.state.pictures.map(function (picture) {
-	            return _react2.default.createElement(
-	              'li',
-	              { className: 'col-xs-12 col-md-6 col-lg-4 picture-link' },
-	              _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: { pathname: picture.link } },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'text' },
-	                  _react2.default.createElement(
-	                    'p',
-	                    { className: 'picture-des' },
-	                    picture.des
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'picture-container' },
-	                  _react2.default.createElement('img', { className: 'picture', src: picture.img })
-	                )
-	              )
-	            );
-	          })
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Frame;
-	}(_react2.default.Component);
-
-	exports.default = Frame;
-
-/***/ },
-/* 239 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var About = function (_React$Component) {
-	  _inherits(About, _React$Component);
-
-	  function About() {
-	    _classCallCheck(this, About);
-
-	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-	  }
-
-	  _createClass(About, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'WHO WE ARE'
-	      );
-	    }
-	  }]);
-
-	  return About;
-	}(_react2.default.Component);
-
-	exports.default = About;
-
-/***/ },
+/* 237 */,
+/* 238 */,
+/* 239 */,
 /* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -37639,7 +37279,7 @@
 
 
 	// module
-	exports.push([module.id, ".homeBtn {\n  float: left; }\n\n.historyBtn {\n  float: right; }\n\n.container {\n  padding: 0 0; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n\n.navbar-brand img {\n  padding: 7px 15px;\n  height: 100%;\n  width: auto;\n  display: block; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; } }\n", ""]);
+	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 7px 15px;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n", ""]);
 
 	// exports
 
@@ -37987,13 +37627,187 @@
 
 
 	// module
-	exports.push([module.id, ".picture-container {\n  height: 0;\n  overflow: hidden;\n  position: relative;\n  background-color: rgba(0, 0, 0, 0.025);\n  padding-bottom: 68.193548%; }\n\n.picture {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  display: block; }\n\nul {\n  list-style: none;\n  padding-left: 20px; }\n\nli.picture-link {\n  padding-bottom: 15px;\n  padding-right: 5px;\n  padding-left: 5px;\n  font-family: 'Permanent Marker', cursive; }\n\n@media (max-width: 767px) {\n  li.picture-link {\n    padding-right: 30px !important; } }\n\n.text {\n  z-index: 1;\n  width: 100%;\n  position: absolute;\n  color: white;\n  display: table; }\n\n.text:hover {\n  color: orange; }\n\np.picture-des {\n  font-size: -webkit-xxx-large;\n  text-align: center;\n  vertical-align: middle;\n  display: table-cell;\n  height: 200px; }\n", ""]);
+	exports.push([module.id, ".picture-container {\n  height: 0;\n  overflow: hidden;\n  position: relative;\n  background-color: rgba(0, 0, 0, 0.025);\n  padding-bottom: 100%; }\n\n.picture {\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  display: block; }\n\nul {\n  list-style: none;\n  padding-left: 20px; }\n  ul li.picture-link {\n    padding-bottom: 15px;\n    padding-right: 5px;\n    padding-left: 5px;\n    font-family: 'Permanent Marker', cursive;\n    font-family: 'Patrick Hand SC', cursive;\n    font-weight: bold; }\n    ul li.picture-link .rectangle {\n      padding-bottom: 49.193548387096776%;\n      margin-bottom: -1px; }\n\n@media (max-width: 1200px) {\n  .rectangle {\n    padding-bottom: 100% !important; }\n    .rectangle img.picture {\n      width: inherit;\n      left: -50%; } }\n\n@media (max-width: 767px) {\n  li.picture-link {\n    padding-right: 30px !important; } }\n\n.text {\n  z-index: 1;\n  width: 100%;\n  position: absolute;\n  color: white;\n  display: table; }\n\n@media (min-width: 1200px) {\n  .text {\n    height: 285.83px; } }\n\n@media (min-width: 992px) {\n  .text {\n    height: 307.5px; } }\n\n@media (min-width: 768px) {\n  .text {\n    height: 307.5px; } }\n\np.picture-des {\n  font-size: -webkit-xxx-large;\n  text-align: center;\n  vertical-align: middle;\n  display: table-cell;\n  margin: auto 0;\n  text-shadow: 0px 0px 1px #F8F8FF  , -1px -1px #F8F8FF , 1px 1px #F8F8FF; }\n\n.picture-link:hover .text {\n  color: darkred; }\n  .picture-link:hover .text p.picture-des {\n    text-shadow: 0px 0px 1px darkred  , -1px -1px darkred , 1px 1px darkred; }\n\n.picture-link:hover .picture {\n  opacity: 0.5; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 246 */
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Frame = function (_React$Component) {
+	  _inherits(Frame, _React$Component);
+
+	  function Frame() {
+	    _classCallCheck(this, Frame);
+
+	    return _possibleConstructorReturn(this, (Frame.__proto__ || Object.getPrototypeOf(Frame)).apply(this, arguments));
+	  }
+
+	  _createClass(Frame, [{
+	    key: 'render',
+	    value: function render() {
+	      var pictures = this.props.pictures;
+	      // let largeLogic = "col-xs-12 col-sm-6 col-lg-4 picture-link";
+	      // if(pictures.length === 4) {
+	      //   largeLogic = "col-xs-12 col-sm-6 col-lg-6 picture-link";
+	      // }
+
+
+	      // if(pictures.length % 3 === 1 || pictures.length % 3 === 2 || 
+	      //   pictures.length % 2 === 1 )
+
+
+	      //if length > 3
+
+	      //return first type
+	      // if length % 3 === 0, all lines large = 4 column
+	      // if length % 3 === 1, first line large = 8 col + 4 col, second line 4 col + 8 col
+	      // if length % 3 === 2, first line large = 8 col + 4 col, second line all large
+	      // if length % 2 === 0, all lines medium = 6 col
+	      // if length % 2 === 1, first line medium = 12 col, second line 6 col
+
+	      //if length === 3 
+
+	      //return large 1 line, medium 2 lines
+	      //large = 4 column
+	      //medium = first line medium = 12 col, second line 6 col
+
+	      //if length === 2
+
+	      // return 1 line
+	      // large = 6 col
+	      // medium = 6 col
+
+	      //if length === 1
+
+	      // return 1 line all 12 column
+	      // large = 12 col
+	      // medium = 12 col
+
+
+	      //<li className="picture-link col-lg-8">
+	      //  <Link to={{ pathname: '/who-we-are' }}>
+	      //  <div className="text">
+	      //  <p className="picture-des">WHO WE ARE</p>
+	      //</div>
+	      //<div className="picture-container">
+	      //<img className="picture" src="http://www.coupofy.com/m/Store/content/Skt79E_5.jpg"/>
+	      //</div>
+	      //</Link>
+	      //</li>
+
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'frame row' },
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          _react2.default.createElement(
+	            'li',
+	            { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                'WHO WE ARE'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container rectangle' },
+	              _react2.default.createElement('img', { className: 'picture', src: 'http://www.coupofy.com/m/Store/content/Skt79E_5.jpg' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'text' },
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'picture-des' },
+	                'PRODUCTS'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'picture-container' },
+	              _react2.default.createElement('img', { className: 'picture', src: 'http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg' })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          pictures.map(function (picture) {
+	            return _react2.default.createElement(
+	              'li',
+	              { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
+	              _react2.default.createElement(
+	                _reactRouter.Link,
+	                { to: { pathname: picture.link } },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'text' },
+	                  _react2.default.createElement(
+	                    'p',
+	                    { className: 'picture-des' },
+	                    picture.des
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'picture-container' },
+	                  _react2.default.createElement('img', { className: 'picture', src: picture.img })
+	                )
+	              )
+	            );
+	          })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Frame;
+	}(_react2.default.Component);
+
+	exports.default = Frame;
+
+/***/ },
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38022,33 +37836,474 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var News = function (_React$Component) {
-	  _inherits(News, _React$Component);
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
 
-	  function News() {
-	    _classCallCheck(this, News);
+	  function App() {
+	    _classCallCheck(this, App);
 
-	    return _possibleConstructorReturn(this, (News.__proto__ || Object.getPrototypeOf(News)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
 	  }
 
-	  _createClass(News, [{
+	  _createClass(App, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'WHAT\'S NEW'
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'container' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'logo col-lg-offset-1 col-lg-1 col-sm-2 hidden-xs' },
+	            _react2.default.createElement(
+	              _reactRouter.IndexLink,
+	              { to: { pathname: '/' } },
+	              _react2.default.createElement('img', { className: 'logo-img', src: 'assets/images/logo1.png', alt: 'Dispute Bills' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'content col-lg-9 col-xs-12 col-sm-10' },
+	            _react2.default.createElement(
+	              'nav',
+	              { className: 'navbar navbar-default' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'navbar-header' },
+	                _react2.default.createElement(
+	                  'button',
+	                  { type: 'button', className: 'navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#navbar2' },
+	                  _react2.default.createElement(
+	                    'span',
+	                    { className: 'sr-only' },
+	                    'Toggle navigation'
+	                  ),
+	                  _react2.default.createElement('span', { className: 'icon-bar' }),
+	                  _react2.default.createElement('span', { className: 'icon-bar' }),
+	                  _react2.default.createElement('span', { className: 'icon-bar' })
+	                ),
+	                _react2.default.createElement(
+	                  _reactRouter.IndexLink,
+	                  { className: 'navbar-brand collapsed', to: { pathname: '/' } },
+	                  _react2.default.createElement('img', { className: 'nav-logo-img visible-xs', src: 'assets/images/logo.png', alt: 'First Glory' })
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { id: 'navbar2', className: 'navbar-collapse collapse' },
+	                _react2.default.createElement(
+	                  'ul',
+	                  { className: 'nav navbar-nav navbar-right' },
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: '/who-we-are' } },
+	                      'Who We Are'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: '/products' } },
+	                      'Products'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: '/people' } },
+	                      'People'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: '/global-community-initiatives' } },
+	                      'Global Community Initiative'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: '/whats-new' } },
+	                      'What\'s New'
+	                    )
+	                  )
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'content' },
+	              this.props.children
+	            ),
+	            _react2.default.createElement(
+	              'footer',
+	              { className: 'footer' },
+	              _react2.default.createElement(
+	                'nav',
+	                { className: 'navbar navbar-default' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: '', id: 'footer-body' },
+	                  _react2.default.createElement(
+	                    'ul',
+	                    { className: 'nav navbar-nav navbar-right' },
+	                    _react2.default.createElement(
+	                      'li',
+	                      { className: 'foot-list' },
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: '#' },
+	                        '繁'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      { className: 'foot-list' },
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: '#' },
+	                        '簡'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      { className: 'foot-list' },
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: '#' },
+	                        'Contact Us'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      { className: 'foot-list' },
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: '#' },
+	                        'Site Map'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      { className: 'foot-list' },
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: '#' },
+	                        'Terms of Use'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      { className: 'foot-list' },
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: '#' },
+	                        'Privacy Policy'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'li',
+	                      { className: 'foot-list' },
+	                      _react2.default.createElement(
+	                        'a',
+	                        { href: 'https://www.facebook.com/firstgloryltd/' },
+	                        'Facebook'
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                null,
+	                '2016 First Glory Ltd. All Rights Reserved'
+	              )
+	            )
+	          )
+	        )
 	      );
 	    }
 	  }]);
 
-	  return News;
+	  return App;
 	}(_react2.default.Component);
 
-	exports.default = News;
+	exports.default = App;
 
 /***/ },
-/* 247 */
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Frame = __webpack_require__(252);
+
+	var _Frame2 = _interopRequireDefault(_Frame);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Home = function (_React$Component) {
+	  _inherits(Home, _React$Component);
+
+	  function Home(props) {
+	    _classCallCheck(this, Home);
+
+	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+
+	    _this.state = {
+	      pictures: [
+	      // {
+	      //   img: "http://wollywonka.be/wp-content/uploads/2016/09/DSC_0557_slider_klein.jpg",
+	      //   des: "WHO WE ARE",
+	      //   link: '/who-we-are',
+	      //   size: 'rectangle'
+	      // },
+	      // {
+	      //   img: "http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg",
+	      //   des: "PRODUCTS",
+	      //   link: '/products',
+	      //   size: 'square'
+	      // },
+	      {
+	        img: "http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg",
+	        des: "PEOPLE",
+	        link: '/people',
+	        size: 'square'
+	      }, {
+	        img: "http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg",
+	        des: "GLOBAL COMMUNITY INITIATIVE",
+	        link: '/global-community-initiatives',
+	        size: 'square'
+	      }, {
+	        img: "http://s12.favim.com/610/160527/adidas-beautiful-fashion-girl-Favim.com-4351007.jpeg",
+	        des: "WHAT'S NEW",
+	        link: '/whats-new',
+	        size: 'square'
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Home, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Frame2.default, { pictures: this.state.pictures })
+	      );
+	    }
+	  }]);
+
+	  return Home;
+	}(_react2.default.Component);
+
+	exports.default = Home;
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Frame = __webpack_require__(252);
+
+	var _Frame2 = _interopRequireDefault(_Frame);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var About = function (_React$Component) {
+	  _inherits(About, _React$Component);
+
+	  function About(props) {
+	    _classCallCheck(this, About);
+
+	    var _this = _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).call(this, props));
+
+	    _this.state = {
+	      pictures: [{
+	        img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
+	        des: "HISTORY",
+	        link: '/who-we-are/history'
+	      }, {
+	        img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
+	        des: "CULTURE & CORE VALUES",
+	        link: '/who-we-are/culture-core-values'
+	      }, {
+	        img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
+	        des: "EXECUTIVE OFFICERS",
+	        link: '/who-we-are/executive-officers'
+	      }, {
+	        img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
+	        des: "OUR PARTNERS",
+	        link: '/who-we-are/our-partners'
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(About, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'h3',
+	          null,
+	          'Title'
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          null,
+	          'First Glory first glory First Glory first glory First Glory first glory First Glory first glory First Glory first glory '
+	        ),
+	        _react2.default.createElement(_Frame2.default, { pictures: this.state.pictures })
+	      );
+	    }
+	  }]);
+
+	  return About;
+	}(_react2.default.Component);
+
+	exports.default = About;
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Frame = __webpack_require__(252);
+
+	var _Frame2 = _interopRequireDefault(_Frame);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Home = function (_React$Component) {
+	  _inherits(Home, _React$Component);
+
+	  function Home(props) {
+	    _classCallCheck(this, Home);
+
+	    var _this = _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).call(this, props));
+
+	    _this.state = {
+	      pictures: [{
+	        img: "http://iris.backcountry.com/image/view/c311028/900/900",
+	        des: "MEN",
+	        link: '/products/men'
+	      }, {
+	        img: "http://www.toadandco.com/images/product/610/T1241603-669-16.jpg",
+	        des: "WOMEN",
+	        link: '/products/women'
+	      }, {
+	        img: "https://s-media-cache-ak0.pinimg.com/736x/62/ec/92/62ec926e8a63ae7a60a68a97d70540a0.jpg",
+	        des: "CHILDREN",
+	        link: '/products/children'
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Home, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Frame2.default, { pictures: this.state.pictures })
+	      );
+	    }
+	  }]);
+
+	  return Home;
+	}(_react2.default.Component);
+
+	exports.default = Home;
+
+/***/ },
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38103,62 +38358,7 @@
 	exports.default = People;
 
 /***/ },
-/* 248 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Products = function (_React$Component) {
-	  _inherits(Products, _React$Component);
-
-	  function Products() {
-	    _classCallCheck(this, Products);
-
-	    return _possibleConstructorReturn(this, (Products.__proto__ || Object.getPrototypeOf(Products)).apply(this, arguments));
-	  }
-
-	  _createClass(Products, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        'PRODUCTS'
-	      );
-	    }
-	  }]);
-
-	  return Products;
-	}(_react2.default.Component);
-
-	exports.default = Products;
-
-/***/ },
-/* 249 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38211,6 +38411,333 @@
 	}(_react2.default.Component);
 
 	exports.default = Community;
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var News = function (_React$Component) {
+	  _inherits(News, _React$Component);
+
+	  function News() {
+	    _classCallCheck(this, News);
+
+	    return _possibleConstructorReturn(this, (News.__proto__ || Object.getPrototypeOf(News)).apply(this, arguments));
+	  }
+
+	  _createClass(News, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        'WHAT\'S NEW'
+	      );
+	    }
+	  }]);
+
+	  return News;
+	}(_react2.default.Component);
+
+	exports.default = News;
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _List = __webpack_require__(261);
+
+	var _List2 = _interopRequireDefault(_List);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var History = function (_React$Component) {
+	  _inherits(History, _React$Component);
+
+	  function History(props) {
+	    _classCallCheck(this, History);
+
+	    var _this = _possibleConstructorReturn(this, (History.__proto__ || Object.getPrototypeOf(History)).call(this, props));
+
+	    _this.state = {
+	      items: [{
+	        img: "https://journalcinelyon1.files.wordpress.com/2015/06/mermet.jpg",
+	        title: "The First Store & Mission",
+	        des: 'The year was 1970. Dick Hayne was just 23 years old when he and college roommate Scott Belair came up with the idea to open a retail store. Belair was in search of a topic for an entrepreneurial class he was taking at the time. The first store, originally called Free People, was located in a small space across the street from the University of Pennsylvania. Its mission was to provide second-hand clothing, furniture, jewelry and home décor for college-aged customers in a casual fun environment.'
+	      }, {
+	        img: "https://journalcinelyon1.files.wordpress.com/2015/06/mermet.jpg",
+	        title: "The First Store & Mission",
+	        des: 'The year was 1970. Dick Hayne was just 23 years old when he and college roommate Scott Belair came up with the idea to open a retail store. Belair was in search of a topic for an entrepreneurial class he was taking at the time. The first store, originally called Free People, was located in a small space across the street from the University of Pennsylvania. Its mission was to provide second-hand clothing, furniture, jewelry and home décor for college-aged customers in a casual fun environment.'
+	      }, {
+	        img: "https://journalcinelyon1.files.wordpress.com/2015/06/mermet.jpg",
+	        title: "The First Store & Mission",
+	        des: 'The year was 1970. Dick Hayne was just 23 years old when he and college roommate Scott Belair came up with the idea to open a retail store. Belair was in search of a topic for an entrepreneurial class he was taking at the time. The first store, originally called Free People, was located in a small space across the street from the University of Pennsylvania. Its mission was to provide second-hand clothing, furniture, jewelry and home décor for college-aged customers in a casual fun environment.'
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(History, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_List2.default, { items: this.state.items })
+	      );
+	    }
+	  }]);
+
+	  return History;
+	}(_react2.default.Component);
+
+	exports.default = History;
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var List = function (_React$Component) {
+	  _inherits(List, _React$Component);
+
+	  function List() {
+	    _classCallCheck(this, List);
+
+	    return _possibleConstructorReturn(this, (List.__proto__ || Object.getPrototypeOf(List)).apply(this, arguments));
+	  }
+
+	  _createClass(List, [{
+	    key: 'render',
+	    value: function render() {
+	      var items = this.props.items;
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'frame row' },
+	        _react2.default.createElement(
+	          'ul',
+	          { className: 'mobile-padding-right-20' },
+	          items.map(function (item) {
+	            return _react2.default.createElement(
+	              'li',
+	              { className: 'list-list' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'list-image col-xs-12 col-sm-6' },
+	                _react2.default.createElement('img', { className: 'list-picture', src: item.img })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'list-text col-xs-12 col-sm-6' },
+	                _react2.default.createElement(
+	                  'h5',
+	                  { className: 'list-title' },
+	                  item.title
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'list-des' },
+	                  item.des
+	                )
+	              )
+	            );
+	          })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return List;
+	}(_react2.default.Component);
+
+	exports.default = List;
+
+/***/ },
+/* 262 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(263);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(243)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./list.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./list.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(242)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@media (min-width: 767px) {\n  .list-list {\n    display: -webkit-inline-box; }\n  .mobile-padding-right-20 {\n    padding-right: 0 !important; } }\n\n.mobile-padding-right-20 {\n  padding-right: 20px; }\n  .mobile-padding-right-20 .list-list {\n    margin-bottom: 10px; }\n    .mobile-padding-right-20 .list-list .list-image {\n      margin-bottom: 10px; }\n      .mobile-padding-right-20 .list-list .list-image .list-picture {\n        width: 100%; }\n    .mobile-padding-right-20 .list-list .list-text .list-title {\n      margin: 0 0 5px 0; }\n    .mobile-padding-right-20 .list-list .list-text .list-des {\n      margin: 0 0 10px 0; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _List = __webpack_require__(261);
+
+	var _List2 = _interopRequireDefault(_List);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Culture = function (_React$Component) {
+	  _inherits(Culture, _React$Component);
+
+	  function Culture(props) {
+	    _classCallCheck(this, Culture);
+
+	    var _this = _possibleConstructorReturn(this, (Culture.__proto__ || Object.getPrototypeOf(Culture)).call(this, props));
+
+	    _this.state = {
+	      items: [{
+	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
+	        title: "Fostering Creativity",
+	        des: 'Creativity is in the fabric of all we do. It’s tangible in our store windows, our clothes and our incredible employee talent. It’s obvious when you realize no two store windows are the same and we wouldn’t want it any other way. At URBN, we welcome all ideas no matter how big or small. Check out the photos below to see our creativity at work.'
+	      }, {
+	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
+	        title: "Fostering Creativity",
+	        des: 'Creativity is in the fabric of all we do. It’s tangible in our store windows, our clothes and our incredible employee talent. It’s obvious when you realize no two store windows are the same and we wouldn’t want it any other way. At URBN, we welcome all ideas no matter how big or small. Check out the photos below to see our creativity at work.'
+	      }, {
+	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
+	        title: "Fostering Creativity",
+	        des: 'Creativity is in the fabric of all we do. It’s tangible in our store windows, our clothes and our incredible employee talent. It’s obvious when you realize no two store windows are the same and we wouldn’t want it any other way. At URBN, we welcome all ideas no matter how big or small. Check out the photos below to see our creativity at work.'
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Culture, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_List2.default, { items: this.state.items })
+	      );
+	    }
+	  }]);
+
+	  return Culture;
+	}(_react2.default.Component);
+
+	exports.default = Culture;
 
 /***/ }
 /******/ ]);

@@ -3,7 +3,7 @@
   overflow: hidden;
   position: relative;
   background-color: rgba(0, 0, 0, 0.025);
-  padding-bottom: 68.193548%;
+  padding-bottom: 100%;
 }
 
 .picture {    
@@ -15,18 +15,31 @@
   display: block;
 }
 
-
-
 ul {
   list-style: none;
   padding-left: 20px;
+  li.picture-link {
+    padding-bottom: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Patrick Hand SC', cursive;
+    font-weight: bold;
+    .rectangle {
+      padding-bottom: 49.193548387096776%;
+      margin-bottom: -1px;
+    }
+  }
 }
 
-li.picture-link {
-  padding-bottom: 15px;
-  padding-right: 5px;
-  padding-left: 5px;
-  font-family: 'Permanent Marker', cursive;
+@media (max-width: 1200px) {
+  .rectangle {
+    padding-bottom: 100% !important;
+    img.picture {
+      width: inherit;
+      left: -50%;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -43,15 +56,42 @@ li.picture-link {
   display: table;
 }
 
-.text:hover {
-  color: orange;
+@media (min-width: 1200px) {
+  .text {
+    height: 285.83px;
+  }
 }
+
+@media (min-width: 992px) {
+  .text {
+    height: 307.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .text {
+    height: 307.5px;
+  }
+}
+
 
 p.picture-des {
   font-size: -webkit-xxx-large;
   text-align: center; 
   vertical-align: middle;
   display: table-cell;  
-  height: 200px;
+  margin: auto 0;
+  text-shadow: 0px 0px 1px #F8F8FF  , -1px -1px #F8F8FF , 1px 1px #F8F8FF;
 }
 
+.picture-link:hover {
+  .text {
+    color: darkred;
+    p.picture-des {
+      text-shadow: 0px 0px 1px darkred  , -1px -1px darkred , 1px 1px darkred;
+    }
+  }
+  .picture {
+    opacity: 0.5;
+  }  
+}

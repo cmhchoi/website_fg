@@ -2,25 +2,49 @@ import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import App from './components/app.jsx';
-import Home from './components/home.jsx';
-import About from './components/about.jsx';
-import Products from './components/products.jsx';
-import People from './components/people.jsx';
-import Community from './components/community.jsx';
-import News from './components/news.jsx';
+import App from './components/App.jsx';
+import Home from './containers/Home.jsx';
+import About from './containers/About.jsx';
+import Products from './containers/Products.jsx';
+import People from './containers/People.jsx';
+import Community from './containers/Community.jsx';
+import News from './containers/News.jsx';
+import History from './containers/History.jsx';
+import Culture from './containers/Culture.jsx';
+//import Men from './containers/Men.jsx';
 
 require('./styles/app.scss');
 require('./styles/frame.scss');
+require('./styles/list.scss');
 
 render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home} />
+      <IndexRoute component={Home} /> 
       <Route path="who-we-are" component={About} />
+      <Route path="who-we-are/history" component={History} />
+      <Route path="who-we-are/culture-core-values" component={Culture} />
+      <Route path="who-we-are/executive-officers" component={History} />
+      <Route path="who-we-are/our-partners" component={History} />
       <Route path="products" component={Products} />
+      <Route path="products/category" component={Products} />
+      <Route path="products/category/men" component={Products} />
+      <Route path="products/category/women" component={Products} />
+      <Route path="products/category/children" component={Products} />
+      <Route path="products/materials" component={Products} />
+      <Route path="products/techniques" component={Products} />
       <Route path="people" component={People} />
+      <Route path="people/where-we-work" component={People} />
+      <Route path="people/where-we-work/offices" component={People} />
+      <Route path="people/where-we-work/factories" component={People} />
+      <Route path="people/story" component={People} />
+      <Route path="people/jobs" component={People} />
       <Route path="global-community-initiatives" component={Community} />
+      <Route path="global-community-initiatives/sustainability" component={Community} />
+      <Route path="global-community-initiatives/charitable-programmes" component={Community} />
+      <Route path="global-community-initiatives/practices" component={Community} />
+      <Route path="global-community-initiatives/responsibility" component={Community} />
+      <Route path="global-community-initiatives/collaboration" component={Community} />
       <Route path="whats-new" component={News} />
     </Route>
   </Router>

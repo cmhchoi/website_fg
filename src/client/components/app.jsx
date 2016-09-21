@@ -3,42 +3,17 @@ import { IndexLink, Link } from 'react-router';
 import $ from "jquery";
 
 export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      // gallery
-      // portfolio
-      // factories
-      // directors
-      // news
-    };
-  }
-
-  componentWillMount() {
-    //API call for data
-    // this.serverRequest = $.get("https://demo2697834.mockable.io/movies", data => {
-    //   this.setState({
-    //     videos: data.entries,
-    //   });
-    // });
-  }
-
-
-              // <IndexLink className="navbar-brand" to={{ pathname: '/' }}>
-              //   <img src="assets/images/logo.png" alt="Dispute Bills" />
-              // </IndexLink>
 
   render() {
     return (
       <div>
         <div className="container">
-          <div className="logo col-lg-1 col-sm-2 hidden-xs">
+          <div className="logo col-lg-offset-1 col-lg-1 col-sm-2 hidden-xs">
             <IndexLink to={{ pathname: '/' }}>
               <img className="logo-img" src="assets/images/logo1.png" alt="Dispute Bills" />
             </IndexLink>
           </div>
-          <div className="content col-lg-11 col-xs-12 col-sm-10">
+          <div className="content col-lg-9 col-xs-12 col-sm-10">
             <nav className="navbar navbar-default">
               <div className="navbar-header">
                 <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
@@ -64,6 +39,22 @@ export default class App extends React.Component {
             <div className="content">
               {this.props.children}
             </div>
+            <footer className="footer">
+              <nav className="navbar navbar-default">
+                <div className="" id="footer-body">
+                    <ul className="nav navbar-nav navbar-right">
+                        <li className="foot-list"><a href="#">繁</a></li>
+                        <li className="foot-list"><a href="#">簡</a></li>
+                        <li className="foot-list"><a href="#">Contact Us</a></li>
+                        <li className="foot-list"><a href="#">Site Map</a></li>
+                        <li className="foot-list"><a href="#">Terms of Use</a></li>
+                        <li className="foot-list"><a href="#">Privacy Policy</a></li>
+                        <li className="foot-list"><a href="https://www.facebook.com/firstgloryltd/">Facebook</a></li>
+                    </ul>
+                </div>
+              </nav>
+              <p>2016 First Glory Ltd. All Rights Reserved</p>
+            </footer>
           </div>
         </div>
       </div>
