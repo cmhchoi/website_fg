@@ -102,6 +102,10 @@
 
 	var _Category2 = _interopRequireDefault(_Category);
 
+	var _Where = __webpack_require__(345);
+
+	var _Where2 = _interopRequireDefault(_Where);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	__webpack_require__(240);
@@ -129,7 +133,7 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/materials', component: _Products2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/techniques', component: _Products2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people', component: _People2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work', component: _Where2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work/offices', component: _People2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work/factories', component: _People2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/story', component: _People2.default }),
@@ -39125,7 +39129,7 @@
 	                'div',
 	                { className: 'list-text col-xs-12 col-sm-6' },
 	                _react2.default.createElement(
-	                  'h5',
+	                  'h4',
 	                  { className: 'list-title' },
 	                  item.title
 	                ),
@@ -39182,7 +39186,7 @@
 
 
 	// module
-	exports.push([module.id, "@media (min-width: 767px) {\n  .list-list {\n    display: -webkit-inline-box; }\n  .mobile-padding-right-20 {\n    padding-right: 0 !important; } }\n\n.mobile-padding-right-20 {\n  padding-right: 20px; }\n  .mobile-padding-right-20 .list-list {\n    margin-bottom: 10px; }\n    .mobile-padding-right-20 .list-list .list-image {\n      margin-bottom: 10px; }\n      .mobile-padding-right-20 .list-list .list-image .list-picture {\n        width: 100%; }\n    .mobile-padding-right-20 .list-list .list-text .list-title {\n      margin: 0 0 5px 0; }\n    .mobile-padding-right-20 .list-list .list-text .list-des {\n      margin: 0 0 10px 0; }\n", ""]);
+	exports.push([module.id, "@media (min-width: 767px) {\n  .list-list {\n    display: -webkit-inline-box; }\n  .mobile-padding-right-20 {\n    padding-right: 0 !important; } }\n\n.mobile-padding-right-20 {\n  padding-right: 20px; }\n  .mobile-padding-right-20 .list-list {\n    margin-bottom: 10px; }\n    .mobile-padding-right-20 .list-list .list-image {\n      margin-bottom: 10px; }\n      .mobile-padding-right-20 .list-list .list-image .list-picture {\n        width: 100%; }\n    .mobile-padding-right-20 .list-list .list-text {\n      font-family: \"Raleway\", \"sans-serif\"; }\n      .mobile-padding-right-20 .list-list .list-text .list-title {\n        margin: 0 0 5px 0;\n        font-weight: bold; }\n      .mobile-padding-right-20 .list-list .list-text .list-des {\n        margin: 0 0 10px 0; }\n", ""]);
 
 	// exports
 
@@ -41634,6 +41638,190 @@
 	  else this.add(className)
 	}
 
+
+/***/ },
+/* 343 */,
+/* 344 */,
+/* 345 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Directory = __webpack_require__(346);
+
+	var _Directory2 = _interopRequireDefault(_Directory);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Culture = function (_React$Component) {
+	  _inherits(Culture, _React$Component);
+
+	  function Culture(props) {
+	    _classCallCheck(this, Culture);
+
+	    var _this = _possibleConstructorReturn(this, (Culture.__proto__ || Object.getPrototypeOf(Culture)).call(this, props));
+
+	    _this.state = {
+	      items: [{
+	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
+	        title: "Our Offices",
+	        link: "/people/where-we-work/offices",
+	        locations: ["Hong Kong", "Zhong Shan, China", "Cebu, Philippines"]
+
+	      }, {
+	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
+	        title: "Our Factories",
+	        link: "/people/where-we-work/factories",
+	        des: 'Creativity is in the fabric of all we do. It’s tangible in our store windows, our clothes and our incredible employee talent. It’s obvious when you realize no two store windows are the same and we wouldn’t want it any other way. At URBN, we welcome all ideas no matter how big or small. Check out the photos below to see our creativity at work.'
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Culture, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Directory2.default, { items: this.state.items })
+	      );
+	    }
+	  }]);
+
+	  return Culture;
+	}(_react2.default.Component);
+
+	exports.default = Culture;
+
+/***/ },
+/* 346 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Directory = function (_React$Component) {
+	  _inherits(Directory, _React$Component);
+
+	  function Directory() {
+	    _classCallCheck(this, Directory);
+
+	    return _possibleConstructorReturn(this, (Directory.__proto__ || Object.getPrototypeOf(Directory)).apply(this, arguments));
+	  }
+
+	  _createClass(Directory, [{
+	    key: 'render',
+	    value: function render() {
+	      var items = this.props.items;
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'frame row' },
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          items.map(function () {
+	            return _react2.default.createElement(
+	              'li',
+	              { className: 'col-xs-12 col-sm-12 col-lg-6' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'directory-picture' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: item.link } },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'text' },
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'picture-des' },
+	                      item.des
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'picture-container rectangle large-no-rectangle' },
+	                    _react2.default.createElement('img', { className: 'picture', src: item.img })
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'directory-text' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  item.title
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  item.pointOne
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  item.pointTwo
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  item.pointThree
+	                )
+	              )
+	            );
+	          })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Directory;
+	}(_react2.default.Component);
+
+	exports.default = Directory;
 
 /***/ }
 /******/ ]);

@@ -14,6 +14,7 @@ import Culture from './containers/Culture.jsx';
 import Men from './containers/Men.jsx';
 import Partners from './containers/Partners.jsx';
 import Category from './containers/Category.jsx';
+import Where from './containers/Where.jsx';
 
 require('./styles/app.scss');
 require('./styles/frame.scss');
@@ -37,7 +38,7 @@ render(
       <Route path="products/materials" component={Products} />
       <Route path="products/techniques" component={Products} />
       <Route path="people" component={People} />
-      <Route path="people/where-we-work" component={People} />
+      <Route path="people/where-we-work" component={Where} />
       <Route path="people/where-we-work/offices" component={People} />
       <Route path="people/where-we-work/factories" component={People} />
       <Route path="people/story" component={People} />
