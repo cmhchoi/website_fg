@@ -40,8 +40,12 @@ export default class About extends React.Component {
   render() {
     return(
       <div>
-      	<h3>Title</h3>
-      	<p>First Glory first glory First Glory first glory First Glory first glory First Glory first glory First Glory first glory </p>
+        <div className="row">
+          <div className="col-xs-12 text-body">
+          	<h3>Title</h3>
+          	<p>First Glory first glory First Glory first glory First Glory first glory First Glory first glory First Glory first glory </p>
+          </div>
+        </div>
         <Frame pictures={this.state.pictures}/>
       </div>
     )

@@ -13,7 +13,10 @@ export default class Frame extends React.Component {
     }
   }
 
+  // determine whether to render Frame as link to the next page or to modal lightbox
+  // images is an array in the form of: [{type1: [], type2: []}]
   linkToModal(picture, images) {
+    // when triggered, this opens the modal lightbox and determines which selection of images to choose from
     const openLightbox = (picture) => {
       this.setState({ 
         isOpen: true,
@@ -50,6 +53,7 @@ export default class Frame extends React.Component {
       );
     }
     if(images) {
+      // picture is passed down to openLightbox so that it can pick the correct selection based on picture.des
       return(
         <a href="#" onClick={() => openLightbox(picture)}>
           <div className="text">
@@ -75,6 +79,8 @@ export default class Frame extends React.Component {
     }
   }
 
+  // basic frame of mobile-12 small-6 large-4 (except when there are two pictures only, in which case large-6)
+  // special means two pictures only
   normalFrame(pictures, special) {
     let listClass = "col-xs-12 col-sm-6 picture-link";
     special === "special" ? listClass += " col-lg-6" : listClass += " col-lg-4"
@@ -257,6 +263,7 @@ export default class Frame extends React.Component {
   render() {
     const pictures = this.props.pictures;
 
+    // example 4, 7, 10 pictures
     if(pictures.length % 3 === 1 && pictures.length !== 1) {
 
       const topRects = [];
@@ -273,6 +280,7 @@ export default class Frame extends React.Component {
         }
       })
       
+      // example 7, 13 pictures
       if(pictures.length % 2 === 1) {
         return(
           <div className="frame row">
@@ -282,6 +290,7 @@ export default class Frame extends React.Component {
             </ul>
           </div>
         )
+      // example 4, 10 pictures
       } else {
         return(
           <div className="frame row">
@@ -293,6 +302,7 @@ export default class Frame extends React.Component {
         )
       }
 
+    // example 5, 8, 11 pictures
     } else if(pictures.length % 3 === 2 && pictures.length !== 2) {
 
       const topRects = [];
@@ -309,6 +319,7 @@ export default class Frame extends React.Component {
         }
       })
 
+      // example 5, 11 pictures
       if(pictures.length % 2 === 1) {
         return(
           <div className="frame row">
@@ -318,6 +329,7 @@ export default class Frame extends React.Component {
             </ul>
           </div>
         )
+      // example 8, 14 pictures
       } else {
         return(
           <div className="frame row">
@@ -329,6 +341,7 @@ export default class Frame extends React.Component {
         )
       }
 
+    // 3 pictures
     } else if(pictures.length % 2 === 1) {
 
       const topRects = [];
@@ -351,6 +364,7 @@ export default class Frame extends React.Component {
         </div>
       )
 
+    // example 2, 6 pictures
     } else {
 
       return(
