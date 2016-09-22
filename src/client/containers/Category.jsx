@@ -11,20 +11,20 @@ export default class Home extends React.Component {
       pictures: [
         {
           img: "http://images.contentful.com/x3a5wchdg6mu/17oZuNZe9MWeKeww02CGGy/74d0f98d64a52b6737c888e13f2c6c25/GANT_Recreation_Nature_5_greybg_16x9.jpg?q=75&fl=progressive&w=1536&h=768&fit=thumb&f=left",
-          des: "CATEGORY",
-          link: '/products/category',
+          des: "MEN",
+          link: '/products/category/men',
           size: 'rectangle'
         },
         {
           img: "http://www.toadandco.com/images/product/610/T1241603-669-16.jpg",
-          des: "MATERIALS USED",
-          link: '/products/materials',
+          des: "WOMEN",
+          link: '/products/category/women',
           size: 'square'
         },
         {
           img: "https://s-media-cache-ak0.pinimg.com/736x/62/ec/92/62ec926e8a63ae7a60a68a97d70540a0.jpg",
-          des: "TECHNIQUES",
-          link: '/products/techniques',
+          des: "CHILDREN",
+          link: '/products/category/children',
           size: 'square'
         },
       ],

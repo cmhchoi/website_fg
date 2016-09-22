@@ -10,15 +10,23 @@
   font-size: 18px;
   line-height: 20px;
 	img {
-    padding: 7px 15px;
+    padding: 0 0;
     height: 100%;
     width: auto;
     display: block;
 	}
 }
 
+.bumper {
+}
+
 .navbar-default {
-	background-color: transparent;
+  background-color: transparent;
+}
+
+.top-nav {
+	background-color: white;
+  z-index: 200;
 }
 
 .navbar {
@@ -31,6 +39,11 @@
   margin-bottom: 15px;
   margin-right: -10px;
   margin-left: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#navbar2 {
+  float: right;
 }
 
 .logo-img {

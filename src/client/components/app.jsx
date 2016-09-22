@@ -1,6 +1,11 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
 import $ from "jquery";
+          // <div className="logo col-lg-offset-1 col-lg-1 col-sm-2 hidden-xs">
+            // <IndexLink to={{ pathname: '/' }}>
+              // <img className="logo-img" src="assets/images/logo1.png" alt="Dispute Bills" />
+            // </IndexLink>
+          // </div>
 
 export default class App extends React.Component {
 
@@ -8,13 +13,8 @@ export default class App extends React.Component {
     return (
       <div>
         <div className="container">
-          <div className="logo col-lg-offset-1 col-lg-1 col-sm-2 hidden-xs">
-            <IndexLink to={{ pathname: '/' }}>
-              <img className="logo-img" src="assets/images/logo1.png" alt="Dispute Bills" />
-            </IndexLink>
-          </div>
-          <div className="content col-lg-9 col-xs-12 col-sm-10">
-            <nav className="navbar navbar-default">
+          <div className="content col-lg-offset-1 col-lg-10 col-xs-12 col-sm-12">
+            <nav className="top-nav navbar navbar-default">
               <div className="navbar-header">
                 <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
                   <span className="sr-only">Toggle navigation</span>
@@ -22,8 +22,8 @@ export default class App extends React.Component {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                 </button>
-                <IndexLink className="navbar-brand collapsed" to={{ pathname: '/' }}>
-                  <img className="nav-logo-img visible-xs" src="assets/images/logo.png" alt="First Glory" />
+                <IndexLink className="navbar-brand" to={{ pathname: '/' }}>
+                  <img className="nav-logo-img" src="assets/images/logo2.jpg" alt="First Glory" />
                 </IndexLink>
               </div>
               <div id="navbar2" className="navbar-collapse collapse">
@@ -36,6 +36,7 @@ export default class App extends React.Component {
                 </ul>
               </div>
             </nav>
+            <div className="bumper"></div>
             <div className="content">
               {this.props.children}
             </div>

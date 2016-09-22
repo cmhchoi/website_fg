@@ -1,7 +1,79 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Lightbox from 'react-image-lightbox';
 
 export default class Frame extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      index: 0,
+      isOpen: false,
+      type: null,
+    }
+  }
+
+  linkToModal(picture, images) {
+    const openLightbox = (picture) => {
+      this.setState({ 
+        isOpen: true,
+        type: picture.des,
+      });
+    }
+
+    const closeLightbox = () => {
+      this.setState({ isOpen: false });
+    }
+    
+    const moveNext = () => {
+      this.setState({ index: (this.state.index + 1) % images[0][this.state.type].length });
+    }
+    
+    const movePrev = () => {
+      this.setState({ index: (this.state.index + images[0][this.state.type].length - 1) % images[0][this.state.type].length });
+    }
+
+    let lightbox = '';
+    if(this.state.isOpen) {
+      lightbox = (
+        <div>
+          <Lightbox
+          mainSrc={images[0][this.state.type][this.state.index]}
+          nextSrc={images[0][this.state.type][(this.state.index + 1) % images.length]}
+          prevSrc={images[0][this.state.type][(this.state.index + images.length - 1) % images.length]}
+
+          onCloseRequest={closeLightbox}
+          onMovePrevRequest={movePrev}
+          onMoveNextRequest={moveNext}
+          />
+        </div>
+      );
+    }
+    if(images) {
+      return(
+        <a href="#" onClick={() => openLightbox(picture)}>
+          <div className="text">
+            <p className="picture-des">{picture.des}</p>
+          </div>
+          <div className="picture-container">
+            <img className="picture" src={picture.img}/>
+          </div>
+          {lightbox}
+        </a>
+      )
+    } else {
+      return(
+        <Link to={{ pathname: picture.link }}>
+          <div className="text">
+            <p className="picture-des">{picture.des}</p>
+          </div>
+          <div className="picture-container">
+            <img className="picture" src={picture.img}/>
+          </div>
+        </Link>
+      )
+    }
+  }
 
   normalFrame(pictures, special) {
     let listClass = "col-xs-12 col-sm-6 picture-link";
@@ -10,14 +82,7 @@ export default class Frame extends React.Component {
       return( 
         <div>
           <li className={listClass}>
-            <Link to={{ pathname: picture.link }}>
-              <div className="text">
-                <p className="picture-des">{picture.des}</p>
-              </div>
-              <div className="picture-container">
-                <img className="picture" src={picture.img}/>
-              </div>
-            </Link>
+            {this.linkToModal(picture, this.props.images)}
           </li>
         </div>
       )
@@ -291,7 +356,7 @@ export default class Frame extends React.Component {
       return(
         <div className="frame row">
           <ul>
-            {this.normalFrame(pictures, "special")}
+            {pictures.length === 2 ? this.normalFrame(pictures, "special") : this.normalFrame(pictures)}
           </ul>
         </div>
       )

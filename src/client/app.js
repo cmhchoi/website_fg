@@ -11,11 +11,14 @@ import Community from './containers/Community.jsx';
 import News from './containers/News.jsx';
 import History from './containers/History.jsx';
 import Culture from './containers/Culture.jsx';
-//import Men from './containers/Men.jsx';
+import Men from './containers/Men.jsx';
+import Partners from './containers/Partners.jsx';
+import Category from './containers/Category.jsx';
 
 require('./styles/app.scss');
 require('./styles/frame.scss');
 require('./styles/list.scss');
+require('./styles/bulletin.scss');
 
 render(
   <Router history={browserHistory}>
@@ -25,10 +28,10 @@ render(
       <Route path="who-we-are/history" component={History} />
       <Route path="who-we-are/culture-core-values" component={Culture} />
       <Route path="who-we-are/executive-officers" component={History} />
-      <Route path="who-we-are/our-partners" component={History} />
+      <Route path="who-we-are/our-partners" component={Partners} />
       <Route path="products" component={Products} />
-      <Route path="products/category" component={Products} />
-      <Route path="products/category/men" component={Products} />
+      <Route path="products/category" component={Category} />
+      <Route path="products/category/men" component={Men} />
       <Route path="products/category/women" component={Products} />
       <Route path="products/category/children" component={Products} />
       <Route path="products/materials" component={Products} />
