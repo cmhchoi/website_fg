@@ -126,6 +126,10 @@
 
 	var _Terms2 = _interopRequireDefault(_Terms);
 
+	var _Contact = __webpack_require__(352);
+
+	var _Contact2 = _interopRequireDefault(_Contact);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	__webpack_require__(240);
@@ -165,7 +169,8 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/responsibility', component: _Community2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/collaboration', component: _Community2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'whats-new', component: _News2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'terms-of-use', component: _Terms2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: 'terms-of-use', component: _Terms2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'contact-us', component: _Contact2.default })
 	  )
 	), document.getElementById('app'));
 
@@ -37310,7 +37315,7 @@
 
 
 	// module
-	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 0 0;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.top-nav {\n  background-color: white;\n  z-index: 200; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px;\n  font-family: 'Raleway', sans-serif; }\n\n#navbar2 {\n  float: right; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px;\n    font-family: \"Raleway\", \"sans-serif\"; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n\n.text-body {\n  padding-left: 25px;\n  font-family: 'Raleway', sans-serif; }\n", ""]);
+	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 0 0;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.top-nav {\n  background-color: white;\n  z-index: 200; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px;\n  font-family: 'Raleway', sans-serif; }\n\n#navbar2 {\n  float: right; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px;\n    font-family: \"Raleway\", \"sans-serif\"; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n\nh4, h3 {\n  font-weight: bold; }\n\n.grey {\n  color: grey; }\n\n.underline {\n  text-decoration: underline; }\n\n.text-body {\n  padding-left: 25px;\n  font-family: 'Raleway', sans-serif; }\n", ""]);
 
 	// exports
 
@@ -38275,7 +38280,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        'a',
-	                        { href: '#' },
+	                        { href: '/contact-us' },
 	                        'Contact Us'
 	                      )
 	                    ),
@@ -41816,16 +41821,16 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var About = function (_React$Component) {
-	  _inherits(About, _React$Component);
+	var Terms = function (_React$Component) {
+	  _inherits(Terms, _React$Component);
 
-	  function About() {
-	    _classCallCheck(this, About);
+	  function Terms() {
+	    _classCallCheck(this, Terms);
 
-	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Terms.__proto__ || Object.getPrototypeOf(Terms)).apply(this, arguments));
 	  }
 
-	  _createClass(About, [{
+	  _createClass(Terms, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -41883,10 +41888,10 @@
 	    }
 	  }]);
 
-	  return About;
+	  return Terms;
 	}(_react2.default.Component);
 
-	exports.default = About;
+	exports.default = Terms;
 
 /***/ },
 /* 350 */
@@ -42067,6 +42072,127 @@
 	}(_react2.default.Component);
 
 	exports.default = Children;
+
+/***/ },
+/* 352 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Contact = function (_React$Component) {
+	  _inherits(Contact, _React$Component);
+
+	  function Contact() {
+	    _classCallCheck(this, Contact);
+
+	    return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
+	  }
+
+	  _createClass(Contact, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 text-body' },
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Email'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              _react2.default.createElement(
+	                'a',
+	                { className: 'grey underline', href: 'mailto:info@firstglory.com' },
+	                'info@firstglory.com'
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Hong Kong'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '11B&D, Ka To Factory Building 2 Cheung Yue Street, Lai Chi Kok, Kowloon, Hong Kong'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '(852) 23073020/ (852) 23073091'
+	            ),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Zhongshan, China'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '1 Jiankang Road, Shapingcun, Shaxi, Zhongshan, Guangdong, China'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '(86) 0760-87326630 / 0760-87330330'
+	            ),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Cebu, Philippines'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '3rd Floor, Sudecor Building, MEPZ 1, Gate 2, Lapu-lapu City, Cebu, Philippines'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              '(63) 32-495-5177'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Contact;
+	}(_react2.default.Component);
+
+	exports.default = Contact;
 
 /***/ }
 /******/ ]);

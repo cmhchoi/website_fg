@@ -20,6 +20,7 @@ import Where from './containers/Where.jsx';
 import Materials from './containers/Materials.jsx';
 import Techniques from './containers/Techniques.jsx';
 import Terms from './containers/Terms.jsx';
+import Contact from './containers/Contact.jsx';
 
 require('./styles/app.scss');
 require('./styles/frame.scss');
@@ -56,6 +57,7 @@ render(
       <Route path="global-community-initiatives/collaboration" component={Community} />
       <Route path="whats-new" component={News} />
       <Route path="terms-of-use" component={Terms} />
+      <Route path="contact-us" component={Contact} />
     </Route>
   </Router>
   , document.getElementById('app')
