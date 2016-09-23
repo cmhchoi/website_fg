@@ -15,7 +15,7 @@ export default class Frame extends React.Component {
 
   // determine whether to render Frame as link to the next page or to modal lightbox
   // images is an array in the form of: [{type1: [], type2: []}]
-  linkToModal(picture, images) {
+  linkToModal(picture, images, extraClass) {
     // when triggered, this opens the modal lightbox and determines which selection of images to choose from
     const openLightbox = (picture) => {
       this.setState({ 
@@ -52,6 +52,10 @@ export default class Frame extends React.Component {
         </div>
       );
     }
+
+    let pictureContainer = "picture-container ";
+    extraClass ? pictureContainer += extraClass : pictureContainer;
+
     if(images) {
       // picture is passed down to openLightbox so that it can pick the correct selection based on picture.des
       return(
@@ -59,7 +63,7 @@ export default class Frame extends React.Component {
           <div className="text">
             <p className="picture-des">{picture.des}</p>
           </div>
-          <div className="picture-container">
+          <div className={pictureContainer}>
             <img className="picture" src={picture.img}/>
           </div>
           {lightbox}
@@ -71,7 +75,7 @@ export default class Frame extends React.Component {
           <div className="text">
             <p className="picture-des">{picture.des}</p>
           </div>
-          <div className="picture-container">
+          <div className={pictureContainer}>
             <img className="picture" src={picture.img}/>
           </div>
         </Link>
@@ -99,14 +103,7 @@ export default class Frame extends React.Component {
     return (
       <div>
         <li className="col-xs-12 col-sm-12 col-lg-4 picture-link">
-          <Link to={{ pathname: rectangles[0].link }}>
-            <div className="text">
-              <p className="picture-des">{rectangles[0].des}</p>
-            </div>
-            <div className="picture-container rectangle large-no-rectangle">
-              <img className="picture" src={rectangles[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(rectangles[0], this.props.images, "rectangle large-no-rectangle")}
         </li>
       </div>
     )
@@ -116,24 +113,10 @@ export default class Frame extends React.Component {
     return (
       <div>
         <li className="col-xs-12 col-sm-6 col-lg-8 picture-link">
-          <Link to={{ pathname: rectangles[0].link }}>
-            <div className="text">
-              <p className="picture-des">{rectangles[0].des}</p>
-            </div>
-            <div className="picture-container rectangle mid-no-rectangle">
-              <img className="picture" src={rectangles[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(rectangles[0], this.props.images, "rectangle mid-no-rectangle")}
         </li>
         <li className="col-xs-12 col-sm-6 col-lg-4 picture-link">
-          <Link to={{ pathname: squares[0].link }}>
-            <div className="text">
-              <p className="picture-des">{squares[0].des}</p>
-            </div>
-            <div className="picture-container">
-              <img className="picture" src={squares[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(squares[0], this.props.images,)}
         </li>
       </div>
     )
@@ -143,44 +126,16 @@ export default class Frame extends React.Component {
     return (
       <div>
         <li className="col-xs-12 col-sm-6 col-lg-8 picture-link">
-          <Link to={{ pathname: rectangles[0].link }}>
-            <div className="text">
-              <p className="picture-des">{rectangles[0].des}</p>
-            </div>
-            <div className="picture-container rectangle mid-no-rectangle">
-              <img className="picture" src={rectangles[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(rectangles[0], this.props.images, "rectangle mid-no-rectangle")}
         </li>
         <li className="col-xs-12 col-sm-6 col-lg-4 picture-link">
-          <Link to={{ pathname: squares[0].link }}>
-            <div className="text">
-              <p className="picture-des">{squares[0].des}</p>
-            </div>
-            <div className="picture-container">
-              <img className="picture" src={squares[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(squares[0], this.props.images)}
         </li>
         <li className="col-xs-12 col-sm-6 col-lg-4 picture-link">
-          <Link to={{ pathname: squares[1].link }}>
-            <div className="text">
-              <p className="picture-des">{squares[1].des}</p>
-            </div>
-            <div className="picture-container">
-              <img className="picture" src={squares[1].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(squares[1], this.props.images)}
         </li>
         <li className="col-xs-12 col-sm-6 col-lg-8 picture-link">
-          <Link to={{ pathname: rectangles[1].link }}>
-            <div className="text">
-              <p className="picture-des">{rectangles[1].des}</p>
-            </div>
-            <div className="picture-container rectangle mid-no-rectangle">
-              <img className="picture" src={rectangles[1].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(rectangles[1], this.props.images, "rectangle mid-no-rectangle")}
         </li>
       </div>
     )
@@ -190,44 +145,16 @@ export default class Frame extends React.Component {
     return (
       <div>
         <li className="col-xs-12 col-sm-12 col-lg-8 picture-link">
-          <Link to={{ pathname: rectangles[0].link }}>
-            <div className="text">
-              <p className="picture-des">{rectangles[0].des}</p>
-            </div>
-            <div className="picture-container rectangle">
-              <img className="picture" src={rectangles[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(rectangles[0], this.props.images, "rectangle")}
         </li>
         <li className="col-xs-12 col-sm-6 col-lg-4 picture-link">
-          <Link to={{ pathname: squares[0].link }}>
-            <div className="text">
-              <p className="picture-des">{squares[0].des}</p>
-            </div>
-            <div className="picture-container">
-              <img className="picture" src={squares[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(squares[0], this.props.images)}
         </li>
         <li className="col-xs-12 col-sm-6 col-lg-4 picture-link">
-          <Link to={{ pathname: squares[1].link }}>
-            <div className="text">
-              <p className="picture-des">{squares[1].des}</p>
-            </div>
-            <div className="picture-container rectangle">
-              <img className="picture" src={squares[1].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(squares[1], this.props.images)}
         </li>
         <li className="col-xs-12 col-sm-6 col-lg-8 picture-link">
-          <Link to={{ pathname: rectangles[1].link }}>
-            <div className="text">
-              <p className="picture-des">{rectangles[1].des}</p>
-            </div>
-            <div className="picture-container rectangle">
-              <img className="picture" src={rectangles[1].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(rectangles[1], this.props.images, "rectangle")}
         </li>
       </div>
     )
@@ -237,24 +164,10 @@ export default class Frame extends React.Component {
     return (
       <div>
         <li className="col-xs-12 col-sm-12 col-lg-8 picture-link">
-          <Link to={{ pathname: rectangles[0].link }}>
-            <div className="text">
-              <p className="picture-des">{rectangles[0].des}</p>
-            </div>
-            <div className="picture-container rectangle">
-              <img className="picture" src={rectangles[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(rectangles[0], this.props.images, "rectangle")}
         </li>
         <li className="col-xs-12 col-sm-6 col-lg-4 picture-link">
-          <Link to={{ pathname: squares[0].link }}>
-            <div className="text">
-              <p className="picture-des">{squares[0].des}</p>
-            </div>
-            <div className="picture-container">
-              <img className="picture" src={squares[0].img}/>
-            </div>
-          </Link>
+          {this.linkToModal(squares[0], this.props.images)}
         </li>
       </div>
     )

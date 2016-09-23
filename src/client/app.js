@@ -12,9 +12,14 @@ import News from './containers/News.jsx';
 import History from './containers/History.jsx';
 import Culture from './containers/Culture.jsx';
 import Men from './containers/Men.jsx';
+import Women from './containers/Women.jsx';
+import Children from './containers/Children.jsx';
 import Partners from './containers/Partners.jsx';
 import Category from './containers/Category.jsx';
 import Where from './containers/Where.jsx';
+import Materials from './containers/Materials.jsx';
+import Techniques from './containers/Techniques.jsx';
+import Terms from './containers/Terms.jsx';
 
 require('./styles/app.scss');
 require('./styles/frame.scss');
@@ -33,10 +38,10 @@ render(
       <Route path="products" component={Products} />
       <Route path="products/category" component={Category} />
       <Route path="products/category/men" component={Men} />
-      <Route path="products/category/women" component={Products} />
-      <Route path="products/category/children" component={Products} />
-      <Route path="products/materials" component={Products} />
-      <Route path="products/techniques" component={Products} />
+      <Route path="products/category/women" component={Women} />
+      <Route path="products/category/children" component={Children} />
+      <Route path="products/materials" component={Materials} />
+      <Route path="products/techniques" component={Techniques} />
       <Route path="people" component={People} />
       <Route path="people/where-we-work" component={Where} />
       <Route path="people/where-we-work/offices" component={People} />
@@ -50,6 +55,7 @@ render(
       <Route path="global-community-initiatives/responsibility" component={Community} />
       <Route path="global-community-initiatives/collaboration" component={Community} />
       <Route path="whats-new" component={News} />
+      <Route path="terms-of-use" component={Terms} />
     </Route>
   </Router>
   , document.getElementById('app')

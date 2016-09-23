@@ -94,6 +94,14 @@
 
 	var _Men2 = _interopRequireDefault(_Men);
 
+	var _Women = __webpack_require__(350);
+
+	var _Women2 = _interopRequireDefault(_Women);
+
+	var _Children = __webpack_require__(351);
+
+	var _Children2 = _interopRequireDefault(_Children);
+
 	var _Partners = __webpack_require__(266);
 
 	var _Partners2 = _interopRequireDefault(_Partners);
@@ -105,6 +113,18 @@
 	var _Where = __webpack_require__(345);
 
 	var _Where2 = _interopRequireDefault(_Where);
+
+	var _Materials = __webpack_require__(347);
+
+	var _Materials2 = _interopRequireDefault(_Materials);
+
+	var _Techniques = __webpack_require__(348);
+
+	var _Techniques2 = _interopRequireDefault(_Techniques);
+
+	var _Terms = __webpack_require__(349);
+
+	var _Terms2 = _interopRequireDefault(_Terms);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -128,10 +148,10 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _Products2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category', component: _Category2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/men', component: _Men2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/women', component: _Products2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/children', component: _Products2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/materials', component: _Products2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/techniques', component: _Products2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/women', component: _Women2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/children', component: _Children2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/materials', component: _Materials2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'products/techniques', component: _Techniques2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people', component: _People2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work', component: _Where2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work/offices', component: _People2.default }),
@@ -144,7 +164,8 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/practices', component: _Community2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/responsibility', component: _Community2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/collaboration', component: _Community2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'whats-new', component: _News2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: 'whats-new', component: _News2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'terms-of-use', component: _Terms2.default })
 	  )
 	), document.getElementById('app'));
 
@@ -1145,14 +1166,6 @@
 	  var source = null;
 
 	  if (config != null) {
-	    if (process.env.NODE_ENV !== 'production') {
-	      process.env.NODE_ENV !== 'production' ? warning(
-	      /* eslint-disable no-proto */
-	      config.__proto__ == null || config.__proto__ === Object.prototype,
-	      /* eslint-enable no-proto */
-	      'React.createElement(...): Expected props argument to be a plain object. ' + 'Properties defined in its prototype chain will be ignored.') : void 0;
-	    }
-
 	    if (hasValidRef(config)) {
 	      ref = config.ref;
 	    }
@@ -1253,14 +1266,6 @@
 	  var owner = element._owner;
 
 	  if (config != null) {
-	    if (process.env.NODE_ENV !== 'production') {
-	      process.env.NODE_ENV !== 'production' ? warning(
-	      /* eslint-disable no-proto */
-	      config.__proto__ == null || config.__proto__ === Object.prototype,
-	      /* eslint-enable no-proto */
-	      'React.cloneElement(...): Expected props argument to be a plain object. ' + 'Properties defined in its prototype chain will be ignored.') : void 0;
-	    }
-
 	    if (hasValidRef(config)) {
 	      // Silently steal the ref from the parent.
 	      ref = config.ref;
@@ -4294,7 +4299,7 @@
 
 	'use strict';
 
-	module.exports = '15.3.1';
+	module.exports = '15.3.2';
 
 /***/ },
 /* 33 */
@@ -5276,8 +5281,10 @@
 	function getFallbackBeforeInputChars(topLevelType, nativeEvent) {
 	  // If we are currently composing (IME) and using a fallback to do so,
 	  // try to extract the composed characters from the fallback object.
+	  // If composition event is available, we extract a string only at
+	  // compositionevent, otherwise extract it at fallback events.
 	  if (currentComposition) {
-	    if (topLevelType === topLevelTypes.topCompositionEnd || isFallbackCompositionEnd(topLevelType, nativeEvent)) {
+	    if (topLevelType === topLevelTypes.topCompositionEnd || !canUseCompositionEvent && isFallbackCompositionEnd(topLevelType, nativeEvent)) {
 	      var chars = currentComposition.getData();
 	      FallbackCompositionState.release(currentComposition);
 	      currentComposition = null;
@@ -6886,7 +6893,8 @@
 
 	    if (event.preventDefault) {
 	      event.preventDefault();
-	    } else {
+	    } else if (typeof event.returnValue !== 'unknown') {
+	      // eslint-disable-line valid-typeof
 	      event.returnValue = false;
 	    }
 	    this.isDefaultPrevented = emptyFunction.thatReturnsTrue;
@@ -7143,7 +7151,7 @@
 	var doesChangeEventBubble = false;
 	if (ExecutionEnvironment.canUseDOM) {
 	  // See `handleChange` comment below
-	  doesChangeEventBubble = isEventSupported('change') && (!('documentMode' in document) || document.documentMode > 8);
+	  doesChangeEventBubble = isEventSupported('change') && (!document.documentMode || document.documentMode > 8);
 	}
 
 	function manualDispatchChangeEvent(nativeEvent) {
@@ -7209,7 +7217,7 @@
 	  // deleting text, so we ignore its input events.
 	  // IE10+ fire input events to often, such when a placeholder
 	  // changes or when an input with a placeholder is focused.
-	  isInputEventSupported = isEventSupported('input') && (!('documentMode' in document) || document.documentMode > 11);
+	  isInputEventSupported = isEventSupported('input') && (!document.documentMode || document.documentMode > 11);
 	}
 
 	/**
@@ -8438,12 +8446,6 @@
 	    endLifeCycleTimer(debugID, timerType);
 	    emitEvent('onEndLifeCycleTimer', debugID, timerType);
 	  },
-	  onError: function (debugID) {
-	    if (currentTimerDebugID != null) {
-	      endLifeCycleTimer(currentTimerDebugID, currentTimerType);
-	    }
-	    emitEvent('onError', debugID);
-	  },
 	  onBeginProcessingChildContext: function () {
 	    emitEvent('onBeginProcessingChildContext');
 	  },
@@ -9517,6 +9519,8 @@
 	    allowFullScreen: HAS_BOOLEAN_VALUE,
 	    allowTransparency: 0,
 	    alt: 0,
+	    // specifies target context for links with `preload` type
+	    as: 0,
 	    async: HAS_BOOLEAN_VALUE,
 	    autoComplete: 0,
 	    // autoFocus is polyfilled/normalized by AutoFocusUtils
@@ -9597,6 +9601,7 @@
 	    optimum: 0,
 	    pattern: 0,
 	    placeholder: 0,
+	    playsInline: HAS_BOOLEAN_VALUE,
 	    poster: 0,
 	    preload: 0,
 	    profile: 0,
@@ -10119,9 +10124,9 @@
 	  if (node.namespaceURI === DOMNamespaces.svg && !('innerHTML' in node)) {
 	    reusableSVGContainer = reusableSVGContainer || document.createElement('div');
 	    reusableSVGContainer.innerHTML = '<svg>' + html + '</svg>';
-	    var newNodes = reusableSVGContainer.firstChild.childNodes;
-	    for (var i = 0; i < newNodes.length; i++) {
-	      node.appendChild(newNodes[i]);
+	    var svgNode = reusableSVGContainer.firstChild;
+	    while (svgNode.firstChild) {
+	      node.appendChild(svgNode.firstChild);
 	    }
 	  } else {
 	    node.innerHTML = html;
@@ -11049,9 +11054,9 @@
 	  ReactDOMOption.postMountWrapper(inst);
 	}
 
-	var setContentChildForInstrumentation = emptyFunction;
+	var setAndValidateContentChildDev = emptyFunction;
 	if (process.env.NODE_ENV !== 'production') {
-	  setContentChildForInstrumentation = function (content) {
+	  setAndValidateContentChildDev = function (content) {
 	    var hasExistingContent = this._contentDebugID != null;
 	    var debugID = this._debugID;
 	    // This ID represents the inlined child that has no backing instance:
@@ -11065,6 +11070,7 @@
 	      return;
 	    }
 
+	    validateDOMNesting(null, String(content), this, this._ancestorInfo);
 	    this._contentDebugID = contentDebugID;
 	    if (hasExistingContent) {
 	      ReactInstrumentation.debugTool.onBeforeUpdateComponent(contentDebugID, content);
@@ -11239,7 +11245,7 @@
 	  this._flags = 0;
 	  if (process.env.NODE_ENV !== 'production') {
 	    this._ancestorInfo = null;
-	    setContentChildForInstrumentation.call(this, null);
+	    setAndValidateContentChildDev.call(this, null);
 	  }
 	}
 
@@ -11339,7 +11345,7 @@
 	      if (parentInfo) {
 	        // parentInfo should always be present except for the top-level
 	        // component when server rendering
-	        validateDOMNesting(this._tag, this, parentInfo);
+	        validateDOMNesting(this._tag, null, this, parentInfo);
 	      }
 	      this._ancestorInfo = validateDOMNesting.updatedAncestorInfo(parentInfo, this._tag, this);
 	    }
@@ -11508,7 +11514,7 @@
 	        // TODO: Validate that text is allowed as a child of this node
 	        ret = escapeTextContentForBrowser(contentToUse);
 	        if (process.env.NODE_ENV !== 'production') {
-	          setContentChildForInstrumentation.call(this, contentToUse);
+	          setAndValidateContentChildDev.call(this, contentToUse);
 	        }
 	      } else if (childrenToUse != null) {
 	        var mountImages = this.mountChildren(childrenToUse, transaction, context);
@@ -11545,7 +11551,7 @@
 	      if (contentToUse != null) {
 	        // TODO: Validate that text is allowed as a child of this node
 	        if (process.env.NODE_ENV !== 'production') {
-	          setContentChildForInstrumentation.call(this, contentToUse);
+	          setAndValidateContentChildDev.call(this, contentToUse);
 	        }
 	        DOMLazyTree.queueText(lazyTree, contentToUse);
 	      } else if (childrenToUse != null) {
@@ -11777,7 +11783,7 @@
 	      if (lastContent !== nextContent) {
 	        this.updateTextContent('' + nextContent);
 	        if (process.env.NODE_ENV !== 'production') {
-	          setContentChildForInstrumentation.call(this, nextContent);
+	          setAndValidateContentChildDev.call(this, nextContent);
 	        }
 	      }
 	    } else if (nextHtml != null) {
@@ -11789,7 +11795,7 @@
 	      }
 	    } else if (nextChildren != null) {
 	      if (process.env.NODE_ENV !== 'production') {
-	        setContentChildForInstrumentation.call(this, null);
+	        setAndValidateContentChildDev.call(this, null);
 	      }
 
 	      this.updateChildren(nextChildren, transaction, context);
@@ -11844,7 +11850,7 @@
 	    this._wrapperState = null;
 
 	    if (process.env.NODE_ENV !== 'production') {
-	      setContentChildForInstrumentation.call(this, null);
+	      setAndValidateContentChildDev.call(this, null);
 	    }
 	  },
 
@@ -13117,6 +13123,19 @@
 	  },
 
 	  /**
+	   * Protect against document.createEvent() returning null
+	   * Some popup blocker extensions appear to do this:
+	   * https://github.com/facebook/react/issues/6887
+	   */
+	  supportsEventPageXY: function () {
+	    if (!document.createEvent) {
+	      return false;
+	    }
+	    var ev = document.createEvent('MouseEvent');
+	    return ev != null && 'pageX' in ev;
+	  },
+
+	  /**
 	   * Listens to window scroll and resize events. We cache scroll values so that
 	   * application code can access them without triggering reflows.
 	   *
@@ -13129,7 +13148,7 @@
 	   */
 	  ensureScrollValueMonitoring: function () {
 	    if (hasEventPageXY === undefined) {
-	      hasEventPageXY = document.createEvent && 'pageX' in document.createEvent('MouseEvent');
+	      hasEventPageXY = ReactBrowserEventEmitter.supportsEventPageXY();
 	    }
 	    if (!hasEventPageXY && !isMonitoringScrollValue) {
 	      var refresh = ViewportMetrics.refreshScrollValues;
@@ -13415,7 +13434,7 @@
 
 	function isControlled(props) {
 	  var usesChecked = props.type === 'checkbox' || props.type === 'radio';
-	  return usesChecked ? props.checked !== undefined : props.value !== undefined;
+	  return usesChecked ? props.checked != null : props.value != null;
 	}
 
 	/**
@@ -15188,34 +15207,29 @@
 	  }
 	}
 
-	function invokeComponentDidMountWithTimer() {
-	  var publicInstance = this._instance;
-	  if (this._debugID !== 0) {
-	    ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'componentDidMount');
-	  }
-	  publicInstance.componentDidMount();
-	  if (this._debugID !== 0) {
-	    ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'componentDidMount');
-	  }
-	}
-
-	function invokeComponentDidUpdateWithTimer(prevProps, prevState, prevContext) {
-	  var publicInstance = this._instance;
-	  if (this._debugID !== 0) {
-	    ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'componentDidUpdate');
-	  }
-	  publicInstance.componentDidUpdate(prevProps, prevState, prevContext);
-	  if (this._debugID !== 0) {
-	    ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'componentDidUpdate');
-	  }
-	}
-
 	function shouldConstruct(Component) {
 	  return !!(Component.prototype && Component.prototype.isReactComponent);
 	}
 
 	function isPureComponent(Component) {
 	  return !!(Component.prototype && Component.prototype.isPureReactComponent);
+	}
+
+	// Separated into a function to contain deoptimizations caused by try/finally.
+	function measureLifeCyclePerf(fn, debugID, timerType) {
+	  if (debugID === 0) {
+	    // Top-level wrappers (see ReactMount) and empty components (see
+	    // ReactDOMEmptyComponent) are invisible to hooks and devtools.
+	    // Both are implementation details that should go away in the future.
+	    return fn();
+	  }
+
+	  ReactInstrumentation.debugTool.onBeginLifeCycleTimer(debugID, timerType);
+	  try {
+	    return fn();
+	  } finally {
+	    ReactInstrumentation.debugTool.onEndLifeCycleTimer(debugID, timerType);
+	  }
 	}
 
 	/**
@@ -15309,6 +15323,8 @@
 	   * @internal
 	   */
 	  mountComponent: function (transaction, hostParent, hostContainerInfo, context) {
+	    var _this = this;
+
 	    this._context = context;
 	    this._mountOrder = nextMountID++;
 	    this._hostParent = hostParent;
@@ -15398,7 +15414,11 @@
 
 	    if (inst.componentDidMount) {
 	      if (process.env.NODE_ENV !== 'production') {
-	        transaction.getReactMountReady().enqueue(invokeComponentDidMountWithTimer, this);
+	        transaction.getReactMountReady().enqueue(function () {
+	          measureLifeCyclePerf(function () {
+	            return inst.componentDidMount();
+	          }, _this._debugID, 'componentDidMount');
+	        });
 	      } else {
 	        transaction.getReactMountReady().enqueue(inst.componentDidMount, inst);
 	      }
@@ -15422,35 +15442,26 @@
 
 	  _constructComponentWithoutOwner: function (doConstruct, publicProps, publicContext, updateQueue) {
 	    var Component = this._currentElement.type;
-	    var instanceOrElement;
+
 	    if (doConstruct) {
 	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'ctor');
-	        }
-	      }
-	      instanceOrElement = new Component(publicProps, publicContext, updateQueue);
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'ctor');
-	        }
-	      }
-	    } else {
-	      // This can still be an instance in case of factory components
-	      // but we'll count this as time spent rendering as the more common case.
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'render');
-	        }
-	      }
-	      instanceOrElement = Component(publicProps, publicContext, updateQueue);
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'render');
-	        }
+	        return measureLifeCyclePerf(function () {
+	          return new Component(publicProps, publicContext, updateQueue);
+	        }, this._debugID, 'ctor');
+	      } else {
+	        return new Component(publicProps, publicContext, updateQueue);
 	      }
 	    }
-	    return instanceOrElement;
+
+	    // This can still be an instance in case of factory components
+	    // but we'll count this as time spent rendering as the more common case.
+	    if (process.env.NODE_ENV !== 'production') {
+	      return measureLifeCyclePerf(function () {
+	        return Component(publicProps, publicContext, updateQueue);
+	      }, this._debugID, 'render');
+	    } else {
+	      return Component(publicProps, publicContext, updateQueue);
+	    }
 	  },
 
 	  performInitialMountWithErrorHandling: function (renderedElement, hostParent, hostContainerInfo, transaction, context) {
@@ -15459,11 +15470,6 @@
 	    try {
 	      markup = this.performInitialMount(renderedElement, hostParent, hostContainerInfo, transaction, context);
 	    } catch (e) {
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onError();
-	        }
-	      }
 	      // Roll back to checkpoint, handle error (which may add items to the transaction), and take a new checkpoint
 	      transaction.rollback(checkpoint);
 	      this._instance.unstable_handleError(e);
@@ -15484,17 +15490,19 @@
 
 	  performInitialMount: function (renderedElement, hostParent, hostContainerInfo, transaction, context) {
 	    var inst = this._instance;
+
+	    var debugID = 0;
+	    if (process.env.NODE_ENV !== 'production') {
+	      debugID = this._debugID;
+	    }
+
 	    if (inst.componentWillMount) {
 	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'componentWillMount');
-	        }
-	      }
-	      inst.componentWillMount();
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'componentWillMount');
-	        }
+	        measureLifeCyclePerf(function () {
+	          return inst.componentWillMount();
+	        }, debugID, 'componentWillMount');
+	      } else {
+	        inst.componentWillMount();
 	      }
 	      // When mounting, calls to `setState` by `componentWillMount` will set
 	      // `this._pendingStateQueue` without triggering a re-render.
@@ -15514,15 +15522,12 @@
 	    );
 	    this._renderedComponent = child;
 
-	    var selfDebugID = 0;
-	    if (process.env.NODE_ENV !== 'production') {
-	      selfDebugID = this._debugID;
-	    }
-	    var markup = ReactReconciler.mountComponent(child, transaction, hostParent, hostContainerInfo, this._processChildContext(context), selfDebugID);
+	    var markup = ReactReconciler.mountComponent(child, transaction, hostParent, hostContainerInfo, this._processChildContext(context), debugID);
 
 	    if (process.env.NODE_ENV !== 'production') {
-	      if (this._debugID !== 0) {
-	        ReactInstrumentation.debugTool.onSetChildren(this._debugID, child._debugID !== 0 ? [child._debugID] : []);
+	      if (debugID !== 0) {
+	        var childDebugIDs = child._debugID !== 0 ? [child._debugID] : [];
+	        ReactInstrumentation.debugTool.onSetChildren(debugID, childDebugIDs);
 	      }
 	    }
 
@@ -15543,24 +15548,22 @@
 	    if (!this._renderedComponent) {
 	      return;
 	    }
+
 	    var inst = this._instance;
 
 	    if (inst.componentWillUnmount && !inst._calledComponentWillUnmount) {
 	      inst._calledComponentWillUnmount = true;
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'componentWillUnmount');
-	        }
-	      }
+
 	      if (safely) {
 	        var name = this.getName() + '.componentWillUnmount()';
 	        ReactErrorUtils.invokeGuardedCallback(name, inst.componentWillUnmount.bind(inst));
 	      } else {
-	        inst.componentWillUnmount();
-	      }
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'componentWillUnmount');
+	        if (process.env.NODE_ENV !== 'production') {
+	          measureLifeCyclePerf(function () {
+	            return inst.componentWillUnmount();
+	          }, this._debugID, 'componentWillUnmount');
+	        } else {
+	          inst.componentWillUnmount();
 	        }
 	      }
 	    }
@@ -15647,13 +15650,21 @@
 	  _processChildContext: function (currentContext) {
 	    var Component = this._currentElement.type;
 	    var inst = this._instance;
-	    if (process.env.NODE_ENV !== 'production') {
-	      ReactInstrumentation.debugTool.onBeginProcessingChildContext();
+	    var childContext;
+
+	    if (inst.getChildContext) {
+	      if (process.env.NODE_ENV !== 'production') {
+	        ReactInstrumentation.debugTool.onBeginProcessingChildContext();
+	        try {
+	          childContext = inst.getChildContext();
+	        } finally {
+	          ReactInstrumentation.debugTool.onEndProcessingChildContext();
+	        }
+	      } else {
+	        childContext = inst.getChildContext();
+	      }
 	    }
-	    var childContext = inst.getChildContext && inst.getChildContext();
-	    if (process.env.NODE_ENV !== 'production') {
-	      ReactInstrumentation.debugTool.onEndProcessingChildContext();
-	    }
+
 	    if (childContext) {
 	      !(typeof Component.childContextTypes === 'object') ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getChildContext(): childContextTypes must be defined in order to use getChildContext().', this.getName() || 'ReactCompositeComponent') : _prodInvariant('107', this.getName() || 'ReactCompositeComponent') : void 0;
 	      if (process.env.NODE_ENV !== 'production') {
@@ -15748,15 +15759,11 @@
 	    // immediately reconciled instead of waiting for the next batch.
 	    if (willReceive && inst.componentWillReceiveProps) {
 	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'componentWillReceiveProps');
-	        }
-	      }
-	      inst.componentWillReceiveProps(nextProps, nextContext);
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'componentWillReceiveProps');
-	        }
+	        measureLifeCyclePerf(function () {
+	          return inst.componentWillReceiveProps(nextProps, nextContext);
+	        }, this._debugID, 'componentWillReceiveProps');
+	      } else {
+	        inst.componentWillReceiveProps(nextProps, nextContext);
 	      }
 	    }
 
@@ -15766,15 +15773,11 @@
 	    if (!this._pendingForceUpdate) {
 	      if (inst.shouldComponentUpdate) {
 	        if (process.env.NODE_ENV !== 'production') {
-	          if (this._debugID !== 0) {
-	            ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'shouldComponentUpdate');
-	          }
-	        }
-	        shouldUpdate = inst.shouldComponentUpdate(nextProps, nextState, nextContext);
-	        if (process.env.NODE_ENV !== 'production') {
-	          if (this._debugID !== 0) {
-	            ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'shouldComponentUpdate');
-	          }
+	          shouldUpdate = measureLifeCyclePerf(function () {
+	            return inst.shouldComponentUpdate(nextProps, nextState, nextContext);
+	          }, this._debugID, 'shouldComponentUpdate');
+	        } else {
+	          shouldUpdate = inst.shouldComponentUpdate(nextProps, nextState, nextContext);
 	        }
 	      } else {
 	        if (this._compositeType === CompositeTypes.PureClass) {
@@ -15840,6 +15843,8 @@
 	   * @private
 	   */
 	  _performComponentUpdate: function (nextElement, nextProps, nextState, nextContext, transaction, unmaskedContext) {
+	    var _this2 = this;
+
 	    var inst = this._instance;
 
 	    var hasComponentDidUpdate = Boolean(inst.componentDidUpdate);
@@ -15854,15 +15859,11 @@
 
 	    if (inst.componentWillUpdate) {
 	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'componentWillUpdate');
-	        }
-	      }
-	      inst.componentWillUpdate(nextProps, nextState, nextContext);
-	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'componentWillUpdate');
-	        }
+	        measureLifeCyclePerf(function () {
+	          return inst.componentWillUpdate(nextProps, nextState, nextContext);
+	        }, this._debugID, 'componentWillUpdate');
+	      } else {
+	        inst.componentWillUpdate(nextProps, nextState, nextContext);
 	      }
 	    }
 
@@ -15876,7 +15877,9 @@
 
 	    if (hasComponentDidUpdate) {
 	      if (process.env.NODE_ENV !== 'production') {
-	        transaction.getReactMountReady().enqueue(invokeComponentDidUpdateWithTimer.bind(this, prevProps, prevState, prevContext), this);
+	        transaction.getReactMountReady().enqueue(function () {
+	          measureLifeCyclePerf(inst.componentDidUpdate.bind(inst, prevProps, prevState, prevContext), _this2._debugID, 'componentDidUpdate');
+	        });
 	      } else {
 	        transaction.getReactMountReady().enqueue(inst.componentDidUpdate.bind(inst, prevProps, prevState, prevContext), inst);
 	      }
@@ -15893,6 +15896,12 @@
 	    var prevComponentInstance = this._renderedComponent;
 	    var prevRenderedElement = prevComponentInstance._currentElement;
 	    var nextRenderedElement = this._renderValidatedComponent();
+
+	    var debugID = 0;
+	    if (process.env.NODE_ENV !== 'production') {
+	      debugID = this._debugID;
+	    }
+
 	    if (shouldUpdateReactComponent(prevRenderedElement, nextRenderedElement)) {
 	      ReactReconciler.receiveComponent(prevComponentInstance, nextRenderedElement, transaction, this._processChildContext(context));
 	    } else {
@@ -15905,15 +15914,12 @@
 	      );
 	      this._renderedComponent = child;
 
-	      var selfDebugID = 0;
-	      if (process.env.NODE_ENV !== 'production') {
-	        selfDebugID = this._debugID;
-	      }
-	      var nextMarkup = ReactReconciler.mountComponent(child, transaction, this._hostParent, this._hostContainerInfo, this._processChildContext(context), selfDebugID);
+	      var nextMarkup = ReactReconciler.mountComponent(child, transaction, this._hostParent, this._hostContainerInfo, this._processChildContext(context), debugID);
 
 	      if (process.env.NODE_ENV !== 'production') {
-	        if (this._debugID !== 0) {
-	          ReactInstrumentation.debugTool.onSetChildren(this._debugID, child._debugID !== 0 ? [child._debugID] : []);
+	        if (debugID !== 0) {
+	          var childDebugIDs = child._debugID !== 0 ? [child._debugID] : [];
+	          ReactInstrumentation.debugTool.onSetChildren(debugID, childDebugIDs);
 	        }
 	      }
 
@@ -15935,17 +15941,14 @@
 	   */
 	  _renderValidatedComponentWithoutOwnerOrContext: function () {
 	    var inst = this._instance;
+	    var renderedComponent;
 
 	    if (process.env.NODE_ENV !== 'production') {
-	      if (this._debugID !== 0) {
-	        ReactInstrumentation.debugTool.onBeginLifeCycleTimer(this._debugID, 'render');
-	      }
-	    }
-	    var renderedComponent = inst.render();
-	    if (process.env.NODE_ENV !== 'production') {
-	      if (this._debugID !== 0) {
-	        ReactInstrumentation.debugTool.onEndLifeCycleTimer(this._debugID, 'render');
-	      }
+	      renderedComponent = measureLifeCyclePerf(function () {
+	        return inst.render();
+	      }, this._debugID, 'render');
+	    } else {
+	      renderedComponent = inst.render();
 	    }
 
 	    if (process.env.NODE_ENV !== 'production') {
@@ -15996,7 +15999,7 @@
 	    var publicComponentInstance = component.getPublicInstance();
 	    if (process.env.NODE_ENV !== 'production') {
 	      var componentName = component && component.getName ? component.getName() : 'a component';
-	      process.env.NODE_ENV !== 'production' ? warning(publicComponentInstance != null, 'Stateless function components cannot be given refs ' + '(See ref "%s" in %s created by %s). ' + 'Attempts to access this ref will fail.', ref, componentName, this.getName()) : void 0;
+	      process.env.NODE_ENV !== 'production' ? warning(publicComponentInstance != null || component._compositeType !== CompositeTypes.StatelessFunctional, 'Stateless function components cannot be given refs ' + '(See ref "%s" in %s created by %s). ' + 'Attempts to access this ref will fail.', ref, componentName, this.getName()) : void 0;
 	    }
 	    var refs = inst.refs === emptyObject ? inst.refs = {} : inst.refs;
 	    refs[ref] = publicComponentInstance;
@@ -17187,10 +17190,15 @@
 
 	  var didWarn = {};
 
-	  validateDOMNesting = function (childTag, childInstance, ancestorInfo) {
+	  validateDOMNesting = function (childTag, childText, childInstance, ancestorInfo) {
 	    ancestorInfo = ancestorInfo || emptyAncestorInfo;
 	    var parentInfo = ancestorInfo.current;
 	    var parentTag = parentInfo && parentInfo.tag;
+
+	    if (childText != null) {
+	      process.env.NODE_ENV !== 'production' ? warning(childTag == null, 'validateDOMNesting: when childText is passed, childTag should be null') : void 0;
+	      childTag = '#text';
+	    }
 
 	    var invalidParent = isTagValidWithParent(childTag, parentTag) ? null : parentInfo;
 	    var invalidAncestor = invalidParent ? null : findInvalidAncestorForTag(childTag, ancestorInfo);
@@ -17239,7 +17247,15 @@
 	      didWarn[warnKey] = true;
 
 	      var tagDisplayName = childTag;
-	      if (childTag !== '#text') {
+	      var whitespaceInfo = '';
+	      if (childTag === '#text') {
+	        if (/\S/.test(childText)) {
+	          tagDisplayName = 'Text nodes';
+	        } else {
+	          tagDisplayName = 'Whitespace text nodes';
+	          whitespaceInfo = ' Make sure you don\'t have any extra whitespace between tags on ' + 'each line of your source code.';
+	        }
+	      } else {
 	        tagDisplayName = '<' + childTag + '>';
 	      }
 
@@ -17248,7 +17264,7 @@
 	        if (ancestorTag === 'table' && childTag === 'tr') {
 	          info += ' Add a <tbody> to your code to match the DOM tree generated by ' + 'the browser.';
 	        }
-	        process.env.NODE_ENV !== 'production' ? warning(false, 'validateDOMNesting(...): %s cannot appear as a child of <%s>. ' + 'See %s.%s', tagDisplayName, ancestorTag, ownerInfo, info) : void 0;
+	        process.env.NODE_ENV !== 'production' ? warning(false, 'validateDOMNesting(...): %s cannot appear as a child of <%s>.%s ' + 'See %s.%s', tagDisplayName, ancestorTag, whitespaceInfo, ownerInfo, info) : void 0;
 	      } else {
 	        process.env.NODE_ENV !== 'production' ? warning(false, 'validateDOMNesting(...): %s cannot appear as a descendant of ' + '<%s>. See %s.', tagDisplayName, ancestorTag, ownerInfo) : void 0;
 	      }
@@ -17555,7 +17571,7 @@
 	      if (parentInfo) {
 	        // parentInfo should always be present except for the top-level
 	        // component when server rendering
-	        validateDOMNesting('#text', this, parentInfo);
+	        validateDOMNesting(null, this._stringText, this, parentInfo);
 	      }
 	    }
 
@@ -19148,7 +19164,7 @@
 	      bubbled: keyOf({ onSelect: null }),
 	      captured: keyOf({ onSelectCapture: null })
 	    },
-	    dependencies: [topLevelTypes.topBlur, topLevelTypes.topContextMenu, topLevelTypes.topFocus, topLevelTypes.topKeyDown, topLevelTypes.topMouseDown, topLevelTypes.topMouseUp, topLevelTypes.topSelectionChange]
+	    dependencies: [topLevelTypes.topBlur, topLevelTypes.topContextMenu, topLevelTypes.topFocus, topLevelTypes.topKeyDown, topLevelTypes.topKeyUp, topLevelTypes.topMouseDown, topLevelTypes.topMouseUp, topLevelTypes.topSelectionChange]
 	  }
 	};
 
@@ -37707,7 +37723,7 @@
 
 	  _createClass(Frame, [{
 	    key: 'linkToModal',
-	    value: function linkToModal(picture, images) {
+	    value: function linkToModal(picture, images, extraClass) {
 	      var _this2 = this;
 
 	      // when triggered, this opens the modal lightbox and determines which selection of images to choose from
@@ -37746,6 +37762,10 @@
 	          })
 	        );
 	      }
+
+	      var pictureContainer = "picture-container ";
+	      extraClass ? pictureContainer += extraClass : pictureContainer;
+
 	      if (images) {
 	        // picture is passed down to openLightbox so that it can pick the correct selection based on picture.des
 	        return _react2.default.createElement(
@@ -37764,7 +37784,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'picture-container' },
+	            { className: pictureContainer },
 	            _react2.default.createElement('img', { className: 'picture', src: picture.img })
 	          ),
 	          lightbox
@@ -37784,7 +37804,7 @@
 	          ),
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'picture-container' },
+	            { className: pictureContainer },
 	            _react2.default.createElement('img', { className: 'picture', src: picture.img })
 	          )
 	        );
@@ -37822,24 +37842,7 @@
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-12 col-lg-4 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: rectangles[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                rectangles[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container rectangle large-no-rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
-	            )
-	          )
+	          this.linkToModal(rectangles[0], this.props.images, "rectangle large-no-rectangle")
 	        )
 	      );
 	    }
@@ -37852,46 +37855,12 @@
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: rectangles[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                rectangles[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container rectangle mid-no-rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
-	            )
-	          )
+	          this.linkToModal(rectangles[0], this.props.images, "rectangle mid-no-rectangle")
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: squares[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                squares[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container' },
-	              _react2.default.createElement('img', { className: 'picture', src: squares[0].img })
-	            )
-	          )
+	          this.linkToModal(squares[0], this.props.images)
 	        )
 	      );
 	    }
@@ -37904,90 +37873,22 @@
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: rectangles[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                rectangles[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container rectangle mid-no-rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
-	            )
-	          )
+	          this.linkToModal(rectangles[0], this.props.images, "rectangle mid-no-rectangle")
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: squares[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                squares[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container' },
-	              _react2.default.createElement('img', { className: 'picture', src: squares[0].img })
-	            )
-	          )
+	          this.linkToModal(squares[0], this.props.images)
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: squares[1].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                squares[1].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container' },
-	              _react2.default.createElement('img', { className: 'picture', src: squares[1].img })
-	            )
-	          )
+	          this.linkToModal(squares[1], this.props.images)
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: rectangles[1].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                rectangles[1].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container rectangle mid-no-rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: rectangles[1].img })
-	            )
-	          )
+	          this.linkToModal(rectangles[1], this.props.images, "rectangle mid-no-rectangle")
 	        )
 	      );
 	    }
@@ -38000,90 +37901,22 @@
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-12 col-lg-8 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: rectangles[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                rectangles[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
-	            )
-	          )
+	          this.linkToModal(rectangles[0], this.props.images, "rectangle")
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: squares[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                squares[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container' },
-	              _react2.default.createElement('img', { className: 'picture', src: squares[0].img })
-	            )
-	          )
+	          this.linkToModal(squares[0], this.props.images)
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: squares[1].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                squares[1].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: squares[1].img })
-	            )
-	          )
+	          this.linkToModal(squares[1], this.props.images)
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-8 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: rectangles[1].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                rectangles[1].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: rectangles[1].img })
-	            )
-	          )
+	          this.linkToModal(rectangles[1], this.props.images, "rectangle")
 	        )
 	      );
 	    }
@@ -38096,46 +37929,12 @@
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-12 col-lg-8 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: rectangles[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                rectangles[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container rectangle' },
-	              _react2.default.createElement('img', { className: 'picture', src: rectangles[0].img })
-	            )
-	          )
+	          this.linkToModal(rectangles[0], this.props.images, "rectangle")
 	        ),
 	        _react2.default.createElement(
 	          'li',
 	          { className: 'col-xs-12 col-sm-6 col-lg-4 picture-link' },
-	          _react2.default.createElement(
-	            _reactRouter.Link,
-	            { to: { pathname: squares[0].link } },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'text' },
-	              _react2.default.createElement(
-	                'p',
-	                { className: 'picture-des' },
-	                squares[0].des
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'picture-container' },
-	              _react2.default.createElement('img', { className: 'picture', src: squares[0].img })
-	            )
-	          )
+	          this.linkToModal(squares[0], this.props.images)
 	        )
 	      );
 	    }
@@ -38494,7 +38293,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        'a',
-	                        { href: '#' },
+	                        { href: '/terms-of-use' },
 	                        'Terms of Use'
 	                      )
 	                    ),
@@ -38771,17 +38570,17 @@
 
 	    _this.state = {
 	      pictures: [{
-	        img: "http://images.contentful.com/x3a5wchdg6mu/17oZuNZe9MWeKeww02CGGy/74d0f98d64a52b6737c888e13f2c6c25/GANT_Recreation_Nature_5_greybg_16x9.jpg?q=75&fl=progressive&w=1536&h=768&fit=thumb&f=left",
+	        img: "https://aos.iacpublishinglabs.com/question/aq/700px-394px/people-need-clothes_d330435c696a4f74.jpg?domain=cx.aos.ask.com",
 	        des: "CATEGORY",
 	        link: '/products/category',
 	        size: 'rectangle'
 	      }, {
-	        img: "http://www.toadandco.com/images/product/610/T1241603-669-16.jpg",
+	        img: "http://1.bp.blogspot.com/--5Nkk24C1Nk/VDepHENdCkI/AAAAAAAABgY/WggOTtVWLSo/s1600/Clothing%2Bmaterials.png",
 	        des: "MATERIALS USED",
 	        link: '/products/materials',
 	        size: 'square'
 	      }, {
-	        img: "https://s-media-cache-ak0.pinimg.com/736x/62/ec/92/62ec926e8a63ae7a60a68a97d70540a0.jpg",
+	        img: "http://theswatchbook.offsetwarehouse.com/wp-content/uploads/sites/5/2016/01/DSC01351WEB.jpg",
 	        des: "TECHNIQUES",
 	        link: '/products/techniques',
 	        size: 'square'
@@ -39312,7 +39111,7 @@
 	    _this.state = {
 	      pictures: [{
 	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
-	        des: "T-SHIRT",
+	        des: "T-SHIRTS",
 	        link: '/products/men',
 	        size: 'square'
 	      }, {
@@ -39321,29 +39120,21 @@
 	        link: '/products/men',
 	        size: 'square'
 	      }, {
-	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
-	        des: "T-SHIRT",
+	        img: "https://cdnc.lystit.com/1200/630/tr/photos/9b5f-2016/02/12/perry-ellis-america-white-landscape-photo-print-long-sleeve-sweatshirt-product-1-717959060-normal.jpeg",
+	        des: "KNITS",
 	        link: '/products/men',
-	        size: 'square'
+	        size: 'rectangle'
 	      }, {
-	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
-	        des: "T-SHIRT",
+	        img: "http://digitalspyuk.cdnds.net/13/02/640x320/landscape_ustv-suits-patrick-j-adams-1.jpg",
+	        des: "SUITS",
 	        link: '/products/men',
-	        size: 'square'
-	      }, {
-	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
-	        des: "T-SHIRT",
-	        link: '/products/men',
-	        size: 'square'
-	      }, {
-	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
-	        des: "T-SHIRT",
-	        link: '/products/men',
-	        size: 'square'
+	        size: 'rectangle'
 	      }],
 	      images: [{
-	        "T-SHIRT": ["http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg", "https://www.lamnia.com/images/sg-150-Shirts_and_T-Shirts.jpg", "http://market24.co/wp-content/uploads/2016/04/t473gold.jpg"],
-	        "TROUSERS": ["http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg", "https://media.frenchconnection.com/ms/fcuk/54EEZ.jpg?height=768&width=526&lc=en-GB&lv=9", "http://www.charleswall.co.uk/images/XL/GurteenTrouser1400011_202.jpg", "http://www.blitzsport.com/images/large/Adult-Classic-Polycotton-Full-Contact-Trousers-Black-Red.jpg"]
+	        "T-SHIRTS": ["http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg", "https://www.lamnia.com/images/sg-150-Shirts_and_T-Shirts.jpg", "http://market24.co/wp-content/uploads/2016/04/t473gold.jpg"],
+	        "TROUSERS": ["http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg", "https://media.frenchconnection.com/ms/fcuk/54EEZ.jpg?height=768&width=526&lc=en-GB&lv=9", "http://www.charleswall.co.uk/images/XL/GurteenTrouser1400011_202.jpg", "http://www.blitzsport.com/images/large/Adult-Classic-Polycotton-Full-Contact-Trousers-Black-Red.jpg"],
+	        "KNITS": ["https://ae01.alicdn.com/kf/HTB1YMhGKFXXXXXEXpXXq6xXFXXXN/2015-New-font-b-Men-b-font-Casual-O-neck-Pullover-Christmas-font-b-Sweater-b.jpg", "http://www.ruedeshommes.com/media/produits/img/28556-superdry-h15-pull-hudson-fairisle-henley-m61lk033-ayn-pull-tricot-hudson-superdry-acrylique-et-laine-gris-anthracite-a-motifs-1_1128x1128.jpg", "http://i2.cdscdn.com/pdt2/7/6/4/1/700x700/mp02273764/rw/subliminal-mode-pull-over-col-rond-homme-tricot.jpg", "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70430526"],
+	        "SUITS": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"]
 	      }]
 	    };
 	    return _this;
@@ -39501,15 +39292,31 @@
 	          'ul',
 	          null,
 	          items.map(function (item) {
-	            return _react2.default.createElement(
-	              'li',
-	              { className: 'bulletin-list col-xs-12 col-sm-6 col-lg-4' },
-	              _react2.default.createElement(
-	                'a',
-	                { href: item.link },
-	                item.text
-	              )
-	            );
+	            if (item.link) {
+	              return _react2.default.createElement(
+	                'li',
+	                { className: 'bulletin-list col-xs-12 col-sm-6 col-lg-4' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: item.link },
+	                    item.text
+	                  )
+	                )
+	              );
+	            } else {
+	              return _react2.default.createElement(
+	                'li',
+	                { className: 'bulletin-list col-xs-12 col-sm-6 col-lg-4' },
+	                _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  item.text
+	                )
+	              );
+	            }
 	          })
 	        )
 	      );
@@ -39556,7 +39363,7 @@
 
 
 	// module
-	exports.push([module.id, ".banner {\n  height: 300px;\n  margin-bottom: 20px;\n  padding-left: 25px;\n  padding-right: 5px; }\n  .banner img {\n    width: 100%;\n    height: inherit;\n    display: block; }\n\n@media (max-width: 768px) {\n  .banner {\n    padding-right: 30px; } }\n\n.bulletin-list {\n  text-align: center;\n  padding-top: 10px;\n  padding-bottom: 10px; }\n  .bulletin-list a {\n    color: grey;\n    font-family: 'Raleway', sans-serif;\n    background-color: oldlace;\n    padding: 10px 85px; }\n", ""]);
+	exports.push([module.id, ".banner {\n  height: 300px;\n  margin-bottom: 20px;\n  padding-left: 25px;\n  padding-right: 5px; }\n  .banner img {\n    width: 100%;\n    height: inherit;\n    display: block; }\n\n@media (max-width: 768px) {\n  .banner {\n    padding-right: 30px; } }\n\n.bulletin-list {\n  text-align: center;\n  padding-top: 10px;\n  padding-bottom: 10px; }\n  .bulletin-list p {\n    color: grey;\n    font-family: 'Raleway', sans-serif;\n    background-color: oldlace;\n    padding: 10px 85px;\n    margin: 0 0; }\n    .bulletin-list p a {\n      color: grey; }\n", ""]);
 
 	// exports
 
@@ -41822,6 +41629,444 @@
 	}(_react2.default.Component);
 
 	exports.default = Directory;
+
+/***/ },
+/* 347 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Bulletin = __webpack_require__(267);
+
+	var _Bulletin2 = _interopRequireDefault(_Bulletin);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Materials = function (_React$Component) {
+	  _inherits(Materials, _React$Component);
+
+	  function Materials(props) {
+	    _classCallCheck(this, Materials);
+
+	    var _this = _possibleConstructorReturn(this, (Materials.__proto__ || Object.getPrototypeOf(Materials)).call(this, props));
+
+	    _this.state = {
+	      items: [{
+	        text: "Cotton"
+	      }, {
+	        text: "Cotton"
+	      }, {
+	        text: "Cotton"
+	      }, {
+	        text: "Cotton"
+	      }, {
+	        text: "Cotton"
+	      }, {
+	        text: "Cotton"
+	      }, {
+	        text: "Cotton"
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Materials, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Bulletin2.default, { items: this.state.items })
+	      );
+	    }
+	  }]);
+
+	  return Materials;
+	}(_react2.default.Component);
+
+	exports.default = Materials;
+
+/***/ },
+/* 348 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Bulletin = __webpack_require__(267);
+
+	var _Bulletin2 = _interopRequireDefault(_Bulletin);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Materials = function (_React$Component) {
+	  _inherits(Materials, _React$Component);
+
+	  function Materials(props) {
+	    _classCallCheck(this, Materials);
+
+	    var _this = _possibleConstructorReturn(this, (Materials.__proto__ || Object.getPrototypeOf(Materials)).call(this, props));
+
+	    _this.state = {
+	      items: [{
+	        text: "Indigo Dye"
+	      }, {
+	        text: "Indigo Dye"
+	      }, {
+	        text: "Indigo Dye"
+	      }, {
+	        text: "Indigo Dye"
+	      }, {
+	        text: "Indigo Dye"
+	      }, {
+	        text: "Indigo Dye"
+	      }, {
+	        text: "Indigo Dye"
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Materials, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Bulletin2.default, { items: this.state.items })
+	      );
+	    }
+	  }]);
+
+	  return Materials;
+	}(_react2.default.Component);
+
+	exports.default = Materials;
+
+/***/ },
+/* 349 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var About = function (_React$Component) {
+	  _inherits(About, _React$Component);
+
+	  function About() {
+	    _classCallCheck(this, About);
+
+	    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
+	  }
+
+	  _createClass(About, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 text-body' },
+	            _react2.default.createElement(
+	              'h3',
+	              null,
+	              'Terms of Use'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'Welcome to the Urban Outfitters, Inc. (collectively with its affiliates and subsidiaries, “URBN”) site (this "Site"). We provide this Site as a service to our customers, employees, investors and the public. Please review the following terms and conditions that govern your use of our Site (this “Agreement”). Please note that your use of the Site constitutes your agreement to follow and be bound by these terms. If you do not agree to these terms, please do not use this Site. Although you may “bookmark” a particular portion of this Site and thereby bypass this Agreement, your use still binds you to the terms. We reserve the right to update or modify these terms at any time without prior notice. Your use of the Site following any such changes constitutes your agreement to follow and be bound by the terms as changed. For this reason, we encourage you to review these terms whenever you use this Site.'
+	            ),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Termination'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
+	            ),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Termination'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
+	            ),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Termination'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return About;
+	}(_react2.default.Component);
+
+	exports.default = About;
+
+/***/ },
+/* 350 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Frame = __webpack_require__(252);
+
+	var _Frame2 = _interopRequireDefault(_Frame);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Women = function (_React$Component) {
+	  _inherits(Women, _React$Component);
+
+	  function Women(props) {
+	    _classCallCheck(this, Women);
+
+	    var _this = _possibleConstructorReturn(this, (Women.__proto__ || Object.getPrototypeOf(Women)).call(this, props));
+
+	    _this.state = {
+	      pictures: [{
+	        img: "https://cdn.shopify.com/s/files/1/1099/5666/collections/Banner-tshirt-woman.jpg?v=1462258578",
+	        des: "T-SHIRTS",
+	        link: '/products/women',
+	        size: 'rectangle'
+	      }, {
+	        img: "http://www.nelsonwade.com/wp-content/uploads/2014/06/nelsonwade_custom_tailored_women_pants_trousers_med_gray_plain_front.jpg",
+	        des: "TROUSERS",
+	        link: '/products/women',
+	        size: 'square'
+	      }, {
+	        img: "http://prima.cdnds.net/assets/16/25/480x240/landscape-1466785735-knitted-lace-top.jpg",
+	        des: "KNITS",
+	        link: '/products/women',
+	        size: 'rectangle'
+	      }, {
+	        img: "http://i01.i.aliimg.com/wsphoto/v0/2030038917_1/-font-b-military-b-font-font-b-jacket-b-font-font-b-women-b-font.jpg",
+	        des: "JACKETS",
+	        link: '/products/women',
+	        size: 'square'
+	      }],
+	      images: [{
+	        "T-SHIRTS": ["http://www.escapewear.cz/277-822-thickbox/womens-t-shirt-landscape-white.jpg", "http://g01.a.alicdn.com/kf/HTB1IYWsLFXXXXcRXVXXq6xXFXXXe/Sexy-Girl-T-shirts-Girl-Fashion-printed-round-neck-Cheap-Women-T-Shirts-Top-Quality-Slim.jpg", "http://ecx.images-amazon.com/images/I/51dz%2B59wn9L._SX342_.jpg", "http://johnlewis.scene7.com/is/image/JohnLewis/002257472?$prod_main$"],
+	        "TROUSERS": ["https://www.uniqlo.com/uniqloandlemaire/16SS-common/images/itemlineup/women/172462_65_m.jpg", "https://www.uniqlo.com/UniqloU/common/images/items/item_186049_09.jpg", "https://www.uniqlo.com/uniqloandlemaire/16SS-common/images/lookbook/169060_58_m.jpg", "http://im.uniqlo.com/images/common/pc/goods/163969/item/60_163969.jpg"],
+	        "KNITS": ["http://prima.cdnds.net/assets/16/25/480x240/landscape-1466785735-knitted-lace-top.jpg", "http://thebestfashionblog.com/wp-content/uploads/2014/10/Womens-Knit-Sweaters-2015-2.jpg", "https://cdn-img-3.wanelo.com/p/7df/893/953/b549c4e454fd49c80eb723f/x354-q80.jpg", "https://s-media-cache-ak0.pinimg.com/236x/cf/c3/bd/cfc3bd9dfee9da247ef73d56eff4ce94.jpg"],
+	        "JACKETS": ["http://i01.i.aliimg.com/wsphoto/v0/2030038917_1/-font-b-military-b-font-font-b-jacket-b-font-font-b-women-b-font.jpg", "http://atmintlstyle.com/sites/default/files/Latest-Women-Quilted-Jacket.jpg", "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=90695777", "http://atmintlstyle.com/sites/default/files/SuedeStuddedWaterfallJacket.jpg"]
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Women, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Frame2.default, { pictures: this.state.pictures, images: this.state.images })
+	      );
+	    }
+	  }]);
+
+	  return Women;
+	}(_react2.default.Component);
+
+	exports.default = Women;
+
+/***/ },
+/* 351 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Frame = __webpack_require__(252);
+
+	var _Frame2 = _interopRequireDefault(_Frame);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Children = function (_React$Component) {
+	  _inherits(Children, _React$Component);
+
+	  function Children(props) {
+	    _classCallCheck(this, Children);
+
+	    var _this = _possibleConstructorReturn(this, (Children.__proto__ || Object.getPrototypeOf(Children)).call(this, props));
+
+	    _this.state = {
+	      pictures: [{
+	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
+	        des: "T-SHIRTS",
+	        link: '/products/children',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "TROUSERS",
+	        link: '/products/children',
+	        size: 'square'
+	      }, {
+	        img: "https://cdnc.lystit.com/1200/630/tr/photos/9b5f-2016/02/12/perry-ellis-america-white-landscape-photo-print-long-sleeve-sweatshirt-product-1-717959060-normal.jpeg",
+	        des: "KNITS",
+	        link: '/products/children',
+	        size: 'rectangle'
+	      }, {
+	        img: "http://digitalspyuk.cdnds.net/13/02/640x320/landscape_ustv-suits-patrick-j-adams-1.jpg",
+	        des: "SUITS",
+	        link: '/products/children',
+	        size: 'rectangle'
+	      }],
+	      images: [{
+	        "T-SHIRTS": ["http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg", "https://www.lamnia.com/images/sg-150-Shirts_and_T-Shirts.jpg", "http://market24.co/wp-content/uploads/2016/04/t473gold.jpg"],
+	        "TROUSERS": ["http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg", "https://media.frenchconnection.com/ms/fcuk/54EEZ.jpg?height=768&width=526&lc=en-GB&lv=9", "http://www.charleswall.co.uk/images/XL/GurteenTrouser1400011_202.jpg", "http://www.blitzsport.com/images/large/Adult-Classic-Polycotton-Full-Contact-Trousers-Black-Red.jpg"],
+	        "KNITS": ["https://ae01.alicdn.com/kf/HTB1YMhGKFXXXXXEXpXXq6xXFXXXN/2015-New-font-b-Men-b-font-Casual-O-neck-Pullover-Christmas-font-b-Sweater-b.jpg", "http://www.ruedeshommes.com/media/produits/img/28556-superdry-h15-pull-hudson-fairisle-henley-m61lk033-ayn-pull-tricot-hudson-superdry-acrylique-et-laine-gris-anthracite-a-motifs-1_1128x1128.jpg", "http://i2.cdscdn.com/pdt2/7/6/4/1/700x700/mp02273764/rw/subliminal-mode-pull-over-col-rond-homme-tricot.jpg", "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70430526"],
+	        "SUITS": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"]
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Children, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_Frame2.default, { pictures: this.state.pictures, images: this.state.images })
+	      );
+	    }
+	  }]);
+
+	  return Children;
+	}(_react2.default.Component);
+
+	exports.default = Children;
 
 /***/ }
 /******/ ]);

@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import $ from "jquery";
 import Frame from '../components/Frame.jsx';
 
-export default class Men extends React.Component {
+export default class Children extends React.Component {
 	constructor(props) {
     super(props);
 
@@ -12,25 +12,25 @@ export default class Men extends React.Component {
         {
           img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
           des: "T-SHIRTS",
-          link: '/products/men',
+          link: '/products/children',
           size: 'square'
         },
         {
           img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
           des: "TROUSERS",
-          link: '/products/men',
+          link: '/products/children',
           size: 'square'
         },
         {
           img: "https://cdnc.lystit.com/1200/630/tr/photos/9b5f-2016/02/12/perry-ellis-america-white-landscape-photo-print-long-sleeve-sweatshirt-product-1-717959060-normal.jpeg",
           des: "KNITS",
-          link: '/products/men',
+          link: '/products/children',
           size: 'rectangle'
         },
         {
           img: "http://digitalspyuk.cdnds.net/13/02/640x320/landscape_ustv-suits-patrick-j-adams-1.jpg",
           des: "SUITS",
-          link: '/products/men',
+          link: '/products/children',
           size: 'rectangle'
         },
       ],

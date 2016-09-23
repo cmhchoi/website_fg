@@ -48,7 +48,7 @@ export default class App extends React.Component {
                         <li className="foot-list"><a href="#">簡</a></li>
                         <li className="foot-list"><a href="#">Contact Us</a></li>
                         <li className="foot-list"><a href="#">Site Map</a></li>
-                        <li className="foot-list"><a href="#">Terms of Use</a></li>
+                        <li className="foot-list"><a href="/terms-of-use">Terms of Use</a></li>
                         <li className="foot-list"><a href="#">Privacy Policy</a></li>
                         <li className="foot-list"><a href="https://www.facebook.com/firstgloryltd/">Facebook</a></li>
                     </ul>

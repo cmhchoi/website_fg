@@ -12,11 +12,19 @@ export default class Bulletin extends React.Component {
         </div>
         <ul>
         {items.map((item) => {
-          return(
-            <li className="bulletin-list col-xs-12 col-sm-6 col-lg-4">
-              <a href={item.link}>{item.text}</a>
-            </li>
-          )
+          if(item.link) {
+            return(
+              <li className="bulletin-list col-xs-12 col-sm-6 col-lg-4">
+                <p><a href={item.link}>{item.text}</a></p>
+              </li>
+            )
+          } else {
+            return(
+              <li className="bulletin-list col-xs-12 col-sm-6 col-lg-4">
+                <p>{item.text}</p>
+              </li>
+            )
+          }
         })}
         </ul>
       </div>
