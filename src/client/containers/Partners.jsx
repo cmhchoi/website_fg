@@ -45,6 +45,15 @@ export default class Partners extends React.Component {
   render() {
     return(
       <div>
+        <div className="row">
+          <div className="col-xs-12">
+            <ol className="breadcrumb">
+              <li><a className="grey underline" href="/">Home</a></li>
+              <li><a className="grey underline" href="/who-we-are">Who We Are</a></li>
+              <li className="active">Our Partners</li>
+            </ol>
+          </div>
+        </div>
         <Bulletin items={this.state.items}/>
       </div>
     )

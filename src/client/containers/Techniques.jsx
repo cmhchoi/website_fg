@@ -38,6 +38,15 @@ export default class Materials extends React.Component {
   render() {
     return(
       <div>
+        <div className="row">
+          <div className="col-xs-12">
+            <ol className="breadcrumb">
+              <li><a className="grey underline" href="/">Home</a></li>
+              <li><a className="grey underline" href="/products">Products</a></li>
+              <li className="active">Techniques</li>
+            </ol>
+          </div>
+        </div>
         <Bulletin items={this.state.items}/>
       </div>
     )

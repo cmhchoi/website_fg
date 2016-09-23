@@ -41,6 +41,12 @@ export default class About extends React.Component {
     return(
       <div>
         <div className="row">
+          <div className="col-xs-12">
+            <ol className="breadcrumb grey underline">
+              <li><a className="grey underline" href="/">Home</a></li>
+              <li className="active">Who We Are</li>
+            </ol>
+          </div>
           <div className="col-xs-12 text-body">
           	<h3>Title</h3>
           	<p>First Glory first glory First Glory first glory First Glory first glory First Glory first glory First Glory first glory </p>

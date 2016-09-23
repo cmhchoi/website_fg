@@ -8,6 +8,12 @@ export default class Contact extends React.Component {
     return(
       <div>
         <div className="row">
+          <div className="col-xs-12">
+            <ol className="breadcrumb">
+              <li><a className="grey underline" href="/">Home</a></li>
+              <li className="active">Contact Us</li>
+            </ol>
+          </div>
           <div className="col-xs-12 text-body">
             <h4>Email</h4>
             <p>

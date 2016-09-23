@@ -34,6 +34,15 @@ export default class Home extends React.Component {
   render() {
     return(
       <div>
+        <div className="row">
+          <div className="col-xs-12">
+            <ol className="breadcrumb">
+              <li><a className="grey underline" href="/">Home</a></li>
+              <li><a className="grey underline" href="/products">Products</a></li>
+              <li className="active">Category</li>
+            </ol>
+          </div>
+        </div>
         <Frame pictures={this.state.pictures}/>
       </div>
     )
