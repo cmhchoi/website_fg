@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
-import $ from "jquery";
 import List from '../components/List.jsx'
 
 export default class History extends React.Component {

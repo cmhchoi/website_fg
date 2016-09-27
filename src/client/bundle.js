@@ -38141,12 +38141,6 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	// <div className="logo col-lg-offset-1 col-lg-1 col-sm-2 hidden-xs">
-	// <IndexLink to={{ pathname: '/' }}>
-	// <img className="logo-img" src="assets/images/logo1.png" alt="Dispute Bills" />
-	// </IndexLink>
-	// </div>
-
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
@@ -38160,7 +38154,7 @@
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      (0, _jquery2.default)(window).scroll(function () {
-	        if ((0, _jquery2.default)(document).scrollTop() > 40) {
+	        if ((0, _jquery2.default)(document).scrollTop() > 30) {
 	          (0, _jquery2.default)('.navbar-brand').removeClass('large-logo');
 	          (0, _jquery2.default)('#navbar2').removeClass('large-nav');
 	        } else {
@@ -38281,7 +38275,7 @@
 	                      'li',
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
-	                        'a',
+	                        _reactRouter.Link,
 	                        { href: '#' },
 	                        '繁'
 	                      )
@@ -38290,7 +38284,7 @@
 	                      'li',
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
-	                        'a',
+	                        _reactRouter.Link,
 	                        { href: '#' },
 	                        '簡'
 	                      )
@@ -38299,7 +38293,7 @@
 	                      'li',
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
-	                        'a',
+	                        _reactRouter.Link,
 	                        { href: '/contact-us' },
 	                        'Contact Us'
 	                      )
@@ -38308,7 +38302,7 @@
 	                      'li',
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
-	                        'a',
+	                        _reactRouter.Link,
 	                        { href: '#' },
 	                        'Site Map'
 	                      )
@@ -38317,7 +38311,7 @@
 	                      'li',
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
-	                        'a',
+	                        _reactRouter.Link,
 	                        { href: '/terms-of-use' },
 	                        'Terms of Use'
 	                      )
@@ -38326,7 +38320,7 @@
 	                      'li',
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
-	                        'a',
+	                        _reactRouter.Link,
 	                        { href: '#' },
 	                        'Privacy Policy'
 	                      )
@@ -38335,7 +38329,7 @@
 	                      'li',
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
-	                        'a',
+	                        _reactRouter.Link,
 	                        { href: 'https://www.facebook.com/firstgloryltd/' },
 	                        'Facebook'
 	                      )
@@ -38375,12 +38369,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _Frame = __webpack_require__(252);
 
@@ -38464,12 +38452,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _Frame = __webpack_require__(252);
 
@@ -38589,12 +38571,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	var _Frame = __webpack_require__(252);
 
 	var _Frame2 = _interopRequireDefault(_Frame);
@@ -38693,12 +38669,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _Frame = __webpack_require__(252);
 
@@ -38799,12 +38769,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38854,12 +38818,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38908,12 +38866,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _List = __webpack_require__(261);
 
@@ -39140,12 +39092,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	var _List = __webpack_require__(261);
 
 	var _List2 = _interopRequireDefault(_List);
@@ -39250,12 +39196,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _Frame = __webpack_require__(252);
 
@@ -39384,12 +39324,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _Bulletin = __webpack_require__(267);
 
@@ -39631,12 +39565,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _Frame = __webpack_require__(252);
 
@@ -41747,17 +41675,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	var _Directory = __webpack_require__(346);
 
 	var _Directory2 = _interopRequireDefault(_Directory);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -41776,16 +41700,16 @@
 	    _this.state = {
 	      items: [{
 	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
-	        title: "Our Offices",
 	        link: "/people/where-we-work/offices",
-	        locations: ["Hong Kong", "Zhong Shan, China", "Cebu, Philippines"]
-
-	      }, {
+	        des: "Our Offices",
+	        pointOne: "Hong Kong",
+	        pointTwo: "Zhongshan, China",
+	        pointThree: "Cebu, Philippines"
+	      }, _defineProperty({
 	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
-	        title: "Our Factories",
-	        link: "/people/where-we-work/factories",
-	        des: 'Creativity is in the fabric of all we do. It’s tangible in our store windows, our clothes and our incredible employee talent. It’s obvious when you realize no two store windows are the same and we wouldn’t want it any other way. At URBN, we welcome all ideas no matter how big or small. Check out the photos below to see our creativity at work.'
-	      }]
+	        des: "Our Factories",
+	        link: "/people/where-we-work/factories"
+	      }, 'des', 'Creativity is in the fabric of all we do. It’s tangible in our store windows, our clothes and our incredible employee talent. It’s obvious when you realize no two store windows are the same and we wouldn’t want it any other way. At URBN, we welcome all ideas no matter how big or small. Check out the photos below to see our creativity at work.')]
 	    };
 	    return _this;
 	  }
@@ -41929,12 +41853,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	var _Bulletin = __webpack_require__(267);
 
 	var _Bulletin2 = _interopRequireDefault(_Bulletin);
@@ -42042,12 +41960,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	var _Bulletin = __webpack_require__(267);
 
 	var _Bulletin2 = _interopRequireDefault(_Bulletin);
@@ -42143,7 +42055,7 @@
 /* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -42154,12 +42066,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42179,78 +42085,78 @@
 	  }
 
 	  _createClass(Terms, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
+	          "div",
+	          { className: "row" },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-xs-12' },
+	            "div",
+	            { className: "col-xs-12" },
 	            _react2.default.createElement(
-	              'ol',
-	              { className: 'breadcrumb' },
+	              "ol",
+	              { className: "breadcrumb" },
 	              _react2.default.createElement(
-	                'li',
+	                "li",
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
-	                  'Home'
+	                  "a",
+	                  { className: "grey underline", href: "/" },
+	                  "Home"
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'li',
-	                { className: 'active' },
-	                'Terms of Use'
+	                "li",
+	                { className: "active" },
+	                "Terms of Use"
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-xs-12 text-body' },
+	            "div",
+	            { className: "col-xs-12 text-body" },
 	            _react2.default.createElement(
-	              'h3',
+	              "h3",
 	              null,
-	              'Terms of Use'
+	              "Terms of Use"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              'Welcome to the Urban Outfitters, Inc. (collectively with its affiliates and subsidiaries, “URBN”) site (this "Site"). We provide this Site as a service to our customers, employees, investors and the public. Please review the following terms and conditions that govern your use of our Site (this “Agreement”). Please note that your use of the Site constitutes your agreement to follow and be bound by these terms. If you do not agree to these terms, please do not use this Site. Although you may “bookmark” a particular portion of this Site and thereby bypass this Agreement, your use still binds you to the terms. We reserve the right to update or modify these terms at any time without prior notice. Your use of the Site following any such changes constitutes your agreement to follow and be bound by the terms as changed. For this reason, we encourage you to review these terms whenever you use this Site.'
+	              "Welcome to the Urban Outfitters, Inc. (collectively with its affiliates and subsidiaries, “URBN”) site (this \"Site\"). We provide this Site as a service to our customers, employees, investors and the public. Please review the following terms and conditions that govern your use of our Site (this “Agreement”). Please note that your use of the Site constitutes your agreement to follow and be bound by these terms. If you do not agree to these terms, please do not use this Site. Although you may “bookmark” a particular portion of this Site and thereby bypass this Agreement, your use still binds you to the terms. We reserve the right to update or modify these terms at any time without prior notice. Your use of the Site following any such changes constitutes your agreement to follow and be bound by the terms as changed. For this reason, we encourage you to review these terms whenever you use this Site."
 	            ),
 	            _react2.default.createElement(
-	              'h4',
+	              "h4",
 	              null,
-	              'Termination'
+	              "Termination"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
+	              "URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination."
 	            ),
 	            _react2.default.createElement(
-	              'h4',
+	              "h4",
 	              null,
-	              'Termination'
+	              "Termination"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
+	              "URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination."
 	            ),
 	            _react2.default.createElement(
-	              'h4',
+	              "h4",
 	              null,
-	              'Termination'
+	              "Termination"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
+	              "URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination."
 	            )
 	          )
 	        )
@@ -42278,12 +42184,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	var _Frame = __webpack_require__(252);
 
@@ -42413,12 +42313,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
-
 	var _Frame = __webpack_require__(252);
 
 	var _Frame2 = _interopRequireDefault(_Frame);
@@ -42535,7 +42429,7 @@
 /* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -42546,12 +42440,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42571,97 +42459,97 @@
 	  }
 
 	  _createClass(Contact, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
+	          "div",
+	          { className: "row" },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-xs-12' },
+	            "div",
+	            { className: "col-xs-12" },
 	            _react2.default.createElement(
-	              'ol',
-	              { className: 'breadcrumb' },
+	              "ol",
+	              { className: "breadcrumb" },
 	              _react2.default.createElement(
-	                'li',
+	                "li",
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
-	                  'Home'
+	                  "a",
+	                  { className: "grey underline", href: "/" },
+	                  "Home"
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'li',
-	                { className: 'active' },
-	                'Contact Us'
+	                "li",
+	                { className: "active" },
+	                "Contact Us"
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-xs-12 text-body' },
+	            "div",
+	            { className: "col-xs-12 text-body" },
 	            _react2.default.createElement(
-	              'h4',
+	              "h4",
 	              null,
-	              'Email'
+	              "Email"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
 	              _react2.default.createElement(
-	                'a',
-	                { className: 'grey underline', href: 'mailto:info@firstglory.com' },
-	                'info@firstglory.com'
+	                "a",
+	                { className: "grey underline", href: "mailto:info@firstglory.com" },
+	                "info@firstglory.com"
 	              )
 	            ),
 	            _react2.default.createElement(
-	              'h4',
+	              "h4",
 	              null,
-	              'Hong Kong'
+	              "Hong Kong"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              '11B&D, Ka To Factory Building 2 Cheung Yue Street, Lai Chi Kok, Kowloon, Hong Kong'
+	              "11B&D, Ka To Factory Building 2 Cheung Yue Street, Lai Chi Kok, Kowloon, Hong Kong"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              '(852) 23073020/ (852) 23073091'
+	              "(852) 23073020/ (852) 23073091"
 	            ),
 	            _react2.default.createElement(
-	              'h4',
+	              "h4",
 	              null,
-	              'Zhongshan, China'
+	              "Zhongshan, China"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              '1 Jiankang Road, Shapingcun, Shaxi, Zhongshan, Guangdong, China'
+	              "1 Jiankang Road, Shapingcun, Shaxi, Zhongshan, Guangdong, China"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              '(86) 0760-87326630 / 0760-87330330'
+	              "(86) 0760-87326630 / 0760-87330330"
 	            ),
 	            _react2.default.createElement(
-	              'h4',
+	              "h4",
 	              null,
-	              'Cebu, Philippines'
+	              "Cebu, Philippines"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              '3rd Floor, Sudecor Building, MEPZ 1, Gate 2, Lapu-lapu City, Cebu, Philippines'
+	              "3rd Floor, Sudecor Building, MEPZ 1, Gate 2, Lapu-lapu City, Cebu, Philippines"
 	            ),
 	            _react2.default.createElement(
-	              'p',
+	              "p",
 	              null,
-	              '(63) 32-495-5177'
+	              "(63) 32-495-5177"
 	            )
 	          )
 	        )
@@ -42678,7 +42566,7 @@
 /* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -42689,12 +42577,6 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	var _jquery = __webpack_require__(236);
-
-	var _jquery2 = _interopRequireDefault(_jquery);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42744,84 +42626,84 @@
 	  }
 
 	  _createClass(Executives, [{
-	    key: 'render',
+	    key: "render",
 	    value: function render() {
 	      var executives = this.state.executives;
 	      console.log('ceo');
 	      return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
+	          "div",
+	          { className: "row" },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-xs-12' },
+	            "div",
+	            { className: "col-xs-12" },
 	            _react2.default.createElement(
-	              'ol',
-	              { className: 'breadcrumb grey underline' },
+	              "ol",
+	              { className: "breadcrumb grey underline" },
 	              _react2.default.createElement(
-	                'li',
+	                "li",
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
-	                  'Home'
+	                  "a",
+	                  { className: "grey underline", href: "/" },
+	                  "Home"
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'li',
+	                "li",
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/who-we-are' },
-	                  'Who Are We'
+	                  "a",
+	                  { className: "grey underline", href: "/who-we-are" },
+	                  "Who Are We"
 	                )
 	              ),
 	              _react2.default.createElement(
-	                'li',
-	                { className: 'active' },
-	                'Executive Officers'
+	                "li",
+	                { className: "active" },
+	                "Executive Officers"
 	              )
 	            )
 	          )
 	        ),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'row' },
+	          "div",
+	          { className: "row" },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-xs-12 executives' },
+	            "div",
+	            { className: "col-xs-12 executives" },
 	            _react2.default.createElement(
-	              'ul',
+	              "ul",
 	              null,
 	              executives.map(function (executive) {
 	                return _react2.default.createElement(
-	                  'li',
+	                  "li",
 	                  null,
 	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'exec' },
+	                    "div",
+	                    { className: "exec" },
 	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-4 exec-img-container' },
-	                      _react2.default.createElement('img', { className: 'exec-img', src: executive.img })
+	                      "div",
+	                      { className: "col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-4 exec-img-container" },
+	                      _react2.default.createElement("img", { className: "exec-img", src: executive.img })
 	                    ),
 	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'col-xs-12 col-sm-8 exec-bio' },
+	                      "div",
+	                      { className: "col-xs-12 col-sm-8 exec-bio" },
 	                      _react2.default.createElement(
-	                        'h4',
+	                        "h4",
 	                        null,
 	                        executive.name
 	                      ),
 	                      _react2.default.createElement(
-	                        'h4',
+	                        "h4",
 	                        null,
 	                        executive.title
 	                      ),
 	                      _react2.default.createElement(
-	                        'p',
+	                        "p",
 	                        null,
 	                        executive.bio
 	                      )

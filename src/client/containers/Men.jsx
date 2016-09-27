@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
-import $ from "jquery";
 import Frame from '../components/Frame.jsx';
 
 export default class Men extends React.Component {

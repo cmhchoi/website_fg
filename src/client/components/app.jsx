@@ -1,17 +1,12 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
 import $ from "jquery";
-          // <div className="logo col-lg-offset-1 col-lg-1 col-sm-2 hidden-xs">
-            // <IndexLink to={{ pathname: '/' }}>
-              // <img className="logo-img" src="assets/images/logo1.png" alt="Dispute Bills" />
-            // </IndexLink>
-          // </div>
 
 export default class App extends React.Component {
 
   componentWillMount() {
     $(window).scroll(() => {
-      if ($(document).scrollTop() > 40) {
+      if ($(document).scrollTop() > 30) {
         $('.navbar-brand').removeClass('large-logo');
         $('#navbar2').removeClass('large-nav')
       } else {
@@ -56,13 +51,13 @@ export default class App extends React.Component {
               <nav className="navbar navbar-default">
                 <div className="" id="footer-body">
                     <ul className="nav navbar-nav navbar-right">
-                        <li className="foot-list"><a href="#">繁</a></li>
-                        <li className="foot-list"><a href="#">簡</a></li>
-                        <li className="foot-list"><a href="/contact-us">Contact Us</a></li>
-                        <li className="foot-list"><a href="#">Site Map</a></li>
-                        <li className="foot-list"><a href="/terms-of-use">Terms of Use</a></li>
-                        <li className="foot-list"><a href="#">Privacy Policy</a></li>
-                        <li className="foot-list"><a href="https://www.facebook.com/firstgloryltd/">Facebook</a></li>
+                        <li className="foot-list"><Link href="#">繁</Link></li>
+                        <li className="foot-list"><Link href="#">簡</Link></li>
+                        <li className="foot-list"><Link href="/contact-us">Contact Us</Link></li>
+                        <li className="foot-list"><Link href="#">Site Map</Link></li>
+                        <li className="foot-list"><Link href="/terms-of-use">Terms of Use</Link></li>
+                        <li className="foot-list"><Link href="#">Privacy Policy</Link></li>
+                        <li className="foot-list"><Link href="https://www.facebook.com/firstgloryltd/">Facebook</Link></li>
                     </ul>
                 </div>
               </nav>
