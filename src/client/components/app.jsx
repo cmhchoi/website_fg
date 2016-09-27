@@ -11,7 +11,7 @@ export default class App extends React.Component {
 
   componentWillMount() {
     $(window).scroll(() => {
-      if ($(document).scrollTop() > 50) {
+      if ($(document).scrollTop() > 40) {
         $('.navbar-brand').removeClass('large-logo');
         $('#navbar2').removeClass('large-nav')
       } else {
@@ -20,11 +20,6 @@ export default class App extends React.Component {
       }
     });
   }
-
-  // componentDidUpdate() {
-  //   //React.findDOMNode(this).scrollTop = 0
-  //   console.log('changed')
-  // },
 
   render() {
     return (

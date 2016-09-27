@@ -38160,7 +38160,7 @@
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      (0, _jquery2.default)(window).scroll(function () {
-	        if ((0, _jquery2.default)(document).scrollTop() > 50) {
+	        if ((0, _jquery2.default)(document).scrollTop() > 40) {
 	          (0, _jquery2.default)('.navbar-brand').removeClass('large-logo');
 	          (0, _jquery2.default)('#navbar2').removeClass('large-nav');
 	        } else {
@@ -38169,12 +38169,6 @@
 	        }
 	      });
 	    }
-
-	    // componentDidUpdate() {
-	    //   //React.findDOMNode(this).scrollTop = 0
-	    //   console.log('changed')
-	    // },
-
 	  }, {
 	    key: 'render',
 	    value: function render() {
