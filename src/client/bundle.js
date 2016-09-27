@@ -38152,7 +38152,7 @@
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      (0, _jquery2.default)(window).scroll(function () {
-	        if ((0, _jquery2.default)(document).scrollTop() > 30) {
+	        if ((0, _jquery2.default)(document).scrollTop() > 20) {
 	          (0, _jquery2.default)('.navbar-brand').removeClass('large-logo');
 	          (0, _jquery2.default)('#navbar2').removeClass('large-nav');
 	        } else {

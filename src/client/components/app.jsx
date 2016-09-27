@@ -6,7 +6,7 @@ export default class App extends React.Component {
 
   componentWillMount() {
     $(window).scroll(() => {
-      if ($(document).scrollTop() > 30) {
+      if ($(document).scrollTop() > 20) {
         $('.navbar-brand').removeClass('large-logo');
         $('#navbar2').removeClass('large-nav')
       } else {
