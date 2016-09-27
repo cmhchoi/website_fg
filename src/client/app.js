@@ -46,9 +46,7 @@ render(
       <Route path="products/materials" component={Materials} />
       <Route path="products/techniques" component={Techniques} />
       <Route path="people" component={People} />
-      <Route path="people/where-we-work" component={Where} />
-      <Route path="people/where-we-work/offices" component={People} />
-      <Route path="people/where-we-work/factories" component={People} />
+      <Route path="people/factories" component={People} />
       <Route path="people/story" component={People} />
       <Route path="people/jobs" component={People} />
       <Route path="global-community-initiatives" component={Community} />

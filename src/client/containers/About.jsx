@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Frame from '../components/Frame.jsx';
 
 export default class About extends React.Component {
@@ -41,7 +42,7 @@ export default class About extends React.Component {
         <div className="row">
           <div className="col-xs-12">
             <ol className="breadcrumb grey underline">
-              <li><a className="grey underline" href="/">Home</a></li>
+              <li><Link className="grey underline" to={{pathname: "/"}}>Home</Link></li>
               <li className="active">Who We Are</li>
             </ol>
           </div>

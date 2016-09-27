@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Bulletin from '../components/Bulletin.jsx';
 
 export default class Partners extends React.Component {
@@ -46,8 +47,8 @@ export default class Partners extends React.Component {
         <div className="row">
           <div className="col-xs-12">
             <ol className="breadcrumb">
-              <li><a className="grey underline" href="/">Home</a></li>
-              <li><a className="grey underline" href="/who-we-are">Who We Are</a></li>
+              <li><Link className="grey underline" to={{pathname: "/"}}>Home</Link></li>
+              <li><Link className="grey underline" to={{pathname: "/who-we-are"}}>Who We Are</Link></li>
               <li className="active">Our Partners</li>
             </ol>
           </div>

@@ -164,9 +164,7 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/materials', component: _Materials2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/techniques', component: _Techniques2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people', component: _People2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work', component: _Where2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work/offices', component: _People2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/where-we-work/factories', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/factories', component: _People2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/story', component: _People2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/jobs', component: _People2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives', component: _Community2.default }),
@@ -37322,7 +37320,7 @@
 
 
 	// module
-	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.fixed {\n  position: fixed; }\n  @media (min-width: 1200px) {\n    .fixed {\n      min-width: 975px; } }\n  @media (min-width: 992px) and (max-width: 1200px) {\n    .fixed {\n      min-width: 970px; } }\n  @media (min-width: 767px) and (max-width: 992px) {\n    .fixed {\n      min-width: 750px; } }\n  @media (max-width: 767px) {\n    .fixed {\n      min-width: 96vw; } }\n\n.large-logo {\n  height: 100px !important; }\n\n.large-nav {\n  margin-top: 50px !important; }\n\n.large-nav-hamburger {\n  margin-top: 58px !important; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 0 0;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.bumper {\n  height: 105px; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.top-nav {\n  background-color: white;\n  z-index: 200;\n  border-bottom-width: 0 !important; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px;\n  font-family: 'Raleway', sans-serif;\n  font-weight: bold; }\n\n#navbar2 {\n  float: right; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px;\n    font-family: \"Raleway\", \"sans-serif\"; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n\nh4, h3 {\n  font-weight: bold; }\n\n.grey {\n  color: grey; }\n\n.breadcrumb {\n  font-family: 'Raleway', sans-serif;\n  background-color: transparent;\n  margin-bottom: 0;\n  padding-left: 10px; }\n\n.underline {\n  text-decoration: underline; }\n\n.text-body {\n  padding-left: 25px;\n  font-family: 'Raleway', sans-serif; }\n", ""]);
+	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.fixed {\n  position: fixed; }\n  @media (min-width: 1200px) {\n    .fixed {\n      min-width: 975px; } }\n  @media (min-width: 992px) and (max-width: 1200px) {\n    .fixed {\n      min-width: 970px; } }\n  @media (min-width: 767px) and (max-width: 992px) {\n    .fixed {\n      min-width: 750px; } }\n  @media (max-width: 767px) {\n    .fixed {\n      min-width: 96vw; } }\n\n.large-logo {\n  height: 100px !important; }\n\n.large-nav {\n  margin-top: 50px !important; }\n\n.large-nav-hamburger {\n  margin-top: 58px !important; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 0 0;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.bumper {\n  height: 105px; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.top-nav {\n  background-color: white;\n  z-index: 200;\n  border-bottom-width: 0 !important; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px;\n  font-family: 'Raleway', sans-serif;\n  font-weight: bold; }\n\n#navbar2 {\n  float: right; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px;\n    font-family: \"Raleway\", \"sans-serif\"; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n\nh4, h3 {\n  font-weight: bold; }\n\n.grey {\n  color: grey; }\n\n.breadcrumb {\n  font-family: 'Raleway', sans-serif;\n  background-color: transparent;\n  margin-bottom: 0;\n  padding-left: 10px; }\n\n.underline {\n  text-decoration: underline; }\n\n.text-body {\n  padding-left: 25px;\n  font-family: 'Raleway', sans-serif; }\n\n.dropdown:hover .dropdown-menu {\n  display: block;\n  margin-top: 0; }\n\n.dropdown-menu {\n  border: 0; }\n  .dropdown-menu li {\n    margin: 0 0; }\n", ""]);
 
 	// exports
 
@@ -38207,43 +38205,194 @@
 	                  { className: 'nav navbar-nav navbar-right' },
 	                  _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { className: 'dropdown', 'data-toggle': 'dropdown' },
 	                    _react2.default.createElement(
 	                      _reactRouter.Link,
 	                      { to: { pathname: '/who-we-are' } },
 	                      'Who We Are'
+	                    ),
+	                    _react2.default.createElement(
+	                      'ul',
+	                      { className: 'dropdown-menu' },
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/who-we-are/history' } },
+	                          'History'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/who-we-are/executive-officers' } },
+	                          'Executive Officers'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/who-we-are/our-partners' } },
+	                          'Our Partners'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/who-we-are/culture-core-values' } },
+	                          'Culture & Core Values'
+	                        )
+	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { className: 'dropdown' },
 	                    _react2.default.createElement(
 	                      _reactRouter.Link,
 	                      { to: { pathname: '/products' } },
 	                      'Products'
+	                    ),
+	                    _react2.default.createElement(
+	                      'ul',
+	                      { className: 'dropdown-menu' },
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/products/category' } },
+	                          'Category'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/products/materials' } },
+	                          'Materials Used'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/products/techniques' } },
+	                          'Techniques'
+	                        )
+	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { className: 'dropdown' },
 	                    _react2.default.createElement(
 	                      _reactRouter.Link,
 	                      { to: { pathname: '/people' } },
 	                      'People'
+	                    ),
+	                    _react2.default.createElement(
+	                      'ul',
+	                      { className: 'dropdown-menu' },
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/people/factories' } },
+	                          'Our Factories'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/people/story' } },
+	                          'Our People'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/people/jobs' } },
+	                          'Jobs'
+	                        )
+	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { className: 'dropdown' },
 	                    _react2.default.createElement(
 	                      _reactRouter.Link,
 	                      { to: { pathname: '/global-community-initiatives' } },
 	                      'Global Community Initiative'
+	                    ),
+	                    _react2.default.createElement(
+	                      'ul',
+	                      { className: 'dropdown-menu' },
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/global-community-initiatives/sustainability' } },
+	                          'Sustainability'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/global-community-initiatives/charitable-programmes' } },
+	                          'Charitable Programmes'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/global-community-initiatives/practices' } },
+	                          'Practices'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/global-community-initiatives/responsibility' } },
+	                          'Responsibility'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: '/global-community-initiatives/collaboration' } },
+	                          'Collaboration'
+	                        )
+	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'li',
-	                    null,
+	                    { className: 'dropdown' },
 	                    _react2.default.createElement(
 	                      _reactRouter.Link,
 	                      { to: { pathname: '/whats-new' } },
@@ -38276,7 +38425,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { href: '#' },
+	                        { to: { pathname: "#" } },
 	                        '繁'
 	                      )
 	                    ),
@@ -38285,7 +38434,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { href: '#' },
+	                        { to: { pathname: "#" } },
 	                        '簡'
 	                      )
 	                    ),
@@ -38294,7 +38443,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { href: '/contact-us' },
+	                        { to: { pathname: "/contact-us" } },
 	                        'Contact Us'
 	                      )
 	                    ),
@@ -38303,7 +38452,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { href: '#' },
+	                        { to: { pathname: "#" } },
 	                        'Site Map'
 	                      )
 	                    ),
@@ -38312,7 +38461,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { href: '/terms-of-use' },
+	                        { to: { pathname: "/terms-of-use" } },
 	                        'Terms of Use'
 	                      )
 	                    ),
@@ -38321,7 +38470,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { href: '#' },
+	                        { to: { pathname: "#" } },
 	                        'Privacy Policy'
 	                      )
 	                    ),
@@ -38330,7 +38479,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { href: 'https://www.facebook.com/firstgloryltd/' },
+	                        { to: { pathname: "https://www.facebook.com/firstgloryltd/" } },
 	                        'Facebook'
 	                      )
 	                    )
@@ -38453,6 +38602,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _Frame = __webpack_require__(252);
 
 	var _Frame2 = _interopRequireDefault(_Frame);
@@ -38518,8 +38669,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -38570,6 +38721,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	var _Frame = __webpack_require__(252);
 
@@ -38631,8 +38784,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -38669,6 +38822,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	var _Frame = __webpack_require__(252);
 
@@ -38730,8 +38885,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -38867,6 +39022,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _List = __webpack_require__(261);
 
 	var _List2 = _interopRequireDefault(_List);
@@ -38924,8 +39081,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -38933,8 +39090,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/who-we-are' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/who-we-are" } },
 	                  'Who We Are'
 	                )
 	              ),
@@ -39092,6 +39249,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _List = __webpack_require__(261);
 
 	var _List2 = _interopRequireDefault(_List);
@@ -39149,8 +39308,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -39158,8 +39317,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/who-we-are' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/who-we-are" } },
 	                  'Who We Are'
 	                )
 	              ),
@@ -39196,6 +39355,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	var _Frame = __webpack_require__(252);
 
@@ -39268,8 +39429,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -39277,8 +39438,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products" } },
 	                  'Products'
 	                )
 	              ),
@@ -39286,8 +39447,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products/category' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products/category" } },
 	                  'Category'
 	                )
 	              ),
@@ -39324,6 +39485,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	var _Bulletin = __webpack_require__(267);
 
@@ -39391,8 +39554,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -39400,8 +39563,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/who-we-are' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/who-we-are" } },
 	                  'Who We Are'
 	                )
 	              ),
@@ -39566,6 +39729,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _Frame = __webpack_require__(252);
 
 	var _Frame2 = _interopRequireDefault(_Frame);
@@ -39626,8 +39791,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -39635,8 +39800,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products" } },
 	                  'Products'
 	                )
 	              ),
@@ -41853,6 +42018,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _Bulletin = __webpack_require__(267);
 
 	var _Bulletin2 = _interopRequireDefault(_Bulletin);
@@ -41912,8 +42079,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -41921,8 +42088,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products" } },
 	                  'Products'
 	                )
 	              ),
@@ -41960,6 +42127,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	var _Bulletin = __webpack_require__(267);
 
 	var _Bulletin2 = _interopRequireDefault(_Bulletin);
@@ -42019,8 +42188,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -42028,8 +42197,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products" } },
 	                  'Products'
 	                )
 	              ),
@@ -42055,7 +42224,7 @@
 /* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -42066,6 +42235,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42085,78 +42256,78 @@
 	  }
 
 	  _createClass(Terms, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "div",
-	          { className: "row" },
+	          'div',
+	          { className: 'row' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-xs-12" },
+	            'div',
+	            { className: 'col-xs-12' },
 	            _react2.default.createElement(
-	              "ol",
-	              { className: "breadcrumb" },
+	              'ol',
+	              { className: 'breadcrumb' },
 	              _react2.default.createElement(
-	                "li",
+	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  "a",
-	                  { className: "grey underline", href: "/" },
-	                  "Home"
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "li",
-	                { className: "active" },
-	                "Terms of Use"
+	                'li',
+	                { className: 'active' },
+	                'Terms of Use'
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-xs-12 text-body" },
+	            'div',
+	            { className: 'col-xs-12 text-body' },
 	            _react2.default.createElement(
-	              "h3",
+	              'h3',
 	              null,
-	              "Terms of Use"
+	              'Terms of Use'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "Welcome to the Urban Outfitters, Inc. (collectively with its affiliates and subsidiaries, “URBN”) site (this \"Site\"). We provide this Site as a service to our customers, employees, investors and the public. Please review the following terms and conditions that govern your use of our Site (this “Agreement”). Please note that your use of the Site constitutes your agreement to follow and be bound by these terms. If you do not agree to these terms, please do not use this Site. Although you may “bookmark” a particular portion of this Site and thereby bypass this Agreement, your use still binds you to the terms. We reserve the right to update or modify these terms at any time without prior notice. Your use of the Site following any such changes constitutes your agreement to follow and be bound by the terms as changed. For this reason, we encourage you to review these terms whenever you use this Site."
+	              'Welcome to the Urban Outfitters, Inc. (collectively with its affiliates and subsidiaries, “URBN”) site (this "Site"). We provide this Site as a service to our customers, employees, investors and the public. Please review the following terms and conditions that govern your use of our Site (this “Agreement”). Please note that your use of the Site constitutes your agreement to follow and be bound by these terms. If you do not agree to these terms, please do not use this Site. Although you may “bookmark” a particular portion of this Site and thereby bypass this Agreement, your use still binds you to the terms. We reserve the right to update or modify these terms at any time without prior notice. Your use of the Site following any such changes constitutes your agreement to follow and be bound by the terms as changed. For this reason, we encourage you to review these terms whenever you use this Site.'
 	            ),
 	            _react2.default.createElement(
-	              "h4",
+	              'h4',
 	              null,
-	              "Termination"
+	              'Termination'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination."
+	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
 	            ),
 	            _react2.default.createElement(
-	              "h4",
+	              'h4',
 	              null,
-	              "Termination"
+	              'Termination'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination."
+	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
 	            ),
 	            _react2.default.createElement(
-	              "h4",
+	              'h4',
 	              null,
-	              "Termination"
+	              'Termination'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination."
+	              'URBN reserves the right at any time to terminate your use of this Site if you fail to comply in full with any term of this Agreement, or any other terms, agreements, or policies that apply to this Site and the use of it. URBN also reserves the right to discontinue this Site at any time for any reason. The provisions relating to Copyrights, Trademark, and Miscellaneous, shall survive any termination.'
 	            )
 	          )
 	        )
@@ -42184,6 +42355,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	var _Frame = __webpack_require__(252);
 
@@ -42256,8 +42429,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
 	                  'Home'
 	                )
 	              ),
@@ -42265,8 +42438,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products" } },
 	                  'Products'
 	                )
 	              ),
@@ -42274,8 +42447,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products/category' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products/category" } },
 	                  'Category'
 	                )
 	              ),
@@ -42312,6 +42485,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	var _Frame = __webpack_require__(252);
 
@@ -42393,8 +42568,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products" } },
 	                  'Products'
 	                )
 	              ),
@@ -42402,8 +42577,8 @@
 	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'grey underline', href: '/products/category' },
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/products/category" } },
 	                  'Category'
 	                )
 	              ),
@@ -42429,7 +42604,7 @@
 /* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -42440,6 +42615,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42459,97 +42636,97 @@
 	  }
 
 	  _createClass(Contact, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "div",
-	          { className: "row" },
+	          'div',
+	          { className: 'row' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-xs-12" },
+	            'div',
+	            { className: 'col-xs-12' },
 	            _react2.default.createElement(
-	              "ol",
-	              { className: "breadcrumb" },
+	              'ol',
+	              { className: 'breadcrumb' },
 	              _react2.default.createElement(
-	                "li",
+	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  "a",
-	                  { className: "grey underline", href: "/" },
-	                  "Home"
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "li",
-	                { className: "active" },
-	                "Contact Us"
+	                'li',
+	                { className: 'active' },
+	                'Contact Us'
 	              )
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-xs-12 text-body" },
+	            'div',
+	            { className: 'col-xs-12 text-body' },
 	            _react2.default.createElement(
-	              "h4",
+	              'h4',
 	              null,
-	              "Email"
+	              'Email'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
 	              _react2.default.createElement(
-	                "a",
-	                { className: "grey underline", href: "mailto:info@firstglory.com" },
-	                "info@firstglory.com"
+	                'a',
+	                { className: 'grey underline', href: 'mailto:info@firstglory.com' },
+	                'info@firstglory.com'
 	              )
 	            ),
 	            _react2.default.createElement(
-	              "h4",
+	              'h4',
 	              null,
-	              "Hong Kong"
+	              'Hong Kong'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "11B&D, Ka To Factory Building 2 Cheung Yue Street, Lai Chi Kok, Kowloon, Hong Kong"
+	              '11B&D, Ka To Factory Building 2 Cheung Yue Street, Lai Chi Kok, Kowloon, Hong Kong'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "(852) 23073020/ (852) 23073091"
+	              '(852) 23073020/ (852) 23073091'
 	            ),
 	            _react2.default.createElement(
-	              "h4",
+	              'h4',
 	              null,
-	              "Zhongshan, China"
+	              'Zhongshan, China'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "1 Jiankang Road, Shapingcun, Shaxi, Zhongshan, Guangdong, China"
+	              '1 Jiankang Road, Shapingcun, Shaxi, Zhongshan, Guangdong, China'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "(86) 0760-87326630 / 0760-87330330"
+	              '(86) 0760-87326630 / 0760-87330330'
 	            ),
 	            _react2.default.createElement(
-	              "h4",
+	              'h4',
 	              null,
-	              "Cebu, Philippines"
+	              'Cebu, Philippines'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "3rd Floor, Sudecor Building, MEPZ 1, Gate 2, Lapu-lapu City, Cebu, Philippines"
+	              '3rd Floor, Sudecor Building, MEPZ 1, Gate 2, Lapu-lapu City, Cebu, Philippines'
 	            ),
 	            _react2.default.createElement(
-	              "p",
+	              'p',
 	              null,
-	              "(63) 32-495-5177"
+	              '(63) 32-495-5177'
 	            )
 	          )
 	        )
@@ -42566,7 +42743,7 @@
 /* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -42577,6 +42754,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -42626,84 +42805,83 @@
 	  }
 
 	  _createClass(Executives, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
 	      var executives = this.state.executives;
-	      console.log('ceo');
 	      return _react2.default.createElement(
-	        "div",
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          "div",
-	          { className: "row" },
+	          'div',
+	          { className: 'row' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-xs-12" },
+	            'div',
+	            { className: 'col-xs-12' },
 	            _react2.default.createElement(
-	              "ol",
-	              { className: "breadcrumb grey underline" },
+	              'ol',
+	              { className: 'breadcrumb grey underline' },
 	              _react2.default.createElement(
-	                "li",
+	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  "a",
-	                  { className: "grey underline", href: "/" },
-	                  "Home"
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "li",
+	                'li',
 	                null,
 	                _react2.default.createElement(
-	                  "a",
-	                  { className: "grey underline", href: "/who-we-are" },
-	                  "Who Are We"
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/who-we-are" } },
+	                  'Who Are We'
 	                )
 	              ),
 	              _react2.default.createElement(
-	                "li",
-	                { className: "active" },
-	                "Executive Officers"
+	                'li',
+	                { className: 'active' },
+	                'Executive Officers'
 	              )
 	            )
 	          )
 	        ),
 	        _react2.default.createElement(
-	          "div",
-	          { className: "row" },
+	          'div',
+	          { className: 'row' },
 	          _react2.default.createElement(
-	            "div",
-	            { className: "col-xs-12 executives" },
+	            'div',
+	            { className: 'col-xs-12 executives' },
 	            _react2.default.createElement(
-	              "ul",
+	              'ul',
 	              null,
 	              executives.map(function (executive) {
 	                return _react2.default.createElement(
-	                  "li",
+	                  'li',
 	                  null,
 	                  _react2.default.createElement(
-	                    "div",
-	                    { className: "exec" },
+	                    'div',
+	                    { className: 'exec' },
 	                    _react2.default.createElement(
-	                      "div",
-	                      { className: "col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-4 exec-img-container" },
-	                      _react2.default.createElement("img", { className: "exec-img", src: executive.img })
+	                      'div',
+	                      { className: 'col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-4 exec-img-container' },
+	                      _react2.default.createElement('img', { className: 'exec-img', src: executive.img })
 	                    ),
 	                    _react2.default.createElement(
-	                      "div",
-	                      { className: "col-xs-12 col-sm-8 exec-bio" },
+	                      'div',
+	                      { className: 'col-xs-12 col-sm-8 exec-bio' },
 	                      _react2.default.createElement(
-	                        "h4",
+	                        'h4',
 	                        null,
 	                        executive.name
 	                      ),
 	                      _react2.default.createElement(
-	                        "h4",
+	                        'h4',
 	                        null,
 	                        executive.title
 	                      ),
 	                      _react2.default.createElement(
-	                        "p",
+	                        'p',
 	                        null,
 	                        executive.bio
 	                      )

@@ -35,11 +35,42 @@ export default class App extends React.Component {
               </div>
               <div id="navbar2" className="navbar-collapse collapse large-nav">
                 <ul className="nav navbar-nav navbar-right">
-                  <li><Link to={{ pathname: '/who-we-are' }}>Who We Are</Link></li>
-                  <li><Link to={{ pathname: '/products' }}>Products</Link></li>
-                  <li><Link to={{ pathname: '/people' }}>People</Link></li>
-                  <li><Link to={{ pathname: '/global-community-initiatives' }}>Global Community Initiative</Link></li>
-                  <li><Link to={{ pathname: '/whats-new' }}>What's New</Link></li>
+                  <li className="dropdown" data-toggle="dropdown">
+                    <Link to={{ pathname: '/who-we-are' }}>Who We Are</Link>
+                    <ul className="dropdown-menu">
+                      <li><Link to={{ pathname: '/who-we-are/history' }}>History</Link></li>
+                      <li><Link to={{ pathname: '/who-we-are/executive-officers' }}>Executive Officers</Link></li>
+                      <li><Link to={{ pathname: '/who-we-are/our-partners' }}>Our Partners</Link></li>
+                      <li><Link to={{ pathname: '/who-we-are/culture-core-values' }}>Culture & Core Values</Link></li>
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <Link to={{ pathname: '/products' }}>Products</Link>
+                    <ul className="dropdown-menu">
+                      <li><Link to={{ pathname: '/products/category' }}>Category</Link></li>
+                      <li><Link to={{ pathname: '/products/materials' }}>Materials Used</Link></li>
+                      <li><Link to={{ pathname: '/products/techniques' }}>Techniques</Link></li>
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <Link to={{ pathname: '/people' }}>People</Link>
+                    <ul className="dropdown-menu">
+                      <li><Link to={{ pathname: '/people/factories' }}>Our Factories</Link></li>
+                      <li><Link to={{ pathname: '/people/story' }}>Our People</Link></li>
+                      <li><Link to={{ pathname: '/people/jobs' }}>Jobs</Link></li>
+                    </ul>
+                  </li>
+                  <li className="dropdown">
+                    <Link to={{ pathname: '/global-community-initiatives' }}>Global Community Initiative</Link>
+                    <ul className="dropdown-menu">
+                      <li><Link to={{ pathname: '/global-community-initiatives/sustainability' }}>Sustainability</Link></li>
+                      <li><Link to={{ pathname: '/global-community-initiatives/charitable-programmes' }}>Charitable Programmes</Link></li>
+                      <li><Link to={{ pathname: '/global-community-initiatives/practices' }}>Practices</Link></li>
+                      <li><Link to={{ pathname: '/global-community-initiatives/responsibility' }}>Responsibility</Link></li>
+                      <li><Link to={{ pathname: '/global-community-initiatives/collaboration' }}>Collaboration</Link></li>
+                    </ul>
+                  </li>
+                  <li className="dropdown"><Link to={{ pathname: '/whats-new' }}>What's New</Link></li>
                 </ul>
               </div>
             </nav>
@@ -51,13 +82,13 @@ export default class App extends React.Component {
               <nav className="navbar navbar-default">
                 <div className="" id="footer-body">
                     <ul className="nav navbar-nav navbar-right">
-                        <li className="foot-list"><Link href="#">繁</Link></li>
-                        <li className="foot-list"><Link href="#">簡</Link></li>
-                        <li className="foot-list"><Link href="/contact-us">Contact Us</Link></li>
-                        <li className="foot-list"><Link href="#">Site Map</Link></li>
-                        <li className="foot-list"><Link href="/terms-of-use">Terms of Use</Link></li>
-                        <li className="foot-list"><Link href="#">Privacy Policy</Link></li>
-                        <li className="foot-list"><Link href="https://www.facebook.com/firstgloryltd/">Facebook</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "#"}}>繁</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "#"}}>簡</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "/contact-us"}}>Contact Us</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "#"}}>Site Map</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "/terms-of-use"}}>Terms of Use</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "#"}}>Privacy Policy</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "https://www.facebook.com/firstgloryltd/"}}>Facebook</Link></li>
                     </ul>
                 </div>
               </nav>

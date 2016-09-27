@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class Contact extends React.Component {
   
@@ -8,7 +9,7 @@ export default class Contact extends React.Component {
         <div className="row">
           <div className="col-xs-12">
             <ol className="breadcrumb">
-              <li><a className="grey underline" href="/">Home</a></li>
+              <li><Link className="grey underline" to={{pathname: "/"}}>Home</Link></li>
               <li className="active">Contact Us</li>
             </ol>
           </div>

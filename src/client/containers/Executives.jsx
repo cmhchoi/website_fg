@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class Executives extends React.Component {
   constructor(props) {
@@ -41,14 +42,13 @@ export default class Executives extends React.Component {
 
   render() {
     const executives = this.state.executives;
-    console.log('ceo')
     return(
       <div>
         <div className="row">
           <div className="col-xs-12">
             <ol className="breadcrumb grey underline">
-              <li><a className="grey underline" href="/">Home</a></li>
-              <li><a className="grey underline" href="/who-we-are">Who Are We</a></li>
+              <li><Link className="grey underline" to={{pathname: "/"}}>Home</Link></li>
+              <li><Link className="grey underline" to={{pathname: "/who-we-are"}}>Who Are We</Link></li>
               <li className="active">Executive Officers</li>
             </ol>
           </div>

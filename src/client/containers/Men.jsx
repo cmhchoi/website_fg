@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import Frame from '../components/Frame.jsx';
 
 export default class Men extends React.Component {
@@ -69,9 +70,9 @@ export default class Men extends React.Component {
         <div className="row">
           <div className="col-xs-12">
             <ol className="breadcrumb">
-              <li><a className="grey underline" href="/">Home</a></li>
-              <li><a className="grey underline" href="/products">Products</a></li>
-              <li><a className="grey underline" href="/products/category">Category</a></li>
+              <li><Link className="grey underline" to={{pathname: "/"}}>Home</Link></li>
+              <li><Link className="grey underline" to={{pathname: "/products"}}>Products</Link></li>
+              <li><Link className="grey underline" to={{pathname: "/products/category"}}>Category</Link></li>
               <li className="active">Men</li>
             </ol>
           </div>

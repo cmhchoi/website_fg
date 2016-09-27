@@ -166,3 +166,15 @@ h4, h3 {
   font-family: 'Raleway', sans-serif;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+ }
+
+.dropdown-menu {
+  border: 0;
+  li {
+    margin: 0 0;
+  }
+}
+
