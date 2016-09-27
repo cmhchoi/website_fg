@@ -130,16 +130,23 @@
 
 	var _Contact2 = _interopRequireDefault(_Contact);
 
+	var _Executives = __webpack_require__(353);
+
+	var _Executives2 = _interopRequireDefault(_Executives);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	__webpack_require__(240);
 	__webpack_require__(244);
 	__webpack_require__(262);
 	__webpack_require__(268);
+	__webpack_require__(354);
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
-	  { history: _reactRouter.browserHistory },
+	  { onUpdate: function onUpdate() {
+	      return window.scrollTo(0, 0);
+	    }, history: _reactRouter.browserHistory },
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
@@ -147,7 +154,7 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are', component: _About2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/history', component: _History2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/culture-core-values', component: _Culture2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/executive-officers', component: _History2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/executive-officers', component: _Executives2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/our-partners', component: _Partners2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _Products2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category', component: _Category2.default }),
@@ -37315,7 +37322,7 @@
 
 
 	// module
-	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 0 0;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.top-nav {\n  background-color: white;\n  z-index: 200; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px;\n  font-family: 'Raleway', sans-serif; }\n\n#navbar2 {\n  float: right; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px;\n    font-family: \"Raleway\", \"sans-serif\"; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n\nh4, h3 {\n  font-weight: bold; }\n\n.grey {\n  color: grey; }\n\n.breadcrumb {\n  font-family: 'Raleway', sans-serif;\n  background-color: transparent;\n  margin-bottom: 0;\n  padding-left: 10px; }\n\n.underline {\n  text-decoration: underline; }\n\n.text-body {\n  padding-left: 25px;\n  font-family: 'Raleway', sans-serif; }\n", ""]);
+	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.fixed {\n  position: fixed; }\n  @media (min-width: 1200px) {\n    .fixed {\n      min-width: 975px; } }\n  @media (min-width: 992px) and (max-width: 1200px) {\n    .fixed {\n      min-width: 970px; } }\n  @media (min-width: 767px) and (max-width: 992px) {\n    .fixed {\n      min-width: 750px; } }\n  @media (max-width: 767px) {\n    .fixed {\n      min-width: 96vw; } }\n\n.large-logo {\n  height: 100px !important; }\n\n.large-nav {\n  margin-top: 50px !important; }\n\n.large-nav-hamburger {\n  margin-top: 58px !important; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 0 0;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.bumper {\n  height: 105px; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.top-nav {\n  background-color: white;\n  z-index: 200; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px;\n  font-family: 'Raleway', sans-serif; }\n\n#navbar2 {\n  float: right; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px;\n    font-family: \"Raleway\", \"sans-serif\"; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n\nh4, h3 {\n  font-weight: bold; }\n\n.grey {\n  color: grey; }\n\n.breadcrumb {\n  font-family: 'Raleway', sans-serif;\n  background-color: transparent;\n  margin-bottom: 0;\n  padding-left: 10px; }\n\n.underline {\n  text-decoration: underline; }\n\n.text-body {\n  padding-left: 25px;\n  font-family: 'Raleway', sans-serif; }\n", ""]);
 
 	// exports
 
@@ -38150,6 +38157,25 @@
 	  }
 
 	  _createClass(App, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      (0, _jquery2.default)(window).scroll(function () {
+	        if ((0, _jquery2.default)(document).scrollTop() > 50) {
+	          (0, _jquery2.default)('.navbar-brand').removeClass('large-logo');
+	          (0, _jquery2.default)('#navbar2').removeClass('large-nav');
+	        } else {
+	          (0, _jquery2.default)('.navbar-brand').addClass('large-logo');
+	          (0, _jquery2.default)('#navbar2').addClass('large-nav');
+	        }
+	      });
+	    }
+
+	    // componentDidUpdate() {
+	    //   //React.findDOMNode(this).scrollTop = 0
+	    //   console.log('changed')
+	    // },
+
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -38163,7 +38189,7 @@
 	            { className: 'content col-lg-offset-1 col-lg-10 col-xs-12 col-sm-12' },
 	            _react2.default.createElement(
 	              'nav',
-	              { className: 'top-nav navbar navbar-default' },
+	              { className: 'top-nav navbar navbar-default fixed' },
 	              _react2.default.createElement(
 	                'div',
 	                { className: 'navbar-header' },
@@ -38181,13 +38207,13 @@
 	                ),
 	                _react2.default.createElement(
 	                  _reactRouter.IndexLink,
-	                  { className: 'navbar-brand', to: { pathname: '/' } },
+	                  { className: 'navbar-brand large-logo', to: { pathname: '/' } },
 	                  _react2.default.createElement('img', { className: 'nav-logo-img', src: 'assets/images/logo2.jpg', alt: 'First Glory' })
 	                )
 	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { id: 'navbar2', className: 'navbar-collapse collapse' },
+	                { id: 'navbar2', className: 'navbar-collapse collapse large-nav' },
 	                _react2.default.createElement(
 	                  'ul',
 	                  { className: 'nav navbar-nav navbar-right' },
@@ -39099,7 +39125,7 @@
 
 
 	// module
-	exports.push([module.id, "@media (min-width: 767px) {\n  .list-list {\n    display: -webkit-inline-box; }\n  .mobile-padding-right-20 {\n    padding-right: 0 !important; } }\n\n.mobile-padding-right-20 {\n  padding-right: 20px; }\n  .mobile-padding-right-20 .list-list {\n    margin-bottom: 10px; }\n    .mobile-padding-right-20 .list-list .list-image {\n      margin-bottom: 10px; }\n      .mobile-padding-right-20 .list-list .list-image .list-picture {\n        width: 100%; }\n    .mobile-padding-right-20 .list-list .list-text {\n      font-family: \"Raleway\", \"sans-serif\"; }\n      .mobile-padding-right-20 .list-list .list-text .list-title {\n        margin: 0 0 5px 0;\n        font-weight: bold; }\n      .mobile-padding-right-20 .list-list .list-text .list-des {\n        margin: 0 0 10px 0; }\n", ""]);
+	exports.push([module.id, "@media (min-width: 767px) {\n  .list-list {\n    display: -webkit-inline-box; }\n  .mobile-padding-right-20 {\n    padding-right: 0 !important; } }\n\n.mobile-padding-right-20 {\n  padding-right: 20px; }\n  .mobile-padding-right-20 .list-list {\n    margin-bottom: 10px; }\n    .mobile-padding-right-20 .list-list .list-image {\n      margin-bottom: 10px;\n      padding-left: 5px; }\n      .mobile-padding-right-20 .list-list .list-image .list-picture {\n        width: 100%; }\n    .mobile-padding-right-20 .list-list .list-text {\n      font-family: \"Raleway\", \"sans-serif\"; }\n      .mobile-padding-right-20 .list-list .list-text .list-title {\n        margin: 0 0 5px 0;\n        font-weight: bold; }\n      .mobile-padding-right-20 .list-list .list-text .list-des {\n        margin: 0 0 10px 0; }\n", ""]);
 
 	// exports
 
@@ -42653,6 +42679,213 @@
 	}(_react2.default.Component);
 
 	exports.default = Contact;
+
+/***/ },
+/* 353 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Executives = function (_React$Component) {
+	  _inherits(Executives, _React$Component);
+
+	  function Executives(props) {
+	    _classCallCheck(this, Executives);
+
+	    var _this = _possibleConstructorReturn(this, (Executives.__proto__ || Object.getPrototypeOf(Executives)).call(this, props));
+
+	    _this.state = {
+	      executives: [{
+	        img: "https://line.do/uploads/1647708565507255_1446330354630.jpg",
+	        name: "Mark Zuckerberg",
+	        title: "Chairman",
+	        bio: 'Frank Conforti joined URBN in March 2007 as Director of Finance and SEC Reporting and was subsequently promoted to Controller, Chief Accounting Officer and then Chief Financial Officer, his current role. Frank oversees Finance, Accounting, Tax, Investor Relations, Business Development & Strategy and Loss Prevention. Prior to joining the company, Frank worked with AlliedBarton Security Services, LLC, for five years, serving as Controller for three years. He began his career at KPMG in 1998 where he held various audit roles. Frank was named as one of the top CFOs in Retail in 2014 by Institutional Investor. Frank holds a B.S. in Accounting from Moravian College and is a Certified Public Accountant.',
+	        order: 1
+	      }, {
+	        img: "https://line.do/uploads/1647708565507255_1446330354630.jpg",
+	        name: "Dark Zuckerberg",
+	        title: "CEO",
+	        bio: 'Frank Conforti joined URBN in March 2007 as Director of Finance and SEC Reporting and was subsequently promoted to Controller, Chief Accounting Officer and then Chief Financial Officer, his current role. Frank oversees Finance, Accounting, Tax, Investor Relations, Business Development & Strategy and Loss Prevention. Prior to joining the company, Frank worked with AlliedBarton Security Services, LLC, for five years, serving as Controller for three years. He began his career at KPMG in 1998 where he held various audit roles. Frank was named as one of the top CFOs in Retail in 2014 by Institutional Investor. Frank holds a B.S. in Accounting from Moravian College and is a Certified Public Accountant.',
+	        order: 2
+	      }, {
+	        img: "https://line.do/uploads/1647708565507255_1446330354630.jpg",
+	        name: "Bark Zuckerberg",
+	        title: "CFO",
+	        bio: 'Frank Conforti joined URBN in March 2007 as Director of Finance and SEC Reporting and was subsequently promoted to Controller, Chief Accounting Officer and then Chief Financial Officer, his current role. Frank oversees Finance, Accounting, Tax, Investor Relations, Business Development & Strategy and Loss Prevention. Prior to joining the company, Frank worked with AlliedBarton Security Services, LLC, for five years, serving as Controller for three years. He began his career at KPMG in 1998 where he held various audit roles. Frank was named as one of the top CFOs in Retail in 2014 by Institutional Investor. Frank holds a B.S. in Accounting from Moravian College and is a Certified Public Accountant.',
+	        order: 3
+	      }, {
+	        img: "https://line.do/uploads/1647708565507255_1446330354630.jpg",
+	        name: "Park Zuckerberg",
+	        title: "CTO",
+	        bio: 'Frank Conforti joined URBN in March 2007 as Director of Finance and SEC Reporting and was subsequently promoted to Controller, Chief Accounting Officer and then Chief Financial Officer, his current role. Frank oversees Finance, Accounting, Tax, Investor Relations, Business Development & Strategy and Loss Prevention. Prior to joining the company, Frank worked with AlliedBarton Security Services, LLC, for five years, serving as Controller for three years. He began his career at KPMG in 1998 where he held various audit roles. Frank was named as one of the top CFOs in Retail in 2014 by Institutional Investor. Frank holds a B.S. in Accounting from Moravian College and is a Certified Public Accountant.',
+	        order: 4
+	      }],
+	      current: null
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Executives, [{
+	    key: 'render',
+	    value: function render() {
+	      var executives = this.state.executives;
+	      console.log('ceo');
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb grey underline' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'grey underline', href: '/' },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'grey underline', href: '/who-we-are' },
+	                  'Who Are We'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'Executive Officers'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 executives' },
+	            _react2.default.createElement(
+	              'ul',
+	              null,
+	              executives.map(function (executive) {
+	                return _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'exec' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-4 exec-img-container' },
+	                      _react2.default.createElement('img', { className: 'exec-img', src: executive.img })
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'col-xs-12 col-sm-8 exec-bio' },
+	                      _react2.default.createElement(
+	                        'h4',
+	                        null,
+	                        executive.name
+	                      ),
+	                      _react2.default.createElement(
+	                        'h4',
+	                        null,
+	                        executive.title
+	                      ),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        executive.bio
+	                      )
+	                    )
+	                  )
+	                );
+	              })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Executives;
+	}(_react2.default.Component);
+
+	exports.default = Executives;
+
+/***/ },
+/* 354 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(355);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(243)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./executives.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./executives.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 355 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(242)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".executives {\n  padding-left: 5px;\n  font-family: 'Raleway', sans-serif; }\n  .executives ul li {\n    padding-bottom: 15px; }\n    .executives ul li .exec {\n      clear: both; }\n      .executives ul li .exec .exec-img-container {\n        padding: 0 0; }\n        .executives ul li .exec .exec-img-container .exec-img {\n          width: 100%;\n          margin-bottom: 10px; }\n          @media (min-width: 767px) {\n            .executives ul li .exec .exec-img-container .exec-img {\n              max-width: 275px; } }\n      @media (max-width: 767px) {\n        .executives ul li .exec .exec-bio {\n          padding: 0 0; } }\n      .executives ul li .exec .exec-bio h4 {\n        margin-top: 0; }\n", ""]);
+
+	// exports
+
 
 /***/ }
 /******/ ]);

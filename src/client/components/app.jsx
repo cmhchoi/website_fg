@@ -9,12 +9,29 @@ import $ from "jquery";
 
 export default class App extends React.Component {
 
+  componentWillMount() {
+    $(window).scroll(() => {
+      if ($(document).scrollTop() > 50) {
+        $('.navbar-brand').removeClass('large-logo');
+        $('#navbar2').removeClass('large-nav')
+      } else {
+        $('.navbar-brand').addClass('large-logo');
+        $('#navbar2').addClass('large-nav')
+      }
+    });
+  }
+
+  // componentDidUpdate() {
+  //   //React.findDOMNode(this).scrollTop = 0
+  //   console.log('changed')
+  // },
+
   render() {
     return (
       <div>
         <div className="container">
           <div className="content col-lg-offset-1 col-lg-10 col-xs-12 col-sm-12">
-            <nav className="top-nav navbar navbar-default">
+            <nav className="top-nav navbar navbar-default fixed">
               <div className="navbar-header">
                 <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar2">
                   <span className="sr-only">Toggle navigation</span>
@@ -22,11 +39,11 @@ export default class App extends React.Component {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                 </button>
-                <IndexLink className="navbar-brand" to={{ pathname: '/' }}>
+                <IndexLink className="navbar-brand large-logo" to={{ pathname: '/' }}>
                   <img className="nav-logo-img" src="assets/images/logo2.jpg" alt="First Glory" />
                 </IndexLink>
               </div>
-              <div id="navbar2" className="navbar-collapse collapse">
+              <div id="navbar2" className="navbar-collapse collapse large-nav">
                 <ul className="nav navbar-nav navbar-right">
                   <li><Link to={{ pathname: '/who-we-are' }}>Who We Are</Link></li>
                   <li><Link to={{ pathname: '/products' }}>Products</Link></li>

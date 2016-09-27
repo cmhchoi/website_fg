@@ -21,20 +21,22 @@ import Materials from './containers/Materials.jsx';
 import Techniques from './containers/Techniques.jsx';
 import Terms from './containers/Terms.jsx';
 import Contact from './containers/Contact.jsx';
+import Executives from './containers/Executives.jsx';
 
 require('./styles/app.scss');
 require('./styles/frame.scss');
 require('./styles/list.scss');
 require('./styles/bulletin.scss');
+require('./styles/executives.scss');
 
 render(
-  <Router history={browserHistory}>
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} /> 
       <Route path="who-we-are" component={About} />
       <Route path="who-we-are/history" component={History} />
       <Route path="who-we-are/culture-core-values" component={Culture} />
-      <Route path="who-we-are/executive-officers" component={History} />
+      <Route path="who-we-are/executive-officers" component={Executives} />
       <Route path="who-we-are/our-partners" component={Partners} />
       <Route path="products" component={Products} />
       <Route path="products/category" component={Category} />

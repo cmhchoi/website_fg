@@ -2,6 +2,34 @@
   padding: 0 0;
 }
 
+.fixed {
+  position: fixed;
+  @media (min-width: 1200px) {
+    min-width: 975px;
+  }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    min-width: 970px;
+  }
+  @media (min-width: 767px) and (max-width: 992px) {
+    min-width: 750px;
+  }
+  @media (max-width: 767px){
+    min-width: 96vw;
+  }
+}
+
+.large-logo {
+  height: 100px !important;
+}
+
+.large-nav {
+  margin-top: 50px !important;
+}
+
+.large-nav-hamburger {
+  margin-top: 58px !important;
+}
+
 .navbar-brand {
 	color: #777;
   padding: 0px;
@@ -18,6 +46,7 @@
 }
 
 .bumper {
+  height: 105px;
 }
 
 .navbar-default {
