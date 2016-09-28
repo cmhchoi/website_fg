@@ -38215,7 +38215,7 @@
 	                _react2.default.createElement(
 	                  _reactRouter.IndexLink,
 	                  { className: 'navbar-brand large-logo', to: { pathname: '/' } },
-	                  _react2.default.createElement('img', { className: 'nav-logo-img', src: 'assets/images/logo2.jpg', alt: 'First Glory' })
+	                  _react2.default.createElement('img', { className: 'nav-logo-img', src: '/assets/images/logo2.jpg', alt: 'First Glory' })
 	                )
 	              ),
 	              _react2.default.createElement(

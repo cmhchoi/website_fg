@@ -30,7 +30,7 @@ export default class App extends React.Component {
                   <span className="icon-bar"></span>
                 </button>
                 <IndexLink className="navbar-brand large-logo" to={{ pathname: '/' }}>
-                  <img className="nav-logo-img" src="assets/images/logo2.jpg" alt="First Glory" />
+                  <img className="nav-logo-img" src="/assets/images/logo2.jpg" alt="First Glory" />
                 </IndexLink>
               </div>
               <div id="navbar2" className="navbar-collapse collapse large-nav">
