@@ -33,11 +33,12 @@ require('./styles/list.scss');
 require('./styles/bulletin.scss');
 require('./styles/executives.scss');
 require('./styles/factory.scss');
+require('./styles/news.scss');
 
 render(
   <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home} /> 
+      <IndexRoute component={Home} />
       <Route path="who-we-are" component={About} />
       <Route path="who-we-are/history" component={History} />
       <Route path="who-we-are/culture-core-values" component={Culture} />

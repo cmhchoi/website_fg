@@ -50,7 +50,7 @@ export default class Sitemap extends React.Component {
                     </ul>
                   </li>
                   <li><Link to={{pathname: "/people/story"}}>Our People</Link></li>
-                  <li><Link to={{pathname: "/people/jobs"}}>Jobs</Link></li>
+                  <li><Link to={{pathname: "/people/jobs"}}>Work With Us</Link></li>
                 </ul>
               </li>
               <li className="col-xs-12 col-sm-3">

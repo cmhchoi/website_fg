@@ -57,7 +57,7 @@ export default class App extends React.Component {
                     <ul className="dropdown-menu">
                       <li><Link to={{ pathname: '/people/factories' }}>Our Factories</Link></li>
                       <li><Link to={{ pathname: '/people/story' }}>Our People</Link></li>
-                      <li><Link to={{ pathname: '/people/jobs' }}>Jobs</Link></li>
+                      <li><Link to={{ pathname: '/people/jobs' }}>Work With Us</Link></li>
                     </ul>
                   </li>
                   <li className="dropdown">

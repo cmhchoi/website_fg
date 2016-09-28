@@ -158,6 +158,7 @@
 	__webpack_require__(268);
 	__webpack_require__(354);
 	__webpack_require__(357);
+	__webpack_require__(364);
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
@@ -38348,7 +38349,7 @@
 	                        _react2.default.createElement(
 	                          _reactRouter.Link,
 	                          { to: { pathname: '/people/jobs' } },
-	                          'Jobs'
+	                          'Work With Us'
 	                        )
 	                      )
 	                    )
@@ -38879,7 +38880,7 @@
 	        size: 'square'
 	      }, {
 	        img: "http://cdn.elezea.com/images/1_group-work.jpg",
-	        des: "JOBS",
+	        des: "WORK WITH US",
 	        link: '/people/jobs',
 	        size: 'square'
 	      }]
@@ -38994,6 +38995,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouter = __webpack_require__(172);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39005,19 +39008,61 @@
 	var News = function (_React$Component) {
 	  _inherits(News, _React$Component);
 
-	  function News() {
+	  function News(props) {
 	    _classCallCheck(this, News);
 
-	    return _possibleConstructorReturn(this, (News.__proto__ || Object.getPrototypeOf(News)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (News.__proto__ || Object.getPrototypeOf(News)).call(this, props));
+
+	    _this.state = {
+	      articles: [{
+	        title: "Glossy Features Urban Outfitters' Revival of '90s Fashion",
+	        date: "August 16, 2016",
+	        img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
+	        snippet: "Glossy features Urban Outfitters' revival of popular ‘90s fashion"
+	      }, {
+	        title: "Glossy Features Urban Outfitters' Revival of '90s Fashion",
+	        date: "August 16, 2016",
+	        img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
+	        snippet: "Glossy features Urban Outfitters' revival of popular ‘90s fashion"
+	      }]
+	    };
+	    return _this;
 	  }
 
 	  _createClass(News, [{
 	    key: 'render',
 	    value: function render() {
+	      var articles = this.state.articles;
 	      return _react2.default.createElement(
 	        'div',
 	        null,
-	        'WHAT\'S NEW'
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'What\'s New'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement('div', { className: 'col-xs-12 text-body news' })
+	        )
 	      );
 	    }
 	  }]);
@@ -39532,25 +39577,25 @@
 	    _this.state = {
 	      items: [{
 	        text: "Anthropologie",
-	        link: "https://anthropologie.com"
+	        link: "https://www.anthropologie.com"
 	      }, {
 	        text: "Anthropologie",
-	        link: "https://anthropologie.com"
+	        link: "https://www.anthropologie.com"
 	      }, {
 	        text: "Anthropologie",
-	        link: "https://anthropologie.com"
+	        link: "https://www.anthropologie.com"
 	      }, {
 	        text: "Anthropologie",
-	        link: "https://anthropologie.com"
+	        link: "https://www.anthropologie.com"
 	      }, {
 	        text: "Anthropologie",
-	        link: "https://anthropologie.com"
+	        link: "https://www.anthropologie.com"
 	      }, {
 	        text: "Anthropologie",
-	        link: "https://anthropologie.com"
+	        link: "https://www.anthropologie.com"
 	      }, {
 	        text: "Anthropologie",
-	        link: "https://anthropologie.com"
+	        link: "https://www.anthropologie.com"
 	      }]
 	    };
 	    return _this;
@@ -43623,7 +43668,7 @@
 	                    _react2.default.createElement(
 	                      _reactRouter.Link,
 	                      { to: { pathname: "/people/jobs" } },
-	                      'Jobs'
+	                      'Work With Us'
 	                    )
 	                  )
 	                )
@@ -43854,6 +43899,47 @@
 	}(_react2.default.Component);
 
 	exports.default = Privacy;
+
+/***/ },
+/* 363 */,
+/* 364 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(365);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(243)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./news.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./news.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 365 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(242)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".news .news-img-container {\n  width: 150px;\n  height: 150px;\n  overflow: hidden; }\n", ""]);
+
+	// exports
+
 
 /***/ }
 /******/ ]);

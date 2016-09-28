@@ -10,31 +10,31 @@ export default class Partners extends React.Component {
       items: [
         {
           text: "Anthropologie",
-          link: "https://anthropologie.com"
+          link: "https://www.anthropologie.com"
         },
         {
           text: "Anthropologie",
-          link: "https://anthropologie.com"
+          link: "https://www.anthropologie.com"
         },
         {
           text: "Anthropologie",
-          link: "https://anthropologie.com"
+          link: "https://www.anthropologie.com"
         },
         {
           text: "Anthropologie",
-          link: "https://anthropologie.com"
+          link: "https://www.anthropologie.com"
         },
         {
           text: "Anthropologie",
-          link: "https://anthropologie.com"
+          link: "https://www.anthropologie.com"
         },
         {
           text: "Anthropologie",
-          link: "https://anthropologie.com"
+          link: "https://www.anthropologie.com"
         },
         {
           text: "Anthropologie",
-          link: "https://anthropologie.com"
+          link: "https://www.anthropologie.com"
         },
       ]
   	}

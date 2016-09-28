@@ -22,7 +22,7 @@ export default class People extends React.Component {
         },
         {
           img: "http://cdn.elezea.com/images/1_group-work.jpg",
-          des: "JOBS",
+          des: "WORK WITH US",
           link: '/people/jobs',
           size: 'square'
         },
