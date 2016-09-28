@@ -110,9 +110,17 @@
 
 	var _Category2 = _interopRequireDefault(_Category);
 
-	var _Where = __webpack_require__(345);
+	var _Factory = __webpack_require__(356);
 
-	var _Where2 = _interopRequireDefault(_Where);
+	var _Factory2 = _interopRequireDefault(_Factory);
+
+	var _Zhongshan = __webpack_require__(359);
+
+	var _Zhongshan2 = _interopRequireDefault(_Zhongshan);
+
+	var _Cebu = __webpack_require__(360);
+
+	var _Cebu2 = _interopRequireDefault(_Cebu);
 
 	var _Materials = __webpack_require__(347);
 
@@ -130,6 +138,14 @@
 
 	var _Contact2 = _interopRequireDefault(_Contact);
 
+	var _Privacy = __webpack_require__(362);
+
+	var _Privacy2 = _interopRequireDefault(_Privacy);
+
+	var _Sitemap = __webpack_require__(361);
+
+	var _Sitemap2 = _interopRequireDefault(_Sitemap);
+
 	var _Executives = __webpack_require__(353);
 
 	var _Executives2 = _interopRequireDefault(_Executives);
@@ -141,6 +157,7 @@
 	__webpack_require__(262);
 	__webpack_require__(268);
 	__webpack_require__(354);
+	__webpack_require__(357);
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
@@ -164,7 +181,9 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/materials', component: _Materials2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'products/techniques', component: _Techniques2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people', component: _People2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/factories', component: _People2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/factories', component: _Factory2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/factories/zhongshan', component: _Zhongshan2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'people/factories/cebu', component: _Cebu2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/story', component: _People2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'people/jobs', component: _People2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives', component: _Community2.default }),
@@ -175,7 +194,9 @@
 	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/collaboration', component: _Community2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'whats-new', component: _News2.default }),
 	    _react2.default.createElement(_reactRouter.Route, { path: 'terms-of-use', component: _Terms2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'contact-us', component: _Contact2.default })
+	    _react2.default.createElement(_reactRouter.Route, { path: 'contact-us', component: _Contact2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'privacy', component: _Privacy2.default }),
+	    _react2.default.createElement(_reactRouter.Route, { path: 'sitemap', component: _Sitemap2.default })
 	  )
 	), document.getElementById('app'));
 
@@ -37320,7 +37341,7 @@
 
 
 	// module
-	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.fixed {\n  position: fixed; }\n  @media (min-width: 1200px) {\n    .fixed {\n      min-width: 975px; } }\n  @media (min-width: 992px) and (max-width: 1200px) {\n    .fixed {\n      min-width: 970px; } }\n  @media (min-width: 767px) and (max-width: 992px) {\n    .fixed {\n      min-width: 750px; } }\n  @media (max-width: 767px) {\n    .fixed {\n      min-width: 96vw; } }\n\n.large-logo {\n  height: 100px !important; }\n\n.large-nav {\n  margin-top: 50px !important; }\n\n.large-nav-hamburger {\n  margin-top: 58px !important; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 0 0;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.bumper {\n  height: 105px; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.top-nav {\n  background-color: white;\n  z-index: 200;\n  border-bottom-width: 0 !important; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px;\n  font-family: 'Raleway', sans-serif;\n  font-weight: bold; }\n\n#navbar2 {\n  float: right; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px;\n    font-family: \"Raleway\", \"sans-serif\"; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n\nh4, h3 {\n  font-weight: bold; }\n\n.grey {\n  color: grey; }\n\n.breadcrumb {\n  font-family: 'Raleway', sans-serif;\n  background-color: transparent;\n  margin-bottom: 0;\n  padding-left: 10px; }\n\n.underline {\n  text-decoration: underline; }\n\n.text-body {\n  padding-left: 25px;\n  font-family: 'Raleway', sans-serif; }\n\n.dropdown:hover .dropdown-menu {\n  display: block;\n  margin-top: 0; }\n\n.dropdown-menu {\n  border: 0; }\n  .dropdown-menu li {\n    margin: 0 0; }\n", ""]);
+	exports.push([module.id, ".container {\n  padding: 0 0; }\n\n.fixed {\n  position: fixed; }\n  @media (min-width: 1200px) {\n    .fixed {\n      min-width: 975px; } }\n  @media (min-width: 992px) and (max-width: 1200px) {\n    .fixed {\n      min-width: 970px; } }\n  @media (min-width: 767px) and (max-width: 992px) {\n    .fixed {\n      min-width: 750px; } }\n  @media (max-width: 767px) {\n    .fixed {\n      min-width: 96vw; } }\n\n.large-logo {\n  height: 100px !important; }\n\n.large-nav {\n  margin-top: 50px !important; }\n\n.large-nav-hamburger {\n  margin-top: 58px !important; }\n\n.navbar-brand {\n  color: #777;\n  padding: 0px;\n  float: left;\n  height: 50px;\n  font-size: 18px;\n  line-height: 20px; }\n  .navbar-brand img {\n    padding: 0 0;\n    height: 100%;\n    width: auto;\n    display: block; }\n\n.bumper {\n  height: 105px; }\n\n.navbar-default {\n  background-color: transparent; }\n\n.top-nav {\n  background-color: white;\n  z-index: 200;\n  border-bottom-width: 0 !important; }\n\n.navbar {\n  border-bottom: 1px solid lightgrey;\n  border-top: 0;\n  border-left: 0;\n  border-right: 0;\n  border-radius: 0;\n  margin: 0 20px;\n  margin-bottom: 15px;\n  margin-right: -10px;\n  margin-left: 10px;\n  font-family: 'Raleway', sans-serif;\n  font-weight: bold; }\n\n#navbar2 {\n  float: right; }\n\n.logo-img {\n  max-width: 125px; }\n\n.container .logo {\n  padding-right: 0;\n  padding-left: 0; }\n\n.container .content {\n  padding-right: 0;\n  padding-left: 0; }\n  .container .content .content {\n    min-height: 78vh; }\n\nfooter {\n  font-size: small; }\n  footer nav {\n    margin-bottom: 0 !important; }\n    footer nav div ul {\n      padding: 0 0;\n      float: right; }\n      footer nav div ul .foot-list {\n        float: left; }\n        footer nav div ul .foot-list a {\n          padding-top: 29px;\n          padding-bottom: 0; }\n  footer p {\n    float: right;\n    margin-right: -10px;\n    font-family: \"Raleway\", \"sans-serif\"; }\n\n@media (max-width: 767px) {\n  .navbar {\n    margin-right: 15px; }\n  footer p {\n    margin-right: 15px; }\n  .content .content {\n    max-width: 600px;\n    margin: 0 auto; }\n  #footer-body ul {\n    padding: 0 20px; } }\n\nh4, h3 {\n  font-weight: bold; }\n\n.grey {\n  color: grey; }\n\n.breadcrumb {\n  font-family: 'Raleway', sans-serif;\n  background-color: transparent;\n  margin-bottom: 0;\n  padding-left: 10px; }\n\n.underline {\n  text-decoration: underline; }\n\n.text-body {\n  padding-left: 25px;\n  font-family: 'Raleway', sans-serif; }\n\n.dropdown:hover .dropdown-menu {\n  display: block;\n  margin-top: 0; }\n\n.dropdown-menu {\n  border: 0; }\n  .dropdown-menu li {\n    margin: 0 0; }\n\n.clear {\n  clear: both; }\n\n.sitemap a {\n  color: grey; }\n\n.sitemap h5 {\n  font-weight: bold; }\n\n.sitemap div {\n  clear: both;\n  height: 5px; }\n", ""]);
 
 	// exports
 
@@ -38452,7 +38473,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: { pathname: "#" } },
+	                        { to: { pathname: "/sitemap" } },
 	                        'Site Map'
 	                      )
 	                    ),
@@ -38470,7 +38491,7 @@
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
 	                        _reactRouter.Link,
-	                        { to: { pathname: "#" } },
+	                        { to: { pathname: "/privacy" } },
 	                        'Privacy Policy'
 	                      )
 	                    ),
@@ -38478,8 +38499,8 @@
 	                      'li',
 	                      { className: 'foot-list' },
 	                      _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: { pathname: "https://www.facebook.com/firstgloryltd/" } },
+	                        'a',
+	                        { href: 'https://www.facebook.com/firstgloryltd/' },
 	                        'Facebook'
 	                      )
 	                    )
@@ -38848,12 +38869,12 @@
 	    _this.state = {
 	      pictures: [{
 	        img: "http://kaki.sini.com.my/en/wp-content/uploads/2016/08/happy1.jpg",
-	        des: "WHERE WE WORK",
-	        link: '/people/where-we-work',
+	        des: "OUR FACTORIES",
+	        link: '/people/factories',
 	        size: 'rectangle'
 	      }, {
 	        img: "http://cdn.elezea.com/images/1_group-work.jpg",
-	        des: "OUR STORY",
+	        des: "OUR PEOPLE",
 	        link: '/people/story',
 	        size: 'square'
 	      }, {
@@ -41825,184 +41846,8 @@
 /***/ },
 /* 343 */,
 /* 344 */,
-/* 345 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Directory = __webpack_require__(346);
-
-	var _Directory2 = _interopRequireDefault(_Directory);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Culture = function (_React$Component) {
-	  _inherits(Culture, _React$Component);
-
-	  function Culture(props) {
-	    _classCallCheck(this, Culture);
-
-	    var _this = _possibleConstructorReturn(this, (Culture.__proto__ || Object.getPrototypeOf(Culture)).call(this, props));
-
-	    _this.state = {
-	      items: [{
-	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
-	        link: "/people/where-we-work/offices",
-	        des: "Our Offices",
-	        pointOne: "Hong Kong",
-	        pointTwo: "Zhongshan, China",
-	        pointThree: "Cebu, Philippines"
-	      }, _defineProperty({
-	        img: "http://images.contentful.com/fa2v6i6dvqhy/320cJyvj7WWIieOy0AcwuI/bdeb31002f41c13f0948c6f74d4dc2c7/pizzeria-vetri-image.jpg",
-	        des: "Our Factories",
-	        link: "/people/where-we-work/factories"
-	      }, 'des', 'Creativity is in the fabric of all we do. It’s tangible in our store windows, our clothes and our incredible employee talent. It’s obvious when you realize no two store windows are the same and we wouldn’t want it any other way. At URBN, we welcome all ideas no matter how big or small. Check out the photos below to see our creativity at work.')]
-	    };
-	    return _this;
-	  }
-
-	  _createClass(Culture, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(_Directory2.default, { items: this.state.items })
-	      );
-	    }
-	  }]);
-
-	  return Culture;
-	}(_react2.default.Component);
-
-	exports.default = Culture;
-
-/***/ },
-/* 346 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(172);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Directory = function (_React$Component) {
-	  _inherits(Directory, _React$Component);
-
-	  function Directory() {
-	    _classCallCheck(this, Directory);
-
-	    return _possibleConstructorReturn(this, (Directory.__proto__ || Object.getPrototypeOf(Directory)).apply(this, arguments));
-	  }
-
-	  _createClass(Directory, [{
-	    key: 'render',
-	    value: function render() {
-	      var items = this.props.items;
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'frame row' },
-	        _react2.default.createElement(
-	          'ul',
-	          null,
-	          items.map(function () {
-	            return _react2.default.createElement(
-	              'li',
-	              { className: 'col-xs-12 col-sm-12 col-lg-6' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'directory-picture' },
-	                _react2.default.createElement(
-	                  _reactRouter.Link,
-	                  { to: { pathname: item.link } },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'text' },
-	                    _react2.default.createElement(
-	                      'p',
-	                      { className: 'picture-des' },
-	                      item.des
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'picture-container rectangle large-no-rectangle' },
-	                    _react2.default.createElement('img', { className: 'picture', src: item.img })
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'directory-text' },
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  item.title
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  item.pointOne
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  item.pointTwo
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  item.pointThree
-	                )
-	              )
-	            );
-	          })
-	        )
-	      );
-	    }
-	  }]);
-
-	  return Directory;
-	}(_react2.default.Component);
-
-	exports.default = Directory;
-
-/***/ },
+/* 345 */,
+/* 346 */,
 /* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -42940,6 +42785,1075 @@
 
 	// exports
 
+
+/***/ },
+/* 356 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Factories = function (_React$Component) {
+	  _inherits(Factories, _React$Component);
+
+	  function Factories(props) {
+	    _classCallCheck(this, Factories);
+
+	    var _this = _possibleConstructorReturn(this, (Factories.__proto__ || Object.getPrototypeOf(Factories)).call(this, props));
+
+	    _this.state = {
+	      factories: [{
+	        type: "factory",
+	        name: "First Glory (Zhongshan, China) Ltd.",
+	        img: "http://liferebooted.net/wordpress/wp-content/uploads/2014/03/20140307-IMG_0759-e1394324399891-1240x610.jpg",
+	        link: "/people/factories/zhongshan",
+	        des: "Zhongshan",
+	        year: 2003,
+	        products: "Men and Women's Cut & Sewn Tops, Bottoms, Dress, Skirt, Jacket",
+	        services: "Sampling, Computer Grading/Marking, Cutting, Sewing, Finishing, Pressing, Logistics",
+	        address: "1 Jiankang Road, Shapingcun, Shaxi, Zhongshan, Guangdong, China",
+	        factsheet: "http://www.firstglory.com/images/pdf/en-zhongshan-manufacturing-plant.pdf"
+	      }, {
+	        type: "factory",
+	        name: "First Glory Philippines, Inc.",
+	        img: "http://liferebooted.net/wordpress/wp-content/uploads/2014/03/20140307-IMG_0759-e1394324399891-1240x610.jpg",
+	        link: "/people/factories/cebu",
+	        des: "Cebu",
+	        year: 2005,
+	        products: "Men and Women's Cut & Sewn Tops, Bottoms, Dress, Skirt, Jacket",
+	        services: "Designing/Conceptualization, Sample Room, Computer, Grading/Marking, Cutting, Sewing, Wet Processing (through alliance with local laundry), Finishing, Pressing, Logistics",
+	        address: "3rd Floor, Sudecor Building, MEPZ 1, Gate 2, Lapu-lapu City, Cebu, Philippines",
+	        factsheet: "http://www.firstglory.com/images/pdf/en-cebu-the-philippines-manufacturing-plant.pdf"
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Factories, [{
+	    key: 'render',
+	    value: function render() {
+	      var factories = this.state.factories;
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/people" } },
+	                  'People'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'Our Factories'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'frame row' },
+	          _react2.default.createElement(
+	            'ul',
+	            null,
+	            factories.map(function (factory) {
+	              return _react2.default.createElement(
+	                'li',
+	                { className: 'picture-link factory col-xs-12 col-sm-6' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: factory.link } },
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'text' },
+	                    _react2.default.createElement(
+	                      'p',
+	                      { className: 'picture-des' },
+	                      factory.des
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'picture-container rectangle mid-no-rectangle' },
+	                    _react2.default.createElement('img', { className: 'picture', src: factory.img })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'h4',
+	                  null,
+	                  factory.name
+	                ),
+	                _react2.default.createElement(
+	                  'h5',
+	                  { className: 'factory-title' },
+	                  'Year Founded'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'factory-detail' },
+	                  factory.year
+	                ),
+	                _react2.default.createElement(
+	                  'h5',
+	                  { className: 'factory-title' },
+	                  'Products'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'factory-detail' },
+	                  factory.products,
+	                  _react2.default.createElement('br', null),
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/products/category" } },
+	                    'See Category'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'h5',
+	                  { className: 'factory-title' },
+	                  'Facilities/Services'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'factory-detail' },
+	                  factory.services
+	                ),
+	                _react2.default.createElement(
+	                  'h5',
+	                  { className: 'factory-title' },
+	                  'Address'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'factory-detail' },
+	                  factory.address,
+	                  _react2.default.createElement('br', null),
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/contact-us" } },
+	                    'Contact Us'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'h5',
+	                  { className: 'factory-title' },
+	                  'Factsheet'
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'factory-detail' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: factory.factsheet },
+	                    'Download'
+	                  )
+	                )
+	              );
+	            })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Factories;
+	}(_react2.default.Component);
+
+	exports.default = Factories;
+
+/***/ },
+/* 357 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(358);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(243)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./factory.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./factory.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 358 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(242)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".factory {\n  padding-left: 5px; }\n  .factory .factory-detail {\n    font-family: 'Raleway', sans-serif;\n    margin-left: 5px; }\n    .factory .factory-detail a {\n      color: grey;\n      text-decoration: underline; }\n  .factory .factory-title {\n    font-family: 'Raleway', sans-serif;\n    font-weight: bold;\n    font-size: 15px; }\n  .factory h4 {\n    margin-top: 15px;\n    font-family: 'Raleway', sans-serif;\n    font-weight: bold; }\n  @media (min-width: 992px) {\n    .factory .text {\n      height: 237.5px; } }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 359 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _Frame = __webpack_require__(252);
+
+	var _Frame2 = _interopRequireDefault(_Frame);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Zhongshan = function (_React$Component) {
+	  _inherits(Zhongshan, _React$Component);
+
+	  function Zhongshan(props) {
+	    _classCallCheck(this, Zhongshan);
+
+	    var _this = _possibleConstructorReturn(this, (Zhongshan.__proto__ || Object.getPrototypeOf(Zhongshan)).call(this, props));
+
+	    _this.state = {
+	      pictures: [{
+	        img: "http://digitalspyuk.cdnds.net/13/02/640x320/landscape_ustv-suits-patrick-j-adams-1.jpg",
+	        des: "FABRIC INSPECTION",
+	        link: '/products/men',
+	        size: 'rectangle'
+	      }, {
+	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
+	        des: "CUTTING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "SAMPLE ROOM",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "PRODUCTION LINES",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "FINISHING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "QC",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "STEAMING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "OFFICE",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "PRODUCTION MANAGEMENT",
+	        link: '/products/men',
+	        size: 'square'
+	      }],
+	      images: [{
+	        "FABRIC INSPECTION": ["http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg", "https://www.lamnia.com/images/sg-150-Shirts_and_T-Shirts.jpg", "http://market24.co/wp-content/uploads/2016/04/t473gold.jpg"],
+	        "CUTTING": ["http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg", "https://media.frenchconnection.com/ms/fcuk/54EEZ.jpg?height=768&width=526&lc=en-GB&lv=9", "http://www.charleswall.co.uk/images/XL/GurteenTrouser1400011_202.jpg", "http://www.blitzsport.com/images/large/Adult-Classic-Polycotton-Full-Contact-Trousers-Black-Red.jpg"],
+	        "SAMPLE ROOM": ["https://ae01.alicdn.com/kf/HTB1YMhGKFXXXXXEXpXXq6xXFXXXN/2015-New-font-b-Men-b-font-Casual-O-neck-Pullover-Christmas-font-b-Sweater-b.jpg", "http://www.ruedeshommes.com/media/produits/img/28556-superdry-h15-pull-hudson-fairisle-henley-m61lk033-ayn-pull-tricot-hudson-superdry-acrylique-et-laine-gris-anthracite-a-motifs-1_1128x1128.jpg", "http://i2.cdscdn.com/pdt2/7/6/4/1/700x700/mp02273764/rw/subliminal-mode-pull-over-col-rond-homme-tricot.jpg", "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70430526"],
+	        "PRODUCTION LINES": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "FINISHING": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "QC": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "STEAMING": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "OFFICE": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "PRODUCTION MANAGEMENT": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"]
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Zhongshan, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/people" } },
+	                  'People'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/people/factories" } },
+	                  'Our Factories'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'Zhongshan'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_Frame2.default, { pictures: this.state.pictures, images: this.state.images })
+	      );
+	    }
+	  }]);
+
+	  return Zhongshan;
+	}(_react2.default.Component);
+
+	exports.default = Zhongshan;
+
+/***/ },
+/* 360 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _Frame = __webpack_require__(252);
+
+	var _Frame2 = _interopRequireDefault(_Frame);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Cebu = function (_React$Component) {
+	  _inherits(Cebu, _React$Component);
+
+	  function Cebu(props) {
+	    _classCallCheck(this, Cebu);
+
+	    var _this = _possibleConstructorReturn(this, (Cebu.__proto__ || Object.getPrototypeOf(Cebu)).call(this, props));
+
+	    _this.state = {
+	      pictures: [{
+	        img: "http://digitalspyuk.cdnds.net/13/02/640x320/landscape_ustv-suits-patrick-j-adams-1.jpg",
+	        des: "FABRIC INSPECTION",
+	        link: '/products/men',
+	        size: 'rectangle'
+	      }, {
+	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
+	        des: "CUTTING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "SAMPLE ROOM",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "PRODUCTION LINES",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "FINISHING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "QC",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "STEAMING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "OFFICE",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "PRODUCTION MANAGEMENT",
+	        link: '/products/men',
+	        size: 'square'
+	      }],
+	      images: [{
+	        "FABRIC INSPECTION": ["http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg", "https://www.lamnia.com/images/sg-150-Shirts_and_T-Shirts.jpg", "http://market24.co/wp-content/uploads/2016/04/t473gold.jpg"],
+	        "CUTTING": ["http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg", "https://media.frenchconnection.com/ms/fcuk/54EEZ.jpg?height=768&width=526&lc=en-GB&lv=9", "http://www.charleswall.co.uk/images/XL/GurteenTrouser1400011_202.jpg", "http://www.blitzsport.com/images/large/Adult-Classic-Polycotton-Full-Contact-Trousers-Black-Red.jpg"],
+	        "SAMPLE ROOM": ["https://ae01.alicdn.com/kf/HTB1YMhGKFXXXXXEXpXXq6xXFXXXN/2015-New-font-b-Men-b-font-Casual-O-neck-Pullover-Christmas-font-b-Sweater-b.jpg", "http://www.ruedeshommes.com/media/produits/img/28556-superdry-h15-pull-hudson-fairisle-henley-m61lk033-ayn-pull-tricot-hudson-superdry-acrylique-et-laine-gris-anthracite-a-motifs-1_1128x1128.jpg", "http://i2.cdscdn.com/pdt2/7/6/4/1/700x700/mp02273764/rw/subliminal-mode-pull-over-col-rond-homme-tricot.jpg", "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70430526"],
+	        "PRODUCTION LINES": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "FINISHING": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "QC": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "STEAMING": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "OFFICE": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "PRODUCTION MANAGEMENT": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"]
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Cebu, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/people" } },
+	                  'People'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/people/factories" } },
+	                  'Our Factories'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'Cebu'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_Frame2.default, { pictures: this.state.pictures, images: this.state.images })
+	      );
+	    }
+	  }]);
+
+	  return Cebu;
+	}(_react2.default.Component);
+
+	exports.default = Cebu;
+
+/***/ },
+/* 361 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Sitemap = function (_React$Component) {
+	  _inherits(Sitemap, _React$Component);
+
+	  function Sitemap() {
+	    _classCallCheck(this, Sitemap);
+
+	    return _possibleConstructorReturn(this, (Sitemap.__proto__ || Object.getPrototypeOf(Sitemap)).apply(this, arguments));
+	  }
+
+	  _createClass(Sitemap, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'Site Map'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 text-body sitemap' },
+	            _react2.default.createElement(
+	              'ul',
+	              null,
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'col-xs-12 col-sm-3' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: "/who-we-are" } },
+	                  _react2.default.createElement(
+	                    'h5',
+	                    null,
+	                    'Who We Are'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/who-we-are/history" } },
+	                      'History'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/who-we-are/executive-officers" } },
+	                      'Executive Officers'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/who-we-are/our-partners" } },
+	                      'Our Partners'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/who-we-are/culture-core-values" } },
+	                      'Culture & Core Values'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'col-xs-12 col-sm-3' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: "/products" } },
+	                  _react2.default.createElement(
+	                    'h5',
+	                    null,
+	                    'Products'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/products/category" } },
+	                      'Category'
+	                    ),
+	                    _react2.default.createElement(
+	                      'ul',
+	                      null,
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: "/products/category/men" } },
+	                          'Men'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: "/products/category/women" } },
+	                          'Women'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: "/products/category/children" } },
+	                          'Children'
+	                        )
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/products/materials" } },
+	                      'Materials Used'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/products/techniques" } },
+	                      'Techinques'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'col-xs-12 col-sm-3' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: "/people" } },
+	                  _react2.default.createElement(
+	                    'h5',
+	                    null,
+	                    'People'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/people/factories" } },
+	                      'Our Factories'
+	                    ),
+	                    _react2.default.createElement(
+	                      'ul',
+	                      null,
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: "/people/factories/zhongshan" } },
+	                          'Zhongshan'
+	                        )
+	                      ),
+	                      _react2.default.createElement(
+	                        'li',
+	                        null,
+	                        _react2.default.createElement(
+	                          _reactRouter.Link,
+	                          { to: { pathname: "/people/factories/cebu" } },
+	                          'Cebu'
+	                        )
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/people/story" } },
+	                      'Our People'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/people/jobs" } },
+	                      'Jobs'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'col-xs-12 col-sm-3' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: "/global-community-initiatives" } },
+	                  _react2.default.createElement(
+	                    'h5',
+	                    null,
+	                    'Global Community Initiatives'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'ul',
+	                  null,
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/global-community-initiatives/sustainability" } },
+	                      'Sustainability'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/global-community-initiatives/charitable-programmes" } },
+	                      'Charitable Programmes'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/global-community-initiatives/practices" } },
+	                      'Practices'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/global-community-initiatives/responsibility" } },
+	                      'Responsibility'
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactRouter.Link,
+	                      { to: { pathname: "/global-community-initiatives/collaboration" } },
+	                      'Collaboration'
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'hidden-xs' }),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'col-xs-12 col-sm-3' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: "/whats-new" } },
+	                  _react2.default.createElement(
+	                    'h5',
+	                    null,
+	                    'What\'s New'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'col-xs-12 col-sm-3' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: "/terms-of-use" } },
+	                  _react2.default.createElement(
+	                    'h5',
+	                    null,
+	                    'Terms of Use'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'col-xs-12 col-sm-3' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: "/privacy" } },
+	                  _react2.default.createElement(
+	                    'h5',
+	                    null,
+	                    'Privacy Policy'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'col-xs-12 col-sm-3' },
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { to: { pathname: "/contact-us" } },
+	                  _react2.default.createElement(
+	                    'h5',
+	                    null,
+	                    'Contact Us'
+	                  )
+	                )
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Sitemap;
+	}(_react2.default.Component);
+
+	exports.default = Sitemap;
+
+/***/ },
+/* 362 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Privacy = function (_React$Component) {
+	  _inherits(Privacy, _React$Component);
+
+	  function Privacy() {
+	    _classCallCheck(this, Privacy);
+
+	    return _possibleConstructorReturn(this, (Privacy.__proto__ || Object.getPrototypeOf(Privacy)).apply(this, arguments));
+	  }
+
+	  _createClass(Privacy, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'Terms of Use'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 text-body' },
+	            _react2.default.createElement(
+	              'h3',
+	              null,
+	              'Privacy Policy'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'The privacy policy (“Policy”) below governs your use of URBN.com, the Urban Outfitters Inc. corporate website. To review the privacy policies that apply to customers of the URBN brands, please click on the following links: At Urban Outfitters Inc., we respect the privacy of all visitors who access and use our corporate website. The information we collect on this site is used to understand how we can enhance our site and improve your experience. This policy describes the circumstances in which we collect personal information, why we collect it and how we use it. Our policy also describes the choices you can make about how we collect and use your information. This policy is for URBN.com only and does not apply to the urbanoutfitters.com, anthropologie.com, freepeople.com or any other brand sites. You can visit any of those sites to read about their specific privacy policies. If our information practices change in the future, we will post an updated policy on this website. Any changes made will be posted here, and will be effective upon posting. If you have any questions about our privacy policy, please contact us at PR@URBN.com or write to us at Urban Outfitters Inc., Attn: Corporate Website, 5000 South Broad Street, Philadelphia, PA 19112-1495, URBN Urban Outfitters Inc.'
+	            ),
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              'Types of Information Collected'
+	            ),
+	            _react2.default.createElement(
+	              'p',
+	              null,
+	              'We may collect personal information from you, such as your name, email address, postal address, phone number, etc., when you visit our website, apply for a job, or contact us with a question or concern.'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Privacy;
+	}(_react2.default.Component);
+
+	exports.default = Privacy;
 
 /***/ }
 /******/ ]);

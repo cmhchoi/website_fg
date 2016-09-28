@@ -178,3 +178,19 @@ h4, h3 {
   }
 }
 
+.clear {
+  clear: both;
+}
+
+.sitemap {
+  a {
+    color: grey;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  div {
+    clear: both;
+    height: 5px;
+  }
+}

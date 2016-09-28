@@ -16,11 +16,15 @@ import Women from './containers/Women.jsx';
 import Children from './containers/Children.jsx';
 import Partners from './containers/Partners.jsx';
 import Category from './containers/Category.jsx';
-import Where from './containers/Where.jsx';
+import Factory from './containers/Factory.jsx';
+import Zhongshan from './containers/Zhongshan.jsx';
+import Cebu from './containers/Cebu.jsx';
 import Materials from './containers/Materials.jsx';
 import Techniques from './containers/Techniques.jsx';
 import Terms from './containers/Terms.jsx';
 import Contact from './containers/Contact.jsx';
+import Privacy from './containers/Privacy.jsx';
+import Sitemap from './containers/Sitemap.jsx';
 import Executives from './containers/Executives.jsx';
 
 require('./styles/app.scss');
@@ -28,6 +32,7 @@ require('./styles/frame.scss');
 require('./styles/list.scss');
 require('./styles/bulletin.scss');
 require('./styles/executives.scss');
+require('./styles/factory.scss');
 
 render(
   <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
@@ -46,7 +51,9 @@ render(
       <Route path="products/materials" component={Materials} />
       <Route path="products/techniques" component={Techniques} />
       <Route path="people" component={People} />
-      <Route path="people/factories" component={People} />
+      <Route path="people/factories" component={Factory} />
+      <Route path="people/factories/zhongshan" component={Zhongshan} />
+      <Route path="people/factories/cebu" component={Cebu} />
       <Route path="people/story" component={People} />
       <Route path="people/jobs" component={People} />
       <Route path="global-community-initiatives" component={Community} />
@@ -58,6 +65,8 @@ render(
       <Route path="whats-new" component={News} />
       <Route path="terms-of-use" component={Terms} />
       <Route path="contact-us" component={Contact} />
+      <Route path="privacy" component={Privacy} />
+      <Route path="sitemap" component={Sitemap} />
     </Route>
   </Router>
   , document.getElementById('app')

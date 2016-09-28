@@ -10,13 +10,13 @@ export default class People extends React.Component {
       pictures: [
         {
           img: "http://kaki.sini.com.my/en/wp-content/uploads/2016/08/happy1.jpg",
-          des: "WHERE WE WORK",
-          link: '/people/where-we-work',
+          des: "OUR FACTORIES",
+          link: '/people/factories',
           size: 'rectangle'
         },
         {
           img: "http://cdn.elezea.com/images/1_group-work.jpg",
-          des: "OUR STORY",
+          des: "OUR PEOPLE",
           link: '/people/story',
           size: 'square'
         },

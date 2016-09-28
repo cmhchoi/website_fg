@@ -85,10 +85,10 @@ export default class App extends React.Component {
                         <li className="foot-list"><Link to={{pathname: "#"}}>繁</Link></li>
                         <li className="foot-list"><Link to={{pathname: "#"}}>簡</Link></li>
                         <li className="foot-list"><Link to={{pathname: "/contact-us"}}>Contact Us</Link></li>
-                        <li className="foot-list"><Link to={{pathname: "#"}}>Site Map</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "/sitemap"}}>Site Map</Link></li>
                         <li className="foot-list"><Link to={{pathname: "/terms-of-use"}}>Terms of Use</Link></li>
-                        <li className="foot-list"><Link to={{pathname: "#"}}>Privacy Policy</Link></li>
-                        <li className="foot-list"><Link to={{pathname: "https://www.facebook.com/firstgloryltd/"}}>Facebook</Link></li>
+                        <li className="foot-list"><Link to={{pathname: "/privacy"}}>Privacy Policy</Link></li>
+                        <li className="foot-list"><a href="https://www.facebook.com/firstgloryltd/">Facebook</a></li>
                     </ul>
                 </div>
               </nav>
