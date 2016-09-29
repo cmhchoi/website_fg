@@ -38630,6 +38630,10 @@
 
 	var _Frame2 = _interopRequireDefault(_Frame);
 
+	var _jquery = __webpack_require__(236);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -38673,6 +38677,36 @@
 	  }
 
 	  _createClass(About, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      _jquery2.default.get('/api/users', function (users) {
+	        console.log('USERS', users);
+	      });
+	      this.setState({
+	        pictures: [{
+	          img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
+	          des: "HISTORY",
+	          link: '/who-we-are/history',
+	          size: 'rectangle'
+	        }, {
+	          img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
+	          des: "CULTURE & CORE VALUES",
+	          link: '/who-we-are/culture-core-values',
+	          size: 'rectangle'
+	        }, {
+	          img: "http://www.kbslp.com/images/kbs_image_feed_image5.jpg",
+	          des: "EXECUTIVE OFFICERS",
+	          link: '/who-we-are/executive-officers',
+	          size: 'square'
+	        }, {
+	          img: "http://www.kbslp.com/images/kbs_image_feed_image5.jpg",
+	          des: "YOUR PARTNERS",
+	          link: '/who-we-are/our-partners',
+	          size: 'square'
+	        }]
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
