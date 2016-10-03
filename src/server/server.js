@@ -12,6 +12,7 @@ const keystone = require('keystone');
 // const User = require('./models/User');
 
 const apiRoutes = require('./routes/apiRoutes');
+const mongoURI = require('./secret');
 
 // keystone.set('app', app);
 // keystone.set('mongoose', mongoose);
@@ -51,7 +52,8 @@ keystone.init({
   'user model': 'User',
   'cookie secret': 'shhhh',
   'views': '../client',
-  'mongo': 'mongodb://localhost/firstglory',
+  'mongo': process.env.mongoURI || mongoURI,
+  //'mongo': 'mongodb://localhost/firstglory',
   'session': true,
   'auth': true,
 });

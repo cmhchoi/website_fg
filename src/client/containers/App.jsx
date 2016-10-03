@@ -1,6 +1,7 @@
 import React from 'react';
 import { IndexLink, Link } from 'react-router';
 import $ from "jquery";
+import labels from '../assets/labels.js' 
 
 export default class App extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ export default class App extends React.Component {
       }
     });
 
-    this.setState({test: 'test'})
+    this.setState({ labels: labels })
   }
 
   updateAppState(object) {
@@ -89,6 +90,7 @@ export default class App extends React.Component {
   }
 
   render() {
+    console.log(labels)
     console.log('appy', this.state)
     const language = this.props.params.language || '';
     return (
