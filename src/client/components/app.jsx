@@ -3,6 +3,11 @@ import { IndexLink, Link } from 'react-router';
 import $ from "jquery";
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = null;
+  }
 
   componentWillMount() {
     $(window).scroll(() => {
@@ -14,9 +19,59 @@ export default class App extends React.Component {
         $('#navbar2').addClass('large-nav')
       }
     });
+
+    this.setState({test: 'test'})
+  }
+
+  updateAppState(object) {
+    this.setState(object)
+  }
+
+  footer(language, path) {
+    if(language === 'zh-t') {
+      return(
+        <footer className="footer">
+          <nav className="navbar navbar-default">
+            <div className="" id="footer-body">
+                <ul className="nav navbar-nav navbar-right">
+                    <li className="foot-list"><Link to={{pathname: "#"}}>簡</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/"}}>English</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/contact-us"}}>聯絡我們</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/sitemap"}}>網站圖</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/terms-of-use"}}>使用條款</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/privacy"}}>隱私政策</Link></li>
+                    <li className="foot-list"><a href="https://www.facebook.com/firstgloryltd/">Facebook</a></li>
+                </ul>
+            </div>
+          </nav>
+          <p>2016 錦濤國貿有限公司。版權所有</p>
+        </footer>
+      )
+    } else {
+      return(
+        <footer className="footer">
+          <nav className="navbar navbar-default">
+            <div className="" id="footer-body">
+                <ul className="nav navbar-nav navbar-right">
+                    <li className="foot-list"><Link to={{pathname: "/zh-t"}}>繁</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "#"}}>簡</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/contact-us"}}>Contact Us</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/sitemap"}}>Site Map</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/terms-of-use"}}>Terms of Use</Link></li>
+                    <li className="foot-list"><Link to={{pathname: "/privacy"}}>Privacy Policy</Link></li>
+                    <li className="foot-list"><a href="https://www.facebook.com/firstgloryltd/">Facebook</a></li>
+                </ul>
+            </div>
+          </nav>
+          <p>2016 First Glory Ltd. All Rights Reserved</p>
+        </footer>
+      )
+    }
   }
 
   render() {
+    console.log('appy', this.props)
+    const language = this.props.params.language;
     return (
       <div>
         <div className="container">
@@ -76,24 +131,9 @@ export default class App extends React.Component {
             </nav>
             <div className="bumper"></div>
             <div className="content">
-              {this.props.children}
+              {React.cloneElement(this.props.children, { state: this.state, updateAppState: this.updateAppState.bind(this), language: this.props.params.language})}
             </div>
-            <footer className="footer">
-              <nav className="navbar navbar-default">
-                <div className="" id="footer-body">
-                    <ul className="nav navbar-nav navbar-right">
-                        <li className="foot-list"><Link to={{pathname: "#"}}>繁</Link></li>
-                        <li className="foot-list"><Link to={{pathname: "#"}}>簡</Link></li>
-                        <li className="foot-list"><Link to={{pathname: "/contact-us"}}>Contact Us</Link></li>
-                        <li className="foot-list"><Link to={{pathname: "/sitemap"}}>Site Map</Link></li>
-                        <li className="foot-list"><Link to={{pathname: "/terms-of-use"}}>Terms of Use</Link></li>
-                        <li className="foot-list"><Link to={{pathname: "/privacy"}}>Privacy Policy</Link></li>
-                        <li className="foot-list"><a href="https://www.facebook.com/firstgloryltd/">Facebook</a></li>
-                    </ul>
-                </div>
-              </nav>
-              <p>2016 First Glory Ltd. All Rights Reserved</p>
-            </footer>
+              {this.footer(this.props.params.language, this.props.location.pathname)}
           </div>
         </div>
       </div>

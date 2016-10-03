@@ -150,6 +150,14 @@
 
 	var _Executives2 = _interopRequireDefault(_Executives);
 
+	var _Article = __webpack_require__(367);
+
+	var _Article2 = _interopRequireDefault(_Article);
+
+	var _Location = __webpack_require__(368);
+
+	var _Location2 = _interopRequireDefault(_Location);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	__webpack_require__(240);
@@ -159,6 +167,43 @@
 	__webpack_require__(354);
 	__webpack_require__(357);
 	__webpack_require__(364);
+	// <Route path="people/factories/zhongshan" component={Zhongshan} />
+	// <Route path="people/factories/cebu" component={Cebu} />
+
+	var innerRoutes = _react2.default.createElement(
+	  _reactRouter.Route,
+	  null,
+	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are', component: _About2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/history', component: _History2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/culture-core-values', component: _Culture2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/executive-officers', component: _Executives2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/our-partners', component: _Partners2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _Products2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'products/category', component: _Category2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'products/category/men', component: _Men2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'products/category/women', component: _Women2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'products/category/children', component: _Children2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'products/materials', component: _Materials2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'products/techniques', component: _Techniques2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'people', component: _People2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'people/factories', component: _Factory2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'people/factories/:location', component: _Location2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'people/story', component: _People2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'people/jobs', component: _People2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives', component: _Community2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/sustainability', component: _Community2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/charitable-programmes', component: _Community2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/practices', component: _Community2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/responsibility', component: _Community2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/collaboration', component: _Community2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'whats-new', component: _News2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'whats-new/:article', component: _Article2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'terms-of-use', component: _Terms2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'contact-us', component: _Contact2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'privacy', component: _Privacy2.default }),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'sitemap', component: _Sitemap2.default })
+	);
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	  _reactRouter.Router,
@@ -168,36 +213,12 @@
 	  _react2.default.createElement(
 	    _reactRouter.Route,
 	    { path: '/', component: _App2.default },
-	    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are', component: _About2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/history', component: _History2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/culture-core-values', component: _Culture2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/executive-officers', component: _Executives2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'who-we-are/our-partners', component: _Partners2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products', component: _Products2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category', component: _Category2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/men', component: _Men2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/women', component: _Women2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/category/children', component: _Children2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/materials', component: _Materials2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'products/techniques', component: _Techniques2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people', component: _People2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/factories', component: _Factory2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/factories/zhongshan', component: _Zhongshan2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/factories/cebu', component: _Cebu2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/story', component: _People2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'people/jobs', component: _People2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives', component: _Community2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/sustainability', component: _Community2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/charitable-programmes', component: _Community2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/practices', component: _Community2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/responsibility', component: _Community2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'global-community-initiatives/collaboration', component: _Community2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'whats-new', component: _News2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'terms-of-use', component: _Terms2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'contact-us', component: _Contact2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'privacy', component: _Privacy2.default }),
-	    _react2.default.createElement(_reactRouter.Route, { path: 'sitemap', component: _Sitemap2.default })
+	    innerRoutes,
+	    _react2.default.createElement(
+	      _reactRouter.Route,
+	      { path: '/:language' },
+	      innerRoutes
+	    )
 	  )
 	), document.getElementById('app'));
 
@@ -38164,10 +38185,13 @@
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
-	  function App() {
+	  function App(props) {
 	    _classCallCheck(this, App);
 
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+	    _this.state = null;
+	    return _this;
 	  }
 
 	  _createClass(App, [{
@@ -38182,10 +38206,194 @@
 	          (0, _jquery2.default)('#navbar2').addClass('large-nav');
 	        }
 	      });
+
+	      this.setState({ test: 'test' });
+	    }
+	  }, {
+	    key: 'updateAppState',
+	    value: function updateAppState(object) {
+	      this.setState(object);
+	    }
+	  }, {
+	    key: 'footer',
+	    value: function footer(language, path) {
+	      if (language === 'zh-t') {
+	        return _react2.default.createElement(
+	          'footer',
+	          { className: 'footer' },
+	          _react2.default.createElement(
+	            'nav',
+	            { className: 'navbar navbar-default' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: '', id: 'footer-body' },
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'nav navbar-nav navbar-right' },
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "#" } },
+	                    '簡'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/" } },
+	                    'English'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/contact-us" } },
+	                    '聯絡我們'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/sitemap" } },
+	                    '網站圖'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/terms-of-use" } },
+	                    '使用條款'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/privacy" } },
+	                    '隱私政策'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://www.facebook.com/firstgloryltd/' },
+	                    'Facebook'
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '2016 錦濤國貿有限公司。版權所有'
+	          )
+	        );
+	      } else {
+	        return _react2.default.createElement(
+	          'footer',
+	          { className: 'footer' },
+	          _react2.default.createElement(
+	            'nav',
+	            { className: 'navbar navbar-default' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: '', id: 'footer-body' },
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'nav navbar-nav navbar-right' },
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/zh-t" } },
+	                    '繁'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "#" } },
+	                    '簡'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/contact-us" } },
+	                    'Contact Us'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/sitemap" } },
+	                    'Site Map'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/terms-of-use" } },
+	                    'Terms of Use'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: { pathname: "/privacy" } },
+	                    'Privacy Policy'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'foot-list' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://www.facebook.com/firstgloryltd/' },
+	                    'Facebook'
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'p',
+	            null,
+	            '2016 First Glory Ltd. All Rights Reserved'
+	          )
+	        );
+	      }
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      console.log('appy', this.props);
+	      var language = this.props.params.language;
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -38428,92 +38636,9 @@
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'content' },
-	              this.props.children
+	              _react2.default.cloneElement(this.props.children, { state: this.state, updateAppState: this.updateAppState.bind(this), language: this.props.params.language })
 	            ),
-	            _react2.default.createElement(
-	              'footer',
-	              { className: 'footer' },
-	              _react2.default.createElement(
-	                'nav',
-	                { className: 'navbar navbar-default' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: '', id: 'footer-body' },
-	                  _react2.default.createElement(
-	                    'ul',
-	                    { className: 'nav navbar-nav navbar-right' },
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'foot-list' },
-	                      _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: { pathname: "#" } },
-	                        '繁'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'foot-list' },
-	                      _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: { pathname: "#" } },
-	                        '簡'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'foot-list' },
-	                      _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: { pathname: "/contact-us" } },
-	                        'Contact Us'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'foot-list' },
-	                      _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: { pathname: "/sitemap" } },
-	                        'Site Map'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'foot-list' },
-	                      _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: { pathname: "/terms-of-use" } },
-	                        'Terms of Use'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'foot-list' },
-	                      _react2.default.createElement(
-	                        _reactRouter.Link,
-	                        { to: { pathname: "/privacy" } },
-	                        'Privacy Policy'
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      'li',
-	                      { className: 'foot-list' },
-	                      _react2.default.createElement(
-	                        'a',
-	                        { href: 'https://www.facebook.com/firstgloryltd/' },
-	                        'Facebook'
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'p',
-	                null,
-	                '2016 First Glory Ltd. All Rights Reserved'
-	              )
-	            )
+	            this.footer(this.props.params.language, this.props.location.pathname)
 	          )
 	        )
 	      );
@@ -38679,36 +38804,19 @@
 	  _createClass(About, [{
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
-	      _jquery2.default.get('/api/users', function (users) {
-	        console.log('USERS', users);
-	      });
-	      this.setState({
-	        pictures: [{
-	          img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
-	          des: "HISTORY",
-	          link: '/who-we-are/history',
-	          size: 'rectangle'
-	        }, {
-	          img: "https://static.cotecine.fr/tb/Photos/1240x610/crop/MON+ROI+PHOTO3.JPG",
-	          des: "CULTURE & CORE VALUES",
-	          link: '/who-we-are/culture-core-values',
-	          size: 'rectangle'
-	        }, {
-	          img: "http://www.kbslp.com/images/kbs_image_feed_image5.jpg",
-	          des: "EXECUTIVE OFFICERS",
-	          link: '/who-we-are/executive-officers',
-	          size: 'square'
-	        }, {
-	          img: "http://www.kbslp.com/images/kbs_image_feed_image5.jpg",
-	          des: "YOUR PARTNERS",
-	          link: '/who-we-are/our-partners',
-	          size: 'square'
-	        }]
-	      });
+	      var _this2 = this;
+
+	      if (!this.props.state.users) {
+	        _jquery2.default.get('/api/users', function (users) {
+	          _this2.props.updateAppState({ users: users });
+	        });
+	      }
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
+	      console.log('about', this.props);
+	      // console.log('ABOUT!', this.props.setting)
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -39054,10 +39162,10 @@
 	        img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
 	        snippet: "Glossy features Urban Outfitters' revival of popular ‘90s fashion"
 	      }, {
-	        title: "Glossy Features Urban Outfitters' Revival of '90s Fashion",
-	        date: "August 16, 2016",
-	        img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
-	        snippet: "Glossy features Urban Outfitters' revival of popular ‘90s fashion"
+	        title: "Vetri Community Partnership's Mobile Teaching Kitchen",
+	        date: "August 11, 2016",
+	        img: "http://img.whitezine.com/Martin-Schoeller-George-Clooney-Portrait.jpeg",
+	        snippet: "There's a new element to the Vetri Community Partnership program: mobile cooking lessons. Starting this fall, a mobile teaching kitchen will visit schools, community events and farmer’s markets in Philadelphia neighborhoods to give free lessons in healthy cooking."
 	      }]
 	    };
 	    return _this;
@@ -39095,7 +39203,44 @@
 	              )
 	            )
 	          ),
-	          _react2.default.createElement('div', { className: 'col-xs-12 text-body news' })
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 text-body news' },
+	            articles.map(function (article) {
+	              return _react2.default.createElement(
+	                'div',
+	                { className: 'col-xs-12' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-xs-4 col-sm-3 news-img-container' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: '#', className: 'thumbnail' },
+	                    _react2.default.createElement('img', { src: article.img })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-xs-12 col-sm-9 news-text-container' },
+	                  _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    article.title
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    article.date
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    article.snippet
+	                  )
+	                )
+	              );
+	            })
+	          )
 	        )
 	      );
 	    }
@@ -39875,6 +40020,7 @@
 	  _createClass(Home, [{
 	    key: 'render',
 	    value: function render() {
+	      console.log(this.props);
 	      return _react2.default.createElement(
 	        'div',
 	        null,
@@ -43053,20 +43199,6 @@
 	                    { to: { pathname: "/contact-us" } },
 	                    'Contact Us'
 	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'h5',
-	                  { className: 'factory-title' },
-	                  'Factsheet'
-	                ),
-	                _react2.default.createElement(
-	                  'p',
-	                  { className: 'factory-detail' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: factory.factsheet },
-	                    'Download'
-	                  )
 	                )
 	              );
 	            })
@@ -43970,10 +44102,314 @@
 
 
 	// module
-	exports.push([module.id, ".news .news-img-container {\n  width: 150px;\n  height: 150px;\n  overflow: hidden; }\n", ""]);
+	exports.push([module.id, ".news div {\n  padding-left: 0; }\n  .news div .news-img-container {\n    overflow: hidden;\n    padding: 0 0; }\n    .news div .news-img-container .thumbnail {\n      padding: 0 0; }\n  .news div .news-text-container {\n    padding-left: 15px; }\n    @media (max-width: 767px) {\n      .news div .news-text-container {\n        padding-left: 0;\n        margin-bottom: 15px; } }\n    .news div .news-text-container h4 {\n      margin-top: 0; }\n", ""]);
 
 	// exports
 
+
+/***/ },
+/* 366 */,
+/* 367 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Article = function (_React$Component) {
+	  _inherits(Article, _React$Component);
+
+	  function Article(props) {
+	    _classCallCheck(this, Article);
+
+	    var _this = _possibleConstructorReturn(this, (Article.__proto__ || Object.getPrototypeOf(Article)).call(this, props));
+
+	    _this.state = null;
+	    return _this;
+	  }
+
+	  _createClass(Article, [{
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      if (this.props.params.article === 'article') {
+	        this.setState({
+	          articles: [{
+	            title: "Glossy Features Urban Outfitters' Revival of '90s Fashion",
+	            date: "August 33, 2016",
+	            img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
+	            body: "Glossy features Urban Outfitters' revival of popular ‘90s fashion"
+	          }]
+	        });
+	      } else {
+	        this.setState({
+	          articles: [{
+	            title: "Glossy Features Urban Outfitters' Revival of '90s Fashion",
+	            date: "August 50, 2016",
+	            img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
+	            body: "Glossy features Urban Outfitters' revival of popular ‘90s fashion"
+	          }]
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var articles = this.state.articles;
+	      console.log('art', this.props.params.article);
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'What\'s New'
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 text-body news' },
+	            articles.map(function (article) {
+	              return _react2.default.createElement(
+	                'div',
+	                { className: 'col-xs-12' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-xs-4 col-sm-3 news-img-container' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: '#', className: 'thumbnail' },
+	                    _react2.default.createElement('img', { src: article.img })
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'col-xs-12 col-sm-9 news-text-container' },
+	                  _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    article.title
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    article.date
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    article.snippet
+	                  )
+	                )
+	              );
+	            })
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Article;
+	}(_react2.default.Component);
+
+	exports.default = Article;
+
+/***/ },
+/* 368 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(172);
+
+	var _Frame = __webpack_require__(252);
+
+	var _Frame2 = _interopRequireDefault(_Frame);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Location = function (_React$Component) {
+	  _inherits(Location, _React$Component);
+
+	  function Location(props) {
+	    _classCallCheck(this, Location);
+
+	    var _this = _possibleConstructorReturn(this, (Location.__proto__ || Object.getPrototypeOf(Location)).call(this, props));
+
+	    _this.state = {
+	      pictures: [{
+	        img: "http://digitalspyuk.cdnds.net/13/02/640x320/landscape_ustv-suits-patrick-j-adams-1.jpg",
+	        des: "FABRIC INSPECTION",
+	        link: '/products/men',
+	        size: 'rectangle'
+	      }, {
+	        img: "http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg",
+	        des: "CUTTING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "SAMPLE ROOM",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "PRODUCTION LINES",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "FINISHING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "QC",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "STEAMING",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "OFFICE",
+	        link: '/products/men',
+	        size: 'square'
+	      }, {
+	        img: "http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg",
+	        des: "PRODUCTION MANAGEMENT",
+	        link: '/products/men',
+	        size: 'square'
+	      }],
+	      images: [{
+	        "FABRIC INSPECTION": ["http://www.ganzomag.com/wp-content/uploads/2013/07/perfect-persuasion-tshirts.jpg", "https://upload.wikimedia.org/wikipedia/commons/2/24/Blue_Tshirt.jpg", "https://www.lamnia.com/images/sg-150-Shirts_and_T-Shirts.jpg", "http://market24.co/wp-content/uploads/2016/04/t473gold.jpg"],
+	        "CUTTING": ["http://image.dhgate.com/0x0/f2/albu/g3/M01/65/E3/rBVaHFaSFc2AB4WMAACEMPKwEx8946.jpg", "https://media.frenchconnection.com/ms/fcuk/54EEZ.jpg?height=768&width=526&lc=en-GB&lv=9", "http://www.charleswall.co.uk/images/XL/GurteenTrouser1400011_202.jpg", "http://www.blitzsport.com/images/large/Adult-Classic-Polycotton-Full-Contact-Trousers-Black-Red.jpg"],
+	        "SAMPLE ROOM": ["https://ae01.alicdn.com/kf/HTB1YMhGKFXXXXXEXpXXq6xXFXXXN/2015-New-font-b-Men-b-font-Casual-O-neck-Pullover-Christmas-font-b-Sweater-b.jpg", "http://www.ruedeshommes.com/media/produits/img/28556-superdry-h15-pull-hudson-fairisle-henley-m61lk033-ayn-pull-tricot-hudson-superdry-acrylique-et-laine-gris-anthracite-a-motifs-1_1128x1128.jpg", "http://i2.cdscdn.com/pdt2/7/6/4/1/700x700/mp02273764/rw/subliminal-mode-pull-over-col-rond-homme-tricot.jpg", "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70430526"],
+	        "PRODUCTION LINES": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "FINISHING": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "QC": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "STEAMING": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "OFFICE": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"],
+	        "PRODUCTION MANAGEMENT": ["http://images.shopmadeinchina.com/p/437/4538437_0/Men-s-business-suits-Western-style-clothes-top_4538437_0.bak.jpg", "http://images.menswearhouse.com/is/image/TMW/MW40_30U4_14_PERRY_ELLIS_PORTFOLIO_BLUE_POSTMAN_MAIN?01AD=3Bz6xbUUrlWQZ9-z7yjYCMM6SrHDgkwMXoUu6FYuCnLoX916UN2-5GQ&01RI=A71D5047F5D8C7D&01NA=&$40Zoom$", "http://www.mexatk.com/wp-content/uploads/2015/11/%D8%A7%D8%AD%D8%AF%D8%AB-%D9%85%D9%88%D8%B6%D8%A9-%D9%81%D9%8A-%D8%A7%D9%84%D8%A8%D8%AF%D9%84-%D8%A7%D9%84%D8%B1%D8%AC%D8%A7%D9%84%D9%8A-6.jpg", "https://cdna.lystit.com/photos/1d37-2015/03/11/calvin-klein-navy-white-label-body-slim-fit-navy-pinstripe-suit-jacket-blue-product-2-916106911-normal.jpeg"]
+	      }]
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Location, [{
+	    key: 'render',
+	    value: function render() {
+	      console.log(this.props.params);
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'row' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12' },
+	            _react2.default.createElement(
+	              'ol',
+	              { className: 'breadcrumb' },
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/" } },
+	                  'Home'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/people" } },
+	                  'People'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                null,
+	                _react2.default.createElement(
+	                  _reactRouter.Link,
+	                  { className: 'grey underline', to: { pathname: "/people/factories" } },
+	                  'Our Factories'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'li',
+	                { className: 'active' },
+	                'Cebu'
+	              )
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(_Frame2.default, { pictures: this.state.pictures, images: this.state.images })
+	      );
+	    }
+	  }]);
+
+	  return Location;
+	}(_react2.default.Component);
+
+	exports.default = Location;
 
 /***/ }
 /******/ ]);

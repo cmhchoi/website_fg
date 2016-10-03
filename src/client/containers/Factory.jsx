@@ -70,8 +70,6 @@ export default class Factories extends React.Component {
                   <p className="factory-detail">{factory.services}</p>
                   <h5 className="factory-title">Address</h5>
                   <p className="factory-detail">{factory.address}<br/><Link to={{pathname: "/contact-us"}}>Contact Us</Link></p>
-                  <h5 className="factory-title">Factsheet</h5>
-                  <p className="factory-detail"><a href={factory.factsheet}>Download</a></p>
                 </li>
               )
             })}

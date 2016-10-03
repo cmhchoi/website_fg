@@ -1,30 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-export default class News extends React.Component {
+export default class Article extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      articles: [
-        {
-          title: "Glossy Features Urban Outfitters' Revival of '90s Fashion",
-          date: "August 16, 2016",
-          img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
-          snippet: "Glossy features Urban Outfitters' revival of popular ‘90s fashion",
-        },
-        {
-          title: "Vetri Community Partnership's Mobile Teaching Kitchen",
-          date: "August 11, 2016",
-          img: "http://img.whitezine.com/Martin-Schoeller-George-Clooney-Portrait.jpeg",
-          snippet: "There's a new element to the Vetri Community Partnership program: mobile cooking lessons. Starting this fall, a mobile teaching kitchen will visit schools, community events and farmer’s markets in Philadelphia neighborhoods to give free lessons in healthy cooking.",
-        },
-      ],
+    this.state = null;
+  }
+
+  componentWillMount() {
+    if(this.props.params.article === 'article') {
+      this.setState({
+        articles: [
+          {
+            title: "Glossy Features Urban Outfitters' Revival of '90s Fashion",
+            date: "August 33, 2016",
+            img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
+            body: "Glossy features Urban Outfitters' revival of popular ‘90s fashion",
+          },
+        ],
+      })
+    } else {
+      this.setState({
+        articles: [
+          {
+            title: "Glossy Features Urban Outfitters' Revival of '90s Fashion",
+            date: "August 50, 2016",
+            img: "http://images.contentful.com/fa2v6i6dvqhy/7JcIXfDJEAeqM4Yq6EwUGu/28c5cbec562863a03b2e3f0c47b78780/adidas_throwback.jpg",
+            body: "Glossy features Urban Outfitters' revival of popular ‘90s fashion",
+          },
+        ],
+      })
     }
   }
 
   render() {
     const articles = this.state.articles;
+    console.log('art', this.props.params.article)
     return(
       <div>
         <div className="row">
